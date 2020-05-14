@@ -9,4 +9,5 @@
 ## Array
 
 * [Count inversions in an array](array/count-inversions-in-an-array.md)
+* [Permutation](array/permutation.md)
 

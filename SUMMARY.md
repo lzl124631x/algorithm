@@ -10,4 +10,6 @@
 
 * [Count inversions in an array](array/count-inversions-in-an-array.md)
 * [Permutation](array/permutation.md)
+* [Quick Select](array/quick-select.md)
+* [Sliding Window](array/sliding-window.md)
 

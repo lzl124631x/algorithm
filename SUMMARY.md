@@ -1,26 +1,51 @@
-# Table of contents
+# Your Book Title
 
-* [Algorithm](README.md)
-
-## Data Structure
-
-* [Trie](data-structure/trie.md)
-* [Segment Tree](data-structure/segment-tree.md)
-* [Binary Index Tree](data-structure/binary-index-tree.md)
-* [Union Find](data-structure/union-find.md)
-
-## Array
-
-* [Count inversions in an array](array/count-inversions-in-an-array.md)
-* [Permutation](array/permutation.md)
-* [Quick Select](array/quick-select.md)
-* [Sliding Window](array/sliding-window.md)
-* [Two pointers](array/two-pointers.md)
-
-## Binary Tree
-
-* [AVL Tree](binary-tree/avl-tree.md)
-* [Binary Search Tree](binary-tree/binary-search-tree.md)
-* [Serialization and Deserialization](binary-tree/serialization-and-deserialization.md)
-* [Traversal](binary-tree/traversal.md)
-
+- Array
+  * [Count Inversions In An Array](array/count-inversions-in-an-array.md)
+  * [Permutation](array/permutation.md)
+  * [Quick Select](array/quick-select.md)
+  * [Sliding Window](array/sliding-window.md)
+  * [Two Pointers](array/two-pointers.md)
+- Binary Tree
+  * [Avl Tree](binary-tree/avl-tree.md)
+  * [Binary Search Tree](binary-tree/binary-search-tree.md)
+  * [Serialization And Deserialization](binary-tree/serialization-and-deserialization.md)
+  * [Traversal](binary-tree/traversal.md)
+- Data Structure
+  * [Binary Index Tree](data-structure/binary-index-tree.md)
+  * [Segment Tree](data-structure/segment-tree.md)
+  * [Trie](data-structure/trie.md)
+  * [Union Find](data-structure/union-find.md)
+- Graph
+  - Shortest Path
+    * [Bellman Ford](graph/shortest-path/bellman-ford.md)
+    * [Dijkstra](graph/shortest-path/dijkstra.md)
+    * [Floyd Warshall](graph/shortest-path/floyd-warshall.md)
+    * [Prim](graph/shortest-path/prim.md)
+  * [Component Coloring](graph/component-coloring.md)
+  * [Component Count](graph/component-count.md)
+  * [Euler Path](graph/euler-path.md)
+  * [Topological Sort](graph/topological-sort.md)
+- Math
+  * [Catalan Number](math/catalan-number.md)
+  * [Gcd](math/gcd.md)
+- String
+  * [Kmp](string/kmp.md)
+  * [Rabin Karp](string/rabin-karp.md)
+  * [Z](string/z.md)
+* [Binary Answer](binary-answer.md)
+* [Binary Search](binary-search.md)
+* [Bit Manipulation](bit-manipulation.md)
+* [Cpp Stl](cpp-stl.md)
+* [Date](date.md)
+* [Dfs](dfs.md)
+* [Discretization](discretization.md)
+* [Divide And Conquer](divide-and-conquer.md)
+* [Dynamic Programming](dynamic-programming.md)
+* [Line Sweep](line-sweep.md)
+* [Minmax](minmax.md)
+* [Monoqueue](monoqueue.md)
+* [Monotonous Stack](monotonous-stack.md)
+* [Overflow](overflow.md)
+* [Sqrt Decomposition](sqrt-decomposition.md)
+* [State And Hash Table](state-and-hash-table.md)

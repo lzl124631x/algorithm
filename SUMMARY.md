@@ -14,3 +14,10 @@
 * [Sliding Window](array/sliding-window.md)
 * [Two pointers](array/two-pointers.md)
 
+## Binary Tree
+
+* [AVL Tree](binary-tree/avl-tree.md)
+* [Binary Search Tree](binary-tree/binary-search-tree.md)
+* [Serialization and Deserialization](binary-tree/serialization-and-deserialization.md)
+* [Traversal](binary-tree/traversal.md)
+

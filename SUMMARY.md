@@ -1,4 +1,4 @@
-# Your Book Title
+# Algorithm
 
 - Array
   * [Count Inversions In An Array](array/count-inversions-in-an-array.md)

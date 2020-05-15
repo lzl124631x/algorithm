@@ -12,4 +12,5 @@
 * [Permutation](array/permutation.md)
 * [Quick Select](array/quick-select.md)
 * [Sliding Window](array/sliding-window.md)
+* [Two pointers](array/two-pointers.md)
 

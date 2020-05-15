@@ -1,4 +1,4 @@
 # Monotonous Stack
 
-503
-84
+503 84
+

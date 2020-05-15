@@ -1,6 +1,6 @@
 # Component Count
 
-A [**component**](https://en.wikipedia.org/wiki/Component_(graph_theory)) in a graph is a set of vertices where each of them are neighbors and none of them is neighbor of vertices outside of this set.
+A \[**component**\]\([https://en.wikipedia.org/wiki/Component\_\(graph\_theory](https://en.wikipedia.org/wiki/Component_%28graph_theory)\)\) in a graph is a set of vertices where each of them are neighbors and none of them is neighbor of vertices outside of this set.
 
 Count connected components in a graph.
 
@@ -68,7 +68,6 @@ int getComponentCount(vector<vector<int>> &G) {
 
 ### Union Find
 
-
 ```cpp
 class UnionFind {
     vector<int> id, rank;
@@ -102,5 +101,6 @@ int getComponentCount(vector<vector<int>> &G) {
 
 ## Problems
 
-* [947. Most Stones Removed with Same Row or Column (Medium)](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
-* [200. Number of Islands (Medium)](https://leetcode.com/problems/number-of-islands/)
+* [947. Most Stones Removed with Same Row or Column \(Medium\)](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
+* [200. Number of Islands \(Medium\)](https://leetcode.com/problems/number-of-islands/)
+

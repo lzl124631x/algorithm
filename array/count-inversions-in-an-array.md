@@ -1,4 +1,4 @@
-# Count inversions in an array
+# Count Inversions In An Array
 
 In array `A`, two elements `A[i]` and `A[j]` form an inversion if `A[i] > A[j]` and `i < j`
 

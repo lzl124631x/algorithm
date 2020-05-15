@@ -4,7 +4,7 @@ When the number range is very large and the numbers are very sparse, we can disc
 
 For example, the input array is:
 
-```
+```text
 -10000, 0, 10000
 ```
 
@@ -12,13 +12,13 @@ If we need to create an array covering the range we need to create one with leng
 
 We can turn it into
 
-```
+```text
 0, 1, 2
 ```
 
 with the following mapping
 
-```
+```text
 -10000 -> 0
 0      -> 1
 10000  -> 2
@@ -43,4 +43,5 @@ vector<int> discretize(vector<int> &input) {
 
 ## Problem
 
-* [699. Falling Squares (Hard)](https://leetcode.com/problems/falling-squares/
+* \[699. Falling Squares \(Hard\)\]\([https://leetcode.com/problems/falling-squares/](https://leetcode.com/problems/falling-squares/)
+

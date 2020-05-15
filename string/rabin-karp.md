@@ -1,4 +1,4 @@
-# Rabin Karp algorithm
+# Rabin Karp
 
 A string-searching algorithm that uses rolling hash to find an exact match of a pattern string in a text.
 
@@ -49,10 +49,11 @@ public:
 
 ## Problem
 
-* [28. Implement strStr() (Easy)](https://leetcode.com/problems/implement-strstr/)
+* [28. Implement strStr\(\) \(Easy\)](https://leetcode.com/problems/implement-strstr/)
 
 ## Reference
 
-* https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm
-* https://www.youtube.com/watch?v=H4VrKHVG5qI
-* https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/
+* [https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp\_algorithm](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm)
+* [https://www.youtube.com/watch?v=H4VrKHVG5qI](https://www.youtube.com/watch?v=H4VrKHVG5qI)
+* [https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/](https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/)
+

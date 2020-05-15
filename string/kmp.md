@@ -1,6 +1,6 @@
-# KMP Algorithm
+# Kmp
 
-KMP (Knuth-Morris-Pratt) algorithm is a substring search algorithm.
+KMP \(Knuth-Morris-Pratt\) algorithm is a substring search algorithm.
 
 LPS: Longest proper Prefix which is also Suffix.
 
@@ -51,11 +51,12 @@ public:
 
 ## Problems
 
-* [28. Implement strStr() (Easy)](https://leetcode.com/problems/implement-strstr/)
-* [214. Shortest Palindrome (Hard)](https://leetcode.com/problems/shortest-palindrome/)
-* [1392. Longest Happy Prefix (Hard)](https://leetcode.com/problems/longest-happy-prefix/)
+* [28. Implement strStr\(\) \(Easy\)](https://leetcode.com/problems/implement-strstr/)
+* [214. Shortest Palindrome \(Hard\)](https://leetcode.com/problems/shortest-palindrome/)
+* [1392. Longest Happy Prefix \(Hard\)](https://leetcode.com/problems/longest-happy-prefix/)
 
 ## Reference
 
-* https://youtu.be/GTJr8OvyEVQ
-* https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
+* [https://youtu.be/GTJr8OvyEVQ](https://youtu.be/GTJr8OvyEVQ)
+* [https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/](https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/)
+

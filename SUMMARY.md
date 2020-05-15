@@ -5,6 +5,9 @@
 ## Data Structure
 
 * [Trie](data-structure/trie.md)
+* [Segment Tree](data-structure/segment-tree.md)
+* [Binary Index Tree](data-structure/binary-index-tree.md)
+* [Union Find](data-structure/union-find.md)
 
 ## Array
 

@@ -16,6 +16,8 @@
   * [Segment Tree](data-structure/segment-tree.md)
   * [Trie](data-structure/trie.md)
   * [Union Find](data-structure/union-find.md)
+- [Dynamic Programming](dynamic-programming/dynamic-programming.md)
+  * [Knapsnack](dynamic-programming/knapsnack.md)
 - Graph
   - Shortest Path
     * [Bellman Ford](graph/shortest-path/bellman-ford.md)
@@ -41,7 +43,6 @@
 * [Dfs](dfs.md)
 * [Discretization](discretization.md)
 * [Divide And Conquer](divide-and-conquer.md)
-* [Dynamic Programming](dynamic-programming.md)
 * [Line Sweep](line-sweep.md)
 * [Minmax](minmax.md)
 * [Monoqueue](monoqueue.md)

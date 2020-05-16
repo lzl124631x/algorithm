@@ -6,7 +6,7 @@ It can be used for solving range query problems like finding minimum, maximum, s
 
 ## Implementation
 
-Here I use [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable/) as an example.
+Here I use [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/) as an example.
 
 ```cpp
 // OJ: https://leetcode.com/problems/range-sum-query-mutable/
@@ -30,7 +30,7 @@ public:
         tree = vector<int>(N * 2);
         buildTree(nums);
     }
-    
+
     void update(int i, int val) {
         i += N;
         tree[i] = val;
@@ -39,7 +39,7 @@ public:
             tree[i] = tree[2 * i] + tree[2 * i + 1];
         }
     }
-    
+
     int sumRange(int i, int j) {
         i += N;
         j += N;
@@ -81,7 +81,7 @@ public:
         this->merge = merge;
         buildTree(nums);
     }
-    
+
     void update(int i, int val) {
         i += N;
         tree[i] = val;
@@ -90,7 +90,7 @@ public:
             tree[i] = merge(tree[2 * i], tree[2 * i + 1]);
         }
     }
-    
+
     int query(int from, int to, int def) {
         int i = from + N, j = to + N;
         int ans = def;
@@ -123,14 +123,13 @@ public:
 
 When we want to update an interval all at once, we need to use lazy propagation to ensure good run-time complexity.
 
-
-
 ## Problems
 
-* [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable/)
-* [699. Falling Squares (Hard)](https://leetcode.com/problems/falling-squares/)
+* [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/)
+* [699. Falling Squares \(Hard\)](https://leetcode.com/problems/falling-squares/)
 
 ## Reference
 
-* https://leetcode.com/problems/range-sum-query-mutable/solution/
-* https://leetcode.com/articles/a-recursive-approach-to-segment-trees-range-sum-queries-lazy-propagation/
+* [https://leetcode.com/problems/range-sum-query-mutable/solution/](https://leetcode.com/problems/range-sum-query-mutable/solution/)
+* [https://leetcode.com/articles/a-recursive-approach-to-segment-trees-range-sum-queries-lazy-propagation/](https://leetcode.com/articles/a-recursive-approach-to-segment-trees-range-sum-queries-lazy-propagation/)
+

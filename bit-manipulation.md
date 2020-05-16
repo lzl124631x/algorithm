@@ -4,7 +4,7 @@
 
 `~val`
 
-```
+```text
 NOT 0111 (decimal 7)
 = 1000 (decimal 8)
 ```
@@ -13,13 +13,13 @@ NOT 0111 (decimal 7)
 
 So if `val` is some non-negative number, the following:
 
-```
+```text
 for (int i = val; ~i; --i)
 ```
 
 is equivalent to
 
-```
+```text
 for (int i = val; i >= 0; --i)
 ```
 
@@ -51,6 +51,7 @@ function lowbit(int x) {
 }
 ```
 
-## Reference 
+## Reference
 
-* https://oi-wiki.org/math/bit/
+* [https://oi-wiki.org/math/bit/](https://oi-wiki.org/math/bit/)
+

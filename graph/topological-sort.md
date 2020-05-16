@@ -1,16 +1,16 @@
 # Topological Sort
 
-Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge `uv`, vertex `u` comes before `v` in the ordering.
+Topological sorting for Directed Acyclic Graph \(DAG\) is a linear ordering of vertices such that for every directed edge `uv`, vertex `u` comes before `v` in the ordering.
 
 ## Implementation
 
-### Kahn Algorithm (BFS)
+### Kahn Algorithm \(BFS\)
 
 1. Put all the vertices with 0 in-degree in to a `queue q`.
-1. Get a vertex `u` at a time from `q`, and decrement the in-degree of all its neighbors.
-1. If a neighbor has 0 in-degree, add it to `q`.
-1. Keep repeating until we exhaust `q`.
-1. If the number of visited vertices equals the total number of vertices, it's a DAG; otherwise, there must be a circle in the graph.
+2. Get a vertex `u` at a time from `q`, and decrement the in-degree of all its neighbors.
+3. If a neighbor has 0 in-degree, add it to `q`.
+4. Keep repeating until we exhaust `q`.
+5. If the number of visited vertices equals the total number of vertices, it's a DAG; otherwise, there must be a circle in the graph.
 
 ```cpp
 // OJ: https://leetcode.com/problems/course-schedule-ii/
@@ -87,5 +87,6 @@ public:
 
 ## Problems
 
-* [207. Course Schedule (Medium)](https://leetcode.com/problems/course-schedule/)
-* [210. Course Schedule II (Medium)](https://leetcode.com/problems/course-schedule-ii/)
+* [207. Course Schedule \(Medium\)](https://leetcode.com/problems/course-schedule/)
+* [210. Course Schedule II \(Medium\)](https://leetcode.com/problems/course-schedule-ii/)
+

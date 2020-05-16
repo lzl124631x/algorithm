@@ -1,4 +1,4 @@
-# AVL Tree
+# Avl Tree
 
 An AVL Tree \(named after Soviet inventors **A**delson-**V**elsky and **L**andis\) is a self-balancing binary search tree \(BST\). It was the first such data structure to be invented.
 

@@ -4,7 +4,7 @@ Color each connected component in a graph with different colors.
 
 ## Implementation
 
-Implement a function `int componentColoring(vector<vector<int>> &G, vector<int> &color) ` where `G` is an adjacency list representation of the graph, `color` should be updated such that `color[i]` is the color index (starting from `0`) of the component where `i`th node belongs, and the return value is the number of colors (i.e. components).
+Implement a function `int componentColoring(vector<vector<int>> &G, vector<int> &color)` where `G` is an adjacency list representation of the graph, `color` should be updated such that `color[i]` is the color index \(starting from `0`\) of the component where `i`th node belongs, and the return value is the number of colors \(i.e. components\).
 
 ### DFS
 
@@ -89,3 +89,4 @@ int componentColoring(vector<vector<int>> &G, vector<int> &color) {
     return k;
 }
 ```
+

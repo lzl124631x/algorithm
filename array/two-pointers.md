@@ -1,4 +1,4 @@
-# Two pointers
+# Two Pointers
 
 ### Problems
 

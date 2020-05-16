@@ -1,37 +1,38 @@
-# Algorithm
+# Table of contents
 
-- Array
+* [Introduction](README.md)
+* [Array](array/README.md)
   * [Count Inversions In An Array](array/count-inversions-in-an-array.md)
   * [Permutation](array/permutation.md)
   * [Quick Select](array/quick-select.md)
   * [Sliding Window](array/sliding-window.md)
   * [Two Pointers](array/two-pointers.md)
-- Binary Tree
+* [Binary Tree](binary-tree/README.md)
   * [Avl Tree](binary-tree/avl-tree.md)
   * [Binary Search Tree](binary-tree/binary-search-tree.md)
   * [Serialization And Deserialization](binary-tree/serialization-and-deserialization.md)
   * [Traversal](binary-tree/traversal.md)
-- Data Structure
+* [Data Structure](data-structure/README.md)
   * [Binary Index Tree](data-structure/binary-index-tree.md)
   * [Segment Tree](data-structure/segment-tree.md)
   * [Trie](data-structure/trie.md)
   * [Union Find](data-structure/union-find.md)
-- [Dynamic Programming](dynamic-programming/dynamic-programming.md)
+* [Dynamic Programming](dynamic-programming/dynamic-programming.md)
   * [Knapsnack](dynamic-programming/knapsnack.md)
-- Graph
-  - Shortest Path
-    * [Bellman Ford](graph/shortest-path/bellman-ford.md)
-    * [Dijkstra](graph/shortest-path/dijkstra.md)
-    * [Floyd Warshall](graph/shortest-path/floyd-warshall.md)
-    * [Prim](graph/shortest-path/prim.md)
+* [Graph](graph/README.md)
+  * [Shortest Path](graph/shortest-path/README.md)
+  * [Bellman Ford](graph/shortest-path/bellman-ford.md)
+  * [Dijkstra](graph/shortest-path/dijkstra.md)
+  * [Floyd Warshall](graph/shortest-path/floyd-warshall.md)
+  * [Prim](graph/shortest-path/prim.md)
   * [Component Coloring](graph/component-coloring.md)
   * [Component Count](graph/component-count.md)
   * [Euler Path](graph/euler-path.md)
   * [Topological Sort](graph/topological-sort.md)
-- Math
+* [Math](math/README.md)
   * [Catalan Number](math/catalan-number.md)
   * [Gcd](math/gcd.md)
-- String
+* [String](string/README.md)
   * [Kmp](string/kmp.md)
   * [Rabin Karp](string/rabin-karp.md)
   * [Z](string/z.md)
@@ -50,3 +51,4 @@
 * [Overflow](overflow.md)
 * [Sqrt Decomposition](sqrt-decomposition.md)
 * [State And Hash Table](state-and-hash-table.md)
+

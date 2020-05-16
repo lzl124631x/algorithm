@@ -4,8 +4,9 @@ Minimax is a kind of backtracking algorithm that is used in decision making and 
 
 ## Problems
 
-* [1406. Stone Game III (Hard)](https://leetcode.com/problems/stone-game-iii/)
+* [1406. Stone Game III \(Hard\)](https://leetcode.com/problems/stone-game-iii/)
 
 ## Reference
 
-* https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/
+* [https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/)
+

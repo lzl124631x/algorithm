@@ -42,6 +42,28 @@ for (int i = 0; i < N; ++i) {
 return dp[C];
 ```
 
+## A Constant Optimization
+
+Since we only need `dp[N][C]`, which only requires `dp[N-1][C]` and `dp[N-1][C-w[N-1]]`. So for `i = N - 2` (the second from the last item), we only need to loop from `max( w[N-2], C - w[N-1] )` to `C`.
+
+`dp[N-1][C-w[N-1]]` requires `dp[N-2][C]` and `dp[N-2][C-w[N-1]-w[N-2]]`, so for `i = N - 3`, we only need to loop from `max( w[N-3], C - w[N-1] - w[N-2] )` to `C`.
+
+Generalization: for `i`-th item, the inner loop should be from `max( w[i], C - sum(w[j] | i < j < N ) )` to `C`.
+
+```cpp
+// Time: O(NC)
+// Space: O(C)
+vector<int> dp(C + 1);
+int sum = accumulate(w.begin(), w.end(), 0);
+for (int i = 0; i < N; ++i) {
+    sum -= w[i];
+    for (int c = C; c >= max(w[i], C - sum); --c) {
+        dp[c] = max( dp[c], dp[c - w[i]] + v[i] );
+    }
+}
+return dp[C];
+```
+
 ## Problems
 
 * [416. Partition Equal Subset Sum (Medium)](https://leetcode.com/problems/partition-equal-subset-sum/)

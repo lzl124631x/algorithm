@@ -35,5 +35,3 @@ Example: Travelling salesman problem \(TSP\)
 ### Problems
 
 * [1349. Maximum Students Taking Exam \(Hard\)](https://leetcode.com/problems/maximum-students-taking-exam/)
-
-test

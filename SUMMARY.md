@@ -2,6 +2,7 @@
 
 - [Array](array/README.md)
   * [Count Inversions In An Array](array/count-inversions-in-an-array.md)
+  * [Kadane](array/kadane.md)
   * [Permutation](array/permutation.md)
   * [Quick Select](array/quick-select.md)
   * [Sliding Window](array/sliding-window.md)
@@ -19,6 +20,8 @@
 - [Dynamic Programming](dynamic-programming/dynamic-programming.md)
   - [Knapsack](dynamic-programming/knapsack/README.md)
     * [0 1 Knapsack](dynamic-programming/knapsack/0-1-knapsack.md)
+    * [Bounded Knapsack](dynamic-programming/knapsack/bounded-knapsack.md)
+    * [Unbounded Knapsack](dynamic-programming/knapsack/unbounded-knapsack.md)
 - [Graph](graph/README.md)
   - [Shortest Path](graph/shortest-path/README.md)
     * [Bellman Ford](graph/shortest-path/bellman-ford.md)

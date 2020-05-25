@@ -10,6 +10,8 @@ If `u` must happens before `v`, or in other words, `v` is dependent on `u`, then
 
 ### Kahn Algorithm \(BFS\)
 
+It requires additional space for storing the `indegree`s of the nodes.
+
 1. Put all the vertices with 0 in-degree in to a `queue q`.
 2. Get a vertex `u` at a time from `q`, and decrement the in-degree of all its neighbors.
 3. If a neighbor has 0 in-degree, add it to `q`.

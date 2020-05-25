@@ -56,6 +56,10 @@ Each vertex has three states:
 2. -1 = being visited in the current DFS session. If we visit a node with state -1, it means there is a circle in the graph.
 3. 1 = has been visited in a prevous DFS session and this vertex is not in a circle.
 
+It's a post-order DFS -- the node is pushed into the answer after all its subsequent nodes are visited.
+
+Don't forget to reverse the `ans` before returning.
+
 ```cpp
 // OJ: https://leetcode.com/problems/course-schedule-ii/
 // Author: github.com/lzl124631x

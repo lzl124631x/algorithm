@@ -4,6 +4,10 @@ Topological sorting for Directed Acyclic Graph \(DAG\) is a linear ordering of v
 
 ## Implementation
 
+We represent the graph `G` as `unordered_map<int, vector<int>>` which is a map from source node to a list of destination nodes.
+
+If `u` must happens before `v`, or in other words, `v` is dependent on `u`, then there is a directed edge `u -> v`, where `u` is the source node, and `v` is the destination node.
+
 ### Kahn Algorithm \(BFS\)
 
 1. Put all the vertices with 0 in-degree in to a `queue q`.

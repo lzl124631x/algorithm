@@ -53,4 +53,5 @@
 * [Monotonous Stack](monotonous-stack.md)
 * [Overflow](overflow.md)
 * [Sqrt Decomposition](sqrt-decomposition.md)
+* [Stack](stack.md)
 * [State And Hash Table](state-and-hash-table.md)

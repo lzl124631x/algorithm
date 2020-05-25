@@ -70,23 +70,23 @@ Don't forget to reverse the `ans` before returning.
 class Solution {
     vector<int> ans;
     unordered_map<int, vector<int>> G;
-    vector<int> seen;
+    vector<int> state;
     bool dfs(int u) {
-        if (seen[u]) return seen[u] == 1;
-        seen[u] = -1;
+        if (state[u]) return state[u] == 1;
+        state[u] = -1;
         for (int v : G[u]) {
             if (!dfs(v)) return false;
         }
-        seen[u] = 1;
+        state[u] = 1;
         ans.push_back(u);
         return true;
     }
 public:
     vector<int> findOrder(int N, vector<vector<int>>& E) {
-        seen.assign(N, 0);
+        state.assign(N, 0);
         for (auto &e : E) G[e[1]].push_back(e[0]);
         for (int i = 0; i < N; ++i) {
-            if (seen[i]) continue;
+            if (state[i]) continue;
             if (!dfs(i)) return {};
         }
         reverse(begin(ans), end(ans));
@@ -101,3 +101,4 @@ public:
 * [210. Course Schedule II \(Medium\)](https://leetcode.com/problems/course-schedule-ii/)
 * [329. Longest Increasing Path in a Matrix (Hard)](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
 * [Stable Wall](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003379bb)
+* [Fox And Names](https://codeforces.com/contest/510/problem/C)

@@ -28,6 +28,7 @@
     * [Dijkstra](graph/shortest-path/dijkstra.md)
     * [Floyd Warshall](graph/shortest-path/floyd-warshall.md)
     * [Prim](graph/shortest-path/prim.md)
+  * [Bipartite](graph/bipartite.md)
   * [Component Coloring](graph/component-coloring.md)
   * [Component Count](graph/component-count.md)
   * [Euler Path](graph/euler-path.md)

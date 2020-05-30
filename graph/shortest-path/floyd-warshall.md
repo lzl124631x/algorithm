@@ -1,4 +1,4 @@
-# Floyd Warshall Algorithm
+# Floyd-Warshall Algorithm
 
 Floyd-Warshall algorithm is an algorithm for finding the shorted paths in a weighted graph with positive or negative edge weights (but no negative cycles). A single execution of the algorithm will find the lengths (summed weights) of shortest paths between all pairs of vertices.
 

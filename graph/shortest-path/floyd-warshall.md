@@ -49,7 +49,42 @@ public:
 };
 ```
 
+## Path reconstruction
+
+The Floyd-Warshall algorithm typically only provides the lengths of the paths between all pairs of vertices. We can nodify it to reconstruct the path for between any two endpoint vertices.
+
+```
+let dist be a |V| * |V| array of minimum distances initialized to Infinity
+let next be a |V| * |V| array of vertex indices initialized to null
+
+procedure FloydWarshallWithPathReconstruction() is
+    for each edge (u, v) do
+        dist[u][v] ← w(u, v)  // The weight of the edge (u, v)
+        next[u][v] ← v
+    for each vertex v do
+        dist[v][v] ← 0
+        next[v][v] ← v
+    for k from 1 to |V| do // standard Floyd-Warshall implementation
+        for i from 1 to |V|
+            for j from 1 to |V|
+                if dist[i][j] > dist[i][k] + dist[k][j] then
+                    dist[i][j] ← dist[i][k] + dist[k][j]
+                    next[i][j] ← next[i][k]
+procedure Path(u, v)
+    if next[u][v] = null then
+        return []
+    path = [u]
+    while u ≠ v
+        u ← next[u][v]
+        path.append(u)
+    return path
+```
+
 ## Problems
 
 * [1462. Course Schedule IV (Medium)](https://leetcode.com/problems/course-schedule-iv/)
 * [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance (Medium)](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)
+
+## Reference
+
+* https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm

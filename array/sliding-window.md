@@ -56,3 +56,6 @@ Find Maximum
 * [159. Longest Substring with At Most Two Distinct Characters \(Hard\)](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)
 * [340. Longest Substring with At Most K Distinct Characters \(Hard\)](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
 
+Fixed Window Size
+
+* [1461. Check If a String Contains All Binary Codes of Size K (Medium)](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/)

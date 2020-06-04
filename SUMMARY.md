@@ -39,6 +39,7 @@
 - [String](string/README.md)
   * [Kmp](string/kmp.md)
   * [Rabin Karp](string/rabin-karp.md)
+  * [String Processing](string/string-processing.md)
   * [Z](string/z.md)
 * [Binary Answer](binary-answer.md)
 * [Binary Search](binary-search.md)

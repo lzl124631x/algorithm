@@ -52,7 +52,7 @@
 * [Line Sweep](line-sweep.md)
 * [Minmax](minmax.md)
 * [Monoqueue](monoqueue.md)
-* [Monotonous Stack](monotonous-stack.md)
+* [Monotonic Stack](monotonic-stack.md)
 * [Overflow](overflow.md)
 * [Reverse Polish Notation](reverse-polish-notation.md)
 * [Sqrt Decomposition](sqrt-decomposition.md)

@@ -4,7 +4,7 @@ Given a list of items with weight `w[i]` and value `v[i]`, what's the maximum va
 
 ## Algorithm
 
-Let `dp[i + 1][w]` be the maximum value we can get using the first `i + 1` items (index from `0` to `i`).
+Let `dp[i + 1][c]` be the maximum value we can get using the first `i + 1` items (index from `0` to `i`).
 
 ```
 dp[i + 1][c] = max(

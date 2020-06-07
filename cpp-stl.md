@@ -47,3 +47,4 @@ And since the **last element** if regarded as the top, so it is the largest elem
 
 * `iota`: Fills the range `[first, last)` with sequentially increasing values, starting with value and repetitively evaluating `++value`. Generating a sequentially increasing index array is one example use case as shown [here](https://leetcode.com/problems/maximum-profit-in-job-scheduling/discuss/409188/C%2B%2B-with-picture)
 * `next_permutation`: Get the next permutation of a given input array. [Example use case](https://github.com/lzl124631x/LeetCode/tree/master/leetcode/556.%20Next%20Greater%20Element%20III)
+* `nth_element`: do a quick select such that the `n`-th element in the array is the `n`-th element in sorted order. All elements before it are less than or equal to it.

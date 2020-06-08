@@ -1,13 +1,40 @@
 # Dynamic Programming
 
-## Signal of DP
+Dynamic Programming is basically DFS with memoization.
 
-* The problem wants us to find the number of ways to do something without giving specific steps like how to achieve it. This can be a typical signal that dynamic programming may come to help. [https://leetcode.com/problems/strange-printer/discuss/106810/Java-O\(n3\)-DP-Solution-with-Explanation-and-Simple-Optimization](https://leetcode.com/problems/strange-printer/discuss/106810/Java-O%28n3%29-DP-Solution-with-Explanation-and-Simple-Optimization)
-* We can use DPS to solve the problem but the time complexity will be too high. If we find we meet the same subproblem over and over again, it's a signal that we can use DP to solve it because top-down DP is basically just a DFS with memo.
+We can use DFS to solve the DP problem in small scale, but when the input size is large, plain DFS will be too slow because we recompute the result for some specific states over and over again, wasting time.
 
-## Basic DP
+## What's the difference between Top-down DP and Bottom-up DP?
 
-### Problems
+Top-down DP:
+* = DFS + memo
+* It's recursive
+* We start from the original problem, and search into sub-problems (i.e. use the results of the sub-problems).
+* If we visualize the DFS search as a tree, top-down DP is going from the root to leaf nodes.
+
+Bottom-up DP:
+* It's iterative
+* We start from resolving the minimal sub-problems, then use those results to build up solutions for sub-problems with larger scale, until we get enough results to build the solution for the original problem.
+* If we visualize the DFS search as a tree, bottom-up DP is going from the leaf nodes to the root.
+
+## When to use DP?
+
+1. it involves searching, especially DFS. We can use DFS to solve the problem in small scale
+2. it only cares about the optimal solution -- Optimal substructure
+3. During searching, we might go into the same state from different paths -- Overlapping sub-problems.
+
+## What is the common process to solve DP problems?
+
+1. Think in DFS way. Identify the states we need to use in each DFS invocation.
+2. Define the transition between states.
+3. Define special/trivial cases.
+
+## Types of DP
+### Sequence DP
+
+We scan the sequence one by one, make decisions at each step.
+
+#### Problems
 
 * [691. Stickers to Spell Word](https://leetcode.com/problems/stickers-to-spell-word/)
 * [174. Dungeon Game \(Hard\)](https://leetcode.com/problems/dungeon-game/)
@@ -15,24 +42,24 @@
 * [446. Arithmetic Slices II - Subsequence \(Hard\)](https://leetcode.com/problems/arithmetic-slices-ii-subsequence/)
 * [1463. Cherry Pickup II (Hard)](https://leetcode.com/problems/cherry-pickup-ii/)
 
-## Interval DP
+### Interval DP
 
 First type k个连续区间 410
 
 Second Type 375 1246
 
-## Bitmask DP
+### Bitmask DP
 
 * [1125. Smallest Sufficient Team \(Hard\)](https://leetcode.com/problems/smallest-sufficient-team/)
 
-## weighted interval scheduling dp
+### weighted interval scheduling dp
 
-## State Compression DP
+### State Compression DP
 
 Usually used to solve NP-hard problems on small scale dataset, faster then search \(DFS or BFS\).
 
 Example: Travelling salesman problem \(TSP\)
 
-### Problems
+#### Problems
 
 * [1349. Maximum Students Taking Exam \(Hard\)](https://leetcode.com/problems/maximum-students-taking-exam/)

@@ -15,17 +15,43 @@ class Solution {
 public:
     vector<int> preorderTraversal(TreeNode* root) {
         if (!root) return {};
-        vector<int> v;
+        vector<int> ans;
         stack<TreeNode*> s;
         s.push(root);
         while (s.size()) {
             root = s.top();
             s.pop();
-            v.push_back(root->val);
+            ans.push_back(root->val);
             if (root->right) s.push(root->right);
             if (root->left) s.push(root->left);
         }
-        return v;
+        return ans;
+    }
+};
+```
+
+Or
+
+```cpp
+// OJ: https://leetcode.com/problems/binary-tree-preorder-traversal/
+// Author: github.com/lzl124631x
+// Time: O(N)
+// Space: O(H)
+class Solution {
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> ans;
+        stack<TreeNode*> s;
+        while (root || s.size()) {
+            if (!root) {
+                root = s.top();
+                s.pop();
+            }
+            ans.push_back(root->val);
+            if (root->right) s.push(root->right);
+            root = root->left;
+        }
+        return ans;
     }
 };
 ```
@@ -44,19 +70,19 @@ See more my solutions [here](https://github.com/lzl124631x/LeetCode/blob/master/
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> v;
+        vector<int> ans;
         stack<TreeNode*> s;
-        while (root || !s.empty()) {
+        while (root || s.size()) {
             while (root) {
                 s.push(root);
                 root = root->left;
             }
             root = s.top();
             s.pop();
-            v.push_back(root->val);
+            ans.push_back(root->val);
             root = root->right;
         }
-        return v;
+        return ans;
     }
 };
 ```
@@ -75,25 +101,23 @@ See more my solutions [here](https://github.com/lzl124631x/LeetCode/blob/master/
 class Solution {
 public:
     vector<int> postorderTraversal(TreeNode* root) {
-        vector<int> v;
+        vector<int> ans;
         stack<TreeNode*> s;
         TreeNode *prev = NULL;
-        while (root || !s.empty()) {
+        while (root || s.size()) {
             while (root) {
                 s.push(root);
                 root = root->left;
             }
             root = s.top();
             if (!root->right || root->right == prev) {
+                ans.push_back(root->val);
                 s.pop();
-                v.push_back(root->val);
                 prev = root;
                 root = NULL;
-            } else {
-                root = root->right;
-            }
+            } else root = root->right;
         }
-        return v;
+        return ans;
     }
 };
 ```

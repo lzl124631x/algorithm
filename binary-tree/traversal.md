@@ -142,7 +142,7 @@ public:
         q.push(root);
         while (q.size()) {
             int cnt = q.size();
-            ans.push_back({});
+            ans.emplace_back();
             while (cnt--) {
                 root = q.front();
                 q.pop();

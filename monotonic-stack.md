@@ -16,4 +16,5 @@ Otherwise, it's **increasing** from bottom to top.
 * [1019. Next Greater Node In Linked List (Medium)](https://leetcode.com/problems/next-greater-node-in-linked-list/)
 * [503. Next Greater Element II (Medium)](https://leetcode.com/problems/next-greater-element-ii/)
 * [84. Largest Rectangle in Histogram (Hard)](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+* [85. Maximal Rectangle (Hard)](https://leetcode.com/problems/maximal-rectangle/)
 * [456. 132 Pattern (Medium)](https://leetcode.com/problems/132-pattern/)

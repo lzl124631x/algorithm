@@ -42,6 +42,7 @@
   * [String Processing](string/string-processing.md)
   * [Z](string/z.md)
 * [Binary Answer](binary-answer.md)
+* [Binary Lifting](binary-lifting.md)
 * [Binary Search](binary-search.md)
 * [Bit Manipulation](bit-manipulation.md)
 * [Cpp Stl](cpp-stl.md)

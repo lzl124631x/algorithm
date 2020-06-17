@@ -35,6 +35,7 @@ vector<int> bellmanFord(vector<vector<int>>& edges, int V, int src) {
 ## Problems
 
 * [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+* [787. Cheapest Flights Within K Stops (Medium)](https://leetcode.com/problems/cheapest-flights-within-k-stops)
 
 ## Reference
 

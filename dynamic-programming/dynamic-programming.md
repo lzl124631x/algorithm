@@ -45,7 +45,7 @@ We scan the sequence one by one, make decisions at each step.
 
 ### Interval DP
 
-* [1478. Allocate Mailboxes (Hard)](https://leetcode.com/problems/allocate-mailboxes/submissions/)
+* [1478. Allocate Mailboxes (Hard)](https://leetcode.com/problems/allocate-mailboxes/)
 * [410. Split Array Largest Sum (Hard)](https://leetcode.com/problems/split-array-largest-sum/)
 
 Second Type 375 1246

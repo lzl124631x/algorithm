@@ -17,6 +17,18 @@ Then we can use binary answer.
 binary search to find  ┘
 ```
 
+## Pseudo Code
+
+```cpp
+int L = minVal, R = maxVal
+while (L <= R) {
+    int M = (L + R) / 2;
+    if (valid(M)) L = M + 1;
+    else R = M - 1;
+}
+return R >= minVal ? R : -1;
+```
+
 ## Problems
 
 * [410. Split Array Largest Sum \(Hard\)](https://leetcode.com/problems/split-array-largest-sum/)

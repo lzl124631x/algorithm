@@ -19,11 +19,13 @@ binary search to find  ┘
 
 ## Pseudo Code
 
+Assume the answer is monotonically descreasing (from valid to invalid), and we are looking for the maximum valid value.
+
 ```cpp
 int L = minVal, R = maxVal
 while (L <= R) {
     int M = (L + R) / 2;
-    if (valid(M)) L = M + 1;
+    if (valid(M)) L = M + 1;  // You can also `ans = L` here to store the answer
     else R = M - 1;
 }
 return R >= minVal ? R : -1;

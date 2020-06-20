@@ -50,6 +50,7 @@ public:
 ## Problem
 
 * [28. Implement strStr\(\) \(Easy\)](https://leetcode.com/problems/implement-strstr/)
+* [1044. Longest Duplicate Substring (Hard)](https://leetcode.com/problems/longest-duplicate-substring/)
 
 ## Reference
 

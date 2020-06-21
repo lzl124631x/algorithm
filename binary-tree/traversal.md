@@ -1,6 +1,6 @@
 # Traversal
 
-### Preorder
+## Preorder
 
 [144. Binary Tree Preorder Traversal \(Medium\)](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 
@@ -56,7 +56,7 @@ public:
 };
 ```
 
-### Inorder
+## Inorder
 
 [94. Binary Tree Inorder Traversal \(Medium\)](https://leetcode.com/problems/binary-tree-inorder-traversal/)
 
@@ -87,7 +87,7 @@ public:
 };
 ```
 
-### Postorder
+## Postorder
 
 [145. Binary Tree Postorder Traversal \(Hard\)](https://leetcode.com/problems/binary-tree-postorder-traversal/)
 
@@ -122,7 +122,7 @@ public:
 };
 ```
 
-### Level-order
+## Level-order
 
 [102. Binary Tree Level Order Traversal \(Medium\)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 
@@ -156,8 +156,11 @@ public:
 };
 ```
 
-### Other variations
+## Other variations
 
 * [107. Binary Tree Level Order Traversal II \(Easy\)](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)
 * [103. Binary Tree Zigzag Level Order Traversal \(Medium\)](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
 
+## Problems
+
+* [124. Binary Tree Maximum Path Sum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)

@@ -12,6 +12,8 @@
   * [Binary Search Tree](binary-tree/binary-search-tree.md)
   * [Serialization And Deserialization](binary-tree/serialization-and-deserialization.md)
   * [Traversal](binary-tree/traversal.md)
+- Company
+  * [Facebook](company/facebook.md)
 - [Data Structure](data-structure/README.md)
   * [Binary Index Tree](data-structure/binary-index-tree.md)
   * [Segment Tree](data-structure/segment-tree.md)
@@ -23,6 +25,9 @@
     * [Bounded Knapsack](dynamic-programming/knapsack/bounded-knapsack.md)
     * [Unbounded Knapsack](dynamic-programming/knapsack/unbounded-knapsack.md)
 - [Graph](graph/README.md)
+  - Minimum Spanning Tree
+    * [Kruskal](graph/minimum-spanning-tree/kruskal.md)
+    * [Prim](graph/minimum-spanning-tree/prim.md)
   - [Shortest Path](graph/shortest-path/README.md)
     * [Bellman Ford](graph/shortest-path/bellman-ford.md)
     * [Dijkstra](graph/shortest-path/dijkstra.md)

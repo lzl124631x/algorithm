@@ -47,6 +47,8 @@ And since the **last element** if regarded as the top, so it is the largest elem
 
 ### iota
 
+https://en.cppreference.com/w/cpp/algorithm/iota
+
 `iota`: Fills the range `[first, last)` with sequentially increasing values, starting with value and repetitively evaluating `++value`. Generating a sequentially increasing index array is one example use case as shown [here](https://leetcode.com/problems/maximum-profit-in-job-scheduling/discuss/409188/C%2B%2B-with-picture)
 
 ### next_permutation

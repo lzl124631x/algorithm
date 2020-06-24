@@ -4,6 +4,8 @@ Dijkstra's original algorithm found the shortest path between two given nodes, b
 
 It's a greedy BFS algorithm.
 
+Note that we should only use this algorithm on a **weighted** graph. If it's an unweighted graph, just use BFS.
+
 ## Algorithm
 
 Give a graph `G = <V, E>`. Put the start point `v0` into a vertices set `S`. Let `M` be the edges between `S` and `V/S`.

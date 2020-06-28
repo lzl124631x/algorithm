@@ -24,6 +24,7 @@
     * [0 1 Knapsack](dynamic-programming/knapsack/0-1-knapsack.md)
     * [Bounded Knapsack](dynamic-programming/knapsack/bounded-knapsack.md)
     * [Unbounded Knapsack](dynamic-programming/knapsack/unbounded-knapsack.md)
+  * [Bitmask Dp](dynamic-programming/bitmask-dp.md)
 - [Graph](graph/README.md)
   - Minimum Spanning Tree
     * [Kruskal](graph/minimum-spanning-tree/kruskal.md)

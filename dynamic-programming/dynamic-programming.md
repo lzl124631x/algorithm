@@ -50,10 +50,6 @@ We scan the sequence one by one, make decisions at each step.
 
 Second Type 375 1246
 
-### Bitmask DP
-
-* [1125. Smallest Sufficient Team \(Hard\)](https://leetcode.com/problems/smallest-sufficient-team/)
-
 ### weighted interval scheduling dp
 
 ### State Compression DP

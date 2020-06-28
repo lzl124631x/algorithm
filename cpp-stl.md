@@ -76,3 +76,11 @@ The order of equal elements is not guaranteed to be preserved. The order of the 
 [Example use case](https://leetcode.com/problems/the-k-strongest-values-in-an-array/discuss/674384/C%2B%2BJavaPython-Two-Pointers-%2B-3-Bonuses)
 
 Complexity: Approximately `(last-first)log(middle-first)` applications of `cmp`
+
+## Miscellaneous
+
+### Why `unordered_set<pair<int, int>>` doesn't work while `set<pair<int, int>>` work?
+
+`set` requires comparison operators. `pair<int, int>` has comparison operators defined, e.g. `<`.
+
+`unordered_set` requires `hash` function being defined but `pair<int, int>` doesn't have that built-in definition.

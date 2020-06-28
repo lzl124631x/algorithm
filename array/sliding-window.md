@@ -1,6 +1,6 @@
 # Sliding Window
 
-### Tip
+## Tip 1
 
 [Here is a 10-line template that can solve most 'substring' problems](https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems)
 
@@ -44,7 +44,33 @@ When finding maximum:
 * this template works when initially counter condition is valid, so we are extending valid window as large as possible until it becomes invalid.
 * the counter condition should be `true` for **invalid** window, i.e. shrinking the invalid window until it becomes valid again.
 
-### Problems
+## Tip 2
+
+To find maximum, I previously have been using this template:
+
+```
+int i = 0, j = 0;
+while (j < N) {
+    while (j < N && valid()) ++j;
+    ans = max(ans, j - i);
+    while (!valid()) ++j;
+}
+```
+
+Now I found this template is simpler:
+
+```
+int i = 0, j = 0;
+for (; j < N; ++j) {
+    // use A[j] to update state.
+    while (!valid()) ++i; // and update state using A[i]
+    ans = max(ans, j - i);
+}
+```
+
+Because with this template, you don't need to think about when to stop extending `j`, we just always extending `j`.
+
+## Problems
 
 Find Minimum
 
@@ -55,6 +81,7 @@ Find Maximum
 * [3. Longest Substring Without Repeating Characters \(Medium\)](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 * [159. Longest Substring with At Most Two Distinct Characters \(Hard\)](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)
 * [340. Longest Substring with At Most K Distinct Characters \(Hard\)](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
+* [1493. Longest Subarray of 1's After Deleting One Element (Medium)](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/submissions/)
 
 Fixed Window Size
 

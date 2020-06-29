@@ -1,4 +1,4 @@
-# Fast Mod
+# Fast Pow
 
 ## Implementation
 

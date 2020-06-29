@@ -41,7 +41,7 @@
   * [Topological Sort](graph/topological-sort.md)
 - [Math](math/README.md)
   * [Catalan Number](math/catalan-number.md)
-  * [Fast Mod](math/fast-mod.md)
+  * [Fast Pow](math/fast-pow.md)
   * [Gcd](math/gcd.md)
 - [String](string/README.md)
   * [Kmp](string/kmp.md)

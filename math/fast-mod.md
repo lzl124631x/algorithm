@@ -24,4 +24,4 @@ for (int i = 1; i < N; ++i) p[i] = (p[i - 1] * 2) % mod;
 
 ## Problems
 
-* [1498. Number of Subsequences That Satisfy the Given Sum Condition (Medium)](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/submissions/)
+* [1498. Number of Subsequences That Satisfy the Given Sum Condition (Medium)](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)

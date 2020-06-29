@@ -18,8 +18,15 @@ int modpow(int base, int exp, int mod) {
 Or simply pre-compute those pows.
 
 ```cpp
-vector<int> p(N, 1);
-for (int i = 1; i < N; ++i) p[i] = (p[i - 1] * 2) % mod;
+vector<int> p(exp + 1, 1);
+for (int i = 1; i <= exp; ++i) p[i] = ((long long) p[i - 1] * base) % mod;
+```
+
+If we want to reuse the result across test cases, we can use `static vector`.
+
+```cpp
+static vector<int> p{1};
+while (p.size() <= exp) p.push_back(((long long) p.back() * base) % mod);
 ```
 
 ## Problems

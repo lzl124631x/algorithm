@@ -37,7 +37,7 @@
   * [Bipartite](graph/bipartite.md)
   * [Component Coloring](graph/component-coloring.md)
   * [Component Count](graph/component-count.md)
-  * [Euler Path](graph/euler-path.md)
+  * [Eulerian Path](graph/eulerian-path.md)
   * [Topological Sort](graph/topological-sort.md)
 - [Math](math/README.md)
   * [Catalan Number](math/catalan-number.md)

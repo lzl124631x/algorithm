@@ -5,8 +5,7 @@ as known as prefix tree.
 ### Implementation
 
 ```cpp
-class TrieNode {
-public:
+struct TrieNode {
     TrieNode *next[26] = {};
     int count = 0;
 };

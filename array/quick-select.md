@@ -6,18 +6,20 @@ The time complexity is `O(N)` on average, and `O(N^2)` in the worst case.
 
 ### Implementation
 
+Quick select with elements sorted in ascending order.
+
 ```cpp
 // OJ: https://leetcode.com/problems/kth-largest-element-in-an-array/
 // Author: github.com/lzl124631x
 // Time: O(N) on averge, O(N^2) in the worst case
 // Space: O(1)
 class Solution {
-    int quickSelect(vector<int> &A, int L, int R) {
-        int M = rand() % (R - L + 1) + L, p = A[M], i = L, j = R;
+    int quickSelect(vector<int> &A, int L, int R, int M) {
+        int pivot = A[M], i = L, j = R;
         swap(A[L], A[M]);
         while (i < j) {
-            while (i < j && A[j] >= p) --j;
-            while (i < j && A[i] <= p) ++i;
+            while (i < j && A[j] >= pivot) --j;
+            while (i < j && A[i] <= pivot) ++i;
             if (i < j) swap(A[i], A[j]);
         }
         swap(A[L], A[i]);
@@ -29,10 +31,43 @@ public:
         k = A.size() - k;
         srand(NULL);
         while (true) {
-            M = quickSelect(A, L, R);
+            int M = quickSelect(A, L, R, L + rand() % (R - L + 1));
             if (M == k) return A[k];
             if (M > k) R = M - 1;
             else L = M + 1;
+        }
+    }
+};
+```
+
+Quick select with elements sorted in descending order.
+
+```cpp
+// OJ: https://leetcode.com/problems/kth-largest-element-in-an-array/
+// Author: github.com/lzl124631x
+// Time: O(N) on averge, O(N^2) in the worst case
+// Space: O(1)
+class Solution {
+    int quickSelect(vector<int> &A, int L, int R, int M) {
+        int pivot = A[M], i = L, j = R;
+        swap(A[L], A[M]);
+        while (i < j) {
+            while (i < j && A[j] <= pivot) --j;
+            while (i < j && A[i] >= pivot) ++i;
+            if (i < j) swap(A[i], A[j]);
+        }
+        swap(A[L], A[j]);
+        return j;
+    }
+public:
+    int findKthLargest(vector<int>& A, int k) {
+        int L = 0, R = A.size() - 1;
+        --k;
+        while (true) {
+            int M = quickSelect(A, L, R, L + rand() % (R - L + 1));
+            if (M == k) return A[M];
+            if (M < k) L = M + 1;
+            else R = M - 1;
         }
     }
 };
@@ -44,6 +79,5 @@ public:
 
 ### Problems
 
-* [973. K Closest Points to Origin \(Medium\)](https://leetcode.com/problems/k-closest-points-to-origin/)
 * [215. Kth Largest Element in an Array \(Medium\)](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-
+* [973. K Closest Points to Origin \(Medium\)](https://leetcode.com/problems/k-closest-points-to-origin/)

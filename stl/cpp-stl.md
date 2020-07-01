@@ -37,7 +37,7 @@ https://en.cppreference.com/w/cpp/algorithm/iota
 
 `next_permutation`: Get the next permutation of a given input array. [Example use case](https://github.com/lzl124631x/LeetCode/tree/master/leetcode/556.%20Next%20Greater%20Element%20III)
 
-### nth_element
+### nth_element (Quick Select)
 
 https://en.cppreference.com/w/cpp/algorithm/nth_element
 

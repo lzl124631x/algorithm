@@ -43,6 +43,9 @@
   * [Catalan Number](math/catalan-number.md)
   * [Fast Pow](math/fast-pow.md)
   * [Gcd](math/gcd.md)
+- Stl
+  * [Cpp Stl](stl/cpp-stl.md)
+  * [Priority Queue](stl/priority_queue.md)
 - [String](string/README.md)
   * [Kmp](string/kmp.md)
   * [Rabin Karp](string/rabin-karp.md)
@@ -52,7 +55,6 @@
 * [Binary Lifting](binary-lifting.md)
 * [Binary Search](binary-search.md)
 * [Bit Manipulation](bit-manipulation.md)
-* [Cpp Stl](cpp-stl.md)
 * [Date](date.md)
 * [Dfs](dfs.md)
 * [Discretization](discretization.md)

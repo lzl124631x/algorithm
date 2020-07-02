@@ -73,6 +73,22 @@ public:
 };
 ```
 
+Or use STL
+
+```cpp
+// OJ: https://leetcode.com/problems/kth-largest-element-in-an-array/
+// Author: github.com/lzl124631x
+// Time: O(N) on average, O(N^2) in the worst case
+// Space: O(1)
+class Solution {
+public:
+    int findKthLargest(vector<int>& A, int k) {
+        nth_element(begin(A), begin(A) + k - 1, end(A), greater<int>());
+        return A[k - 1];
+    }
+};
+```
+
 ### Reference
 
 * [Quickselect Algorithm - GeeksforGeeks](https://www.geeksforgeeks.org/quickselect-algorithm/)

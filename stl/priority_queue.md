@@ -36,6 +36,8 @@ vector: [    8,              ...         2  ]        [ 10 ]
 
 ## Related functions
 
+Note: try to solve [215. Kth Largest Element in an Array (Medium)](https://leetcode.com/problems/kth-largest-element-in-an-array/submissions/) using the following functions.
+
 ### `make_heap`
 
 Rearranges the elements in the range `[first,last)` in such a way that they form a *heap*.

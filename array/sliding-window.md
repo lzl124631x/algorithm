@@ -48,7 +48,7 @@ When finding maximum:
 
 To find maximum, I previously have been using this template:
 
-```
+```cpp
 int i = 0, j = 0;
 while (j < N) {
     while (j < N && valid()) ++j;
@@ -59,7 +59,7 @@ while (j < N) {
 
 Now I found this template is simpler:
 
-```
+```cpp
 int i = 0, j = 0;
 for (; j < N; ++j) {
     // use A[j] to update state.
@@ -70,11 +70,25 @@ for (; j < N; ++j) {
 
 Because with this template, you don't need to think about when to stop extending `j`, we just always extending `j`.
 
+Similarly, to find minimum window:
+
+```cpp
+int i = 0;
+for (int j = 0; j < N; ++j) {
+    // use A[j] to update state.
+    while (valid()) {
+        ans = min(ans, j - i + 1);
+        sum -= A[i++];
+    }
+}
+```
+
 ## Problems
 
 Find Minimum
 
 * [76. Minimum Window Substring \(Hard\)](https://leetcode.com/problems/minimum-window-substring/)
+* [209. Minimum Size Subarray Sum (Medium)](https://leetcode.com/problems/minimum-size-subarray-sum/)
 
 Find Maximum
 

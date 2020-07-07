@@ -1,4 +1,4 @@
-# Binary Index Tree
+# Binary Indexed Tree
 
 aka Fenwick Tree.
 
@@ -10,6 +10,67 @@ Query: `O(logN)`
 
 Update: `O(logN)`
 
+## Implementation
+
+```cpp
+class BIT {
+    vector<int> sum;
+    static inline int lowbit(int x) { return x & -x; }
+public:
+    BIT(int N) : sum(N + 1) {};
+    void update(int i, int delta) {
+        for (; i < sum.size(); i += lowbit(i)) sum[i] += delta;
+    }
+    int query(int i) {
+        int ans = 0;
+        for (; i; i -= lowbit(i)) ans += sum[i];
+        return ans;
+    }
+};
+```
+
+The implementation for [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable/submissions/)
+
+```cpp
+// OJ: https://leetcode.com/problems/range-sum-query-mutable/
+// Author: github.com/lzl124631x
+// Time: 
+//      NumArray: O(N^2 * logN)
+//      update: O(logN)
+//      sumRange: O(logN)
+// Ref: https://www.youtube.com/watch?v=WbafSgetDDk
+class BIT {
+    vector<int> sum;
+    static inline int lowbit(int x) { return x & -x; }
+public:
+    BIT(int N) : sum(N + 1) {};
+    void update(int i, int delta) {
+        for (; i < sum.size(); i += lowbit(i)) sum[i] += delta;
+    }
+    int query(int i) {
+        int ans = 0;
+        for (; i; i -= lowbit(i)) ans += sum[i];
+        return ans;
+    }
+};
+class NumArray {
+    BIT tree;
+    vector<int> nums;
+public:
+    NumArray(vector<int>& nums) : nums(nums), tree(nums.size()) {
+        for (int i = 0; i < nums.size(); ++i) tree.update(i + 1, nums[i]);
+    }
+    
+    void update(int i, int val) {
+        tree.update(i + 1, val - nums[i]);
+        nums[i] = val;
+    }
+    
+    int sumRange(int i, int j) {
+        return tree.query(j + 1) - tree.query(i);
+    }
+};
+```
 
 ## Reference
 

@@ -19,3 +19,4 @@ Otherwise, it's **increasing** from bottom to top.
 * [84. Largest Rectangle in Histogram (Hard)](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 * [85. Maximal Rectangle (Hard)](https://leetcode.com/problems/maximal-rectangle/)
 * [456. 132 Pattern (Medium)](https://leetcode.com/problems/132-pattern/)
+* [1504. Count Submatrices With All Ones (Medium)](https://leetcode.com/problems/count-submatrices-with-all-ones/)

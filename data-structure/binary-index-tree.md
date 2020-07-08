@@ -26,6 +26,9 @@ public:
         for (; i; i -= lowbit(i)) ans += sum[i];
         return ans;
     }
+    int rangeQuery(int i, int j) {
+        return query(j) - query(i - 1);
+    }
 };
 ```
 
@@ -52,6 +55,9 @@ public:
         for (; i; i -= lowbit(i)) ans += sum[i];
         return ans;
     }
+    int rangeQuery(int i, int j) {
+        return query(j) - query(i - 1);
+    }
 };
 class NumArray {
     BIT tree;
@@ -67,7 +73,7 @@ public:
     }
     
     int sumRange(int i, int j) {
-        return tree.query(j + 1) - tree.query(i);
+        return tree.rangeQuery(i + 1, j + 1);
     }
 };
 ```
@@ -79,3 +85,4 @@ public:
 * [https://oi-wiki.org/ds/fenwick/](https://oi-wiki.org/ds/fenwick/)
 * https://www.youtube.com/watch?v=WbafSgetDDk
 * https://visualgo.net/en/fenwicktree
+* https://www.luogu.com.cn/problem/solution/P3374

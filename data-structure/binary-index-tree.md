@@ -18,10 +18,10 @@ class BIT {
     static inline int lowbit(int x) { return x & -x; }
 public:
     BIT(int N) : sum(N + 1) {};
-    void update(int i, int delta) {
+    void update(int i, int delta) { // Note: this `i` is 1-based.
         for (; i < sum.size(); i += lowbit(i)) sum[i] += delta;
     }
-    int query(int i) {
+    int query(int i) { // Note: this `i` is 1-based.
         int ans = 0;
         for (; i; i -= lowbit(i)) ans += sum[i];
         return ans;

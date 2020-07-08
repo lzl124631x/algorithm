@@ -26,7 +26,7 @@ public:
         for (; i; i -= lowbit(i)) ans += sum[i];
         return ans;
     }
-    int rangeQuery(int i, int j) {
+    int rangeQuery(int i, int j) { // Note: these `i` and `j` are 1-based.
         return query(j) - query(i - 1);
     }
 };

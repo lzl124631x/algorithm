@@ -4,6 +4,21 @@ Segment tree is a data structure that supports queries and update on intervals.
 
 It can be used for solving range query problems like finding minimum, maximum, sum, greatest common divisor, least common denominator in array in logarithmic time.
 
+Example range sum query problem:
+
+given an array, you need to do the following operations:
+* add `k` to every numbers in a index range.
+* get the sum of all the numbers within a index range.
+
+Except for sum, as long as the `merge` operation satisfies **associative law**, we can use segment tree as well.
+
+```
+merge(merge(a, b), c) = merge(a, merge(b, c))
+// Example
+max(max(a, b), c) = max(a, max(b, c))
+gcd(gcd(a, b), c) = gcd(a, gcd(b, c))
+```
+
 ## Implementation
 
 Here I use [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/) as an example.
@@ -64,7 +79,7 @@ Another OOD implementation:
 //      NumArray: O(N)
 //      update: O(1)
 //      sumRange: O(logN)
-// Space: O(N
+// Space: O(N)
 typedef int Merge(const int &a, const int& b);
 class SegTree {
     vector<int> tree;
@@ -127,6 +142,7 @@ When we want to update an interval all at once, we need to use lazy propagation 
 
 * [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/)
 * [699. Falling Squares \(Hard\)](https://leetcode.com/problems/falling-squares/)
+* [1505. Minimum Possible Integer After at Most K Adjacent Swaps On Digits (Hard)](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
 
 ## Reference
 

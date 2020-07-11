@@ -31,17 +31,17 @@
 
 https://en.cppreference.com/w/cpp/algorithm/iota
 
-`iota`: Fills the range `[first, last)` with sequentially increasing values, starting with value and repetitively evaluating `++value`. Generating a sequentially increasing index array is one example use case as shown [here](https://leetcode.com/problems/maximum-profit-in-job-scheduling/discuss/409188/C%2B%2B-with-picture)
+Fills the range `[first, last)` with sequentially increasing values, starting with value and repetitively evaluating `++value`. Generating a sequentially increasing index array is one example use case as shown [here](https://leetcode.com/problems/maximum-profit-in-job-scheduling/discuss/409188/C%2B%2B-with-picture)
 
 ### next_permutation
 
-`next_permutation`: Get the next permutation of a given input array. [Example use case](https://github.com/lzl124631x/LeetCode/tree/master/leetcode/556.%20Next%20Greater%20Element%20III)
+Get the next permutation of a given input array. [Example use case](https://github.com/lzl124631x/LeetCode/tree/master/leetcode/556.%20Next%20Greater%20Element%20III)
 
 ### nth_element (Quick Select)
 
 https://en.cppreference.com/w/cpp/algorithm/nth_element
 
-`nth_element`: do a quick select such that the `n`-th element in the array is the `n`-th element in sorted order. All elements before it are less than or equal to it.
+do a quick select such that the `n`-th element in the array is the `n`-th element in sorted order. All elements before it are less than or equal to it.
 
 [Example use case](https://leetcode.com/problems/the-k-strongest-values-in-an-array/discuss/674384/C%2B%2BJavaPython-Two-Pointers-%2B-3-Bonuses)
 
@@ -51,13 +51,32 @@ Complexity: Linear in `std::distance(first, last)` on average.
 
 https://en.cppreference.com/w/cpp/algorithm/partial_sort
 
-`partial_sort`: Rearranges elements such that the range `[first, middle)` contains the sorted `middle - first` smallest elements in the range `[first, last)`.
+Rearranges elements such that the range `[first, middle)` contains the sorted `middle - first` smallest elements in the range `[first, last)`.
 
 The order of equal elements is not guaranteed to be preserved. The order of the remaining elements in the range `[middle, last)` is unspecified.
 
 [Example use case](https://leetcode.com/problems/the-k-strongest-values-in-an-array/discuss/674384/C%2B%2BJavaPython-Two-Pointers-%2B-3-Bonuses)
 
 Complexity: Approximately `(last-first)log(middle-first)` applications of `cmp`
+
+### partial_sum
+
+https://en.cppreference.com/w/cpp/algorithm/partial_sum
+
+```cpp
+partial_sum(inFirst, inLast, outFirst)
+```
+
+Computes the partial sums of the elements in the subranges of the range `[inFirst, inLast)` and writes them to the range beginning at `outFirst`.
+
+```cpp
+// Generate a `pre` array such that `pre[j + 1] - pre[i]` = sum of numbers between i and j.
+int N = A.size();
+vector<int> pre(N + 1);
+partial_sum(begin(A), end(A), begin(pre) + 1);
+// Or simply
+for (int i = 0; i < N; ++i) pre[i + 1] = pre[i] + A[i];
+```
 
 ## Miscellaneous
 

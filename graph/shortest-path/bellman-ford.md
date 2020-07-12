@@ -1,4 +1,4 @@
-# Bellman-Ford Algorithm
+# Bellman Ford
 
 * Computes shortest paths from **a single source vertex** to all of the other vertices in a weighted digraph.
 * Slower than Dijkstra's algorithm. Its time complexity is `O(VE)`.
@@ -35,7 +35,7 @@ vector<int> bellmanFord(vector<vector<int>>& edges, int V, int src) {
 ## Problems
 
 * [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)
-* [787. Cheapest Flights Within K Stops (Medium)](https://leetcode.com/problems/cheapest-flights-within-k-stops)
+* [787. Cheapest Flights Within K Stops \(Medium\)](https://leetcode.com/problems/cheapest-flights-within-k-stops)
 
 ## Reference
 

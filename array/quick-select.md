@@ -4,7 +4,7 @@ Quickselect is a selection algorithm to find the k-th smallest/largest element i
 
 The time complexity is `O(N)` on average, and `O(N^2)` in the worst case.
 
-### Implementation
+## Implementation
 
 Quick select with elements sorted in ascending order.
 
@@ -89,11 +89,12 @@ public:
 };
 ```
 
-### Reference
+## Reference
 
 * [Quickselect Algorithm - GeeksforGeeks](https://www.geeksforgeeks.org/quickselect-algorithm/)
 
-### Problems
+## Problems
 
 * [215. Kth Largest Element in an Array \(Medium\)](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 * [973. K Closest Points to Origin \(Medium\)](https://leetcode.com/problems/k-closest-points-to-origin/)
+

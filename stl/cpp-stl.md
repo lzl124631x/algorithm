@@ -29,17 +29,17 @@
 
 ### iota
 
-https://en.cppreference.com/w/cpp/algorithm/iota
+[https://en.cppreference.com/w/cpp/algorithm/iota](https://en.cppreference.com/w/cpp/algorithm/iota)
 
 Fills the range `[first, last)` with sequentially increasing values, starting with value and repetitively evaluating `++value`. Generating a sequentially increasing index array is one example use case as shown [here](https://leetcode.com/problems/maximum-profit-in-job-scheduling/discuss/409188/C%2B%2B-with-picture)
 
-### next_permutation
+### next\_permutation
 
 Get the next permutation of a given input array. [Example use case](https://github.com/lzl124631x/LeetCode/tree/master/leetcode/556.%20Next%20Greater%20Element%20III)
 
-### nth_element (Quick Select)
+### nth\_element \(Quick Select\)
 
-https://en.cppreference.com/w/cpp/algorithm/nth_element
+[https://en.cppreference.com/w/cpp/algorithm/nth\_element](https://en.cppreference.com/w/cpp/algorithm/nth_element)
 
 do a quick select such that the `n`-th element in the array is the `n`-th element in sorted order. All elements before it are less than or equal to it.
 
@@ -47,9 +47,9 @@ do a quick select such that the `n`-th element in the array is the `n`-th elemen
 
 Complexity: Linear in `std::distance(first, last)` on average.
 
-### partial_sort
+### partial\_sort
 
-https://en.cppreference.com/w/cpp/algorithm/partial_sort
+[https://en.cppreference.com/w/cpp/algorithm/partial\_sort](https://en.cppreference.com/w/cpp/algorithm/partial_sort)
 
 Rearranges elements such that the range `[first, middle)` contains the sorted `middle - first` smallest elements in the range `[first, last)`.
 
@@ -59,9 +59,9 @@ The order of equal elements is not guaranteed to be preserved. The order of the 
 
 Complexity: Approximately `(last-first)log(middle-first)` applications of `cmp`
 
-### partial_sum
+### partial\_sum
 
-https://en.cppreference.com/w/cpp/algorithm/partial_sum
+[https://en.cppreference.com/w/cpp/algorithm/partial\_sum](https://en.cppreference.com/w/cpp/algorithm/partial_sum)
 
 ```cpp
 partial_sum(inFirst, inLast, outFirst)
@@ -85,3 +85,4 @@ for (int i = 0; i < N; ++i) pre[i + 1] = pre[i] + A[i];
 `set` requires comparison operators. `pair<int, int>` has comparison operators defined, e.g. `<`.
 
 `unordered_set` requires `hash` function being defined but `pair<int, int>` doesn't have that built-in definition.
+

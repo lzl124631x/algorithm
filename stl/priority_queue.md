@@ -1,6 +1,7 @@
 # Priority Queue
 
 By default:
+
 * `priority_queue` is a **Max-heap**. The element with the highest priority is at the top.
 * `priority_queue` uses `less` as comparator. \(In fact, STL always use `less` as the default comparator whenever it needs comparison.\)
 
@@ -10,13 +11,13 @@ It uses `make_heap`, `push_heap` and `pop_heap` algorithm functions under the ho
 
 ## Why is it Max-heap by default?
 
-> The elements are compared using operator`<` (by default), or `comp` (custom comparator): The element with the highest value is an element for which this would return `false` when compared to every other element in the range.
+> The elements are compared using operator`<` \(by default\), or `comp` \(custom comparator\): The element with the highest value is an element for which this would return `false` when compared to every other element in the range.
 
-http://www.cplusplus.com/reference/algorithm/make_heap
+[http://www.cplusplus.com/reference/algorithm/make\_heap](http://www.cplusplus.com/reference/algorithm/make_heap)
 
 In priority queue, the element with the highest priority is the one which gets `false` when comparing with every other element using the comparator. The comparator is by default `less`. So the element that is not less than any other elements, i.e. the largest one, is at the top.
 
-```
+```text
            front                           back 
              v                               v
 vector: [   10,              ...             2  ]
@@ -26,7 +27,7 @@ vector: [   10,              ...             2  ]
 
 After poping the top
 
-```
+```text
            front                        back     popped element
              v                           v              v
 vector: [    8,              ...         2  ]        [ 10 ]
@@ -36,13 +37,13 @@ vector: [    8,              ...         2  ]        [ 10 ]
 
 ## Related functions
 
-Note: try to solve [215. Kth Largest Element in an Array (Medium)](https://leetcode.com/problems/kth-largest-element-in-an-array/submissions/) using the following functions.
+Note: try to solve [215. Kth Largest Element in an Array \(Medium\)](https://leetcode.com/problems/kth-largest-element-in-an-array/submissions/) using the following functions.
 
 ### `make_heap`
 
-Rearranges the elements in the range `[first,last)` in such a way that they form a *heap*.
+Rearranges the elements in the range `[first,last)` in such a way that they form a _heap_.
 
-The element with the highest value is always pointed by *first*.
+The element with the highest value is always pointed by _first_.
 
 ```cpp
 // range heap example
@@ -77,7 +78,7 @@ int main () {
 
 Output:
 
-```
+```text
 initial max heap   : 30
 max heap after pop : 20
 max heap after push: 99
@@ -97,3 +98,4 @@ Rearranges the elements in the heap range `[first,last)` in such a way that the 
 Sorts the elements in the heap range `[first,last)` into ascending order.
 
 The range loses its properties as a heap.
+

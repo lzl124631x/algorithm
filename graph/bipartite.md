@@ -2,7 +2,7 @@
 
 ## Is graph bipartite?
 
-[785. Is Graph Bipartite? (Medium)](https://leetcode.com/problems/is-graph-bipartite/)
+[785. Is Graph Bipartite? \(Medium\)](https://leetcode.com/problems/is-graph-bipartite/)
 
 ### DFS
 
@@ -68,5 +68,6 @@ public:
 
 ## Problems
 
-* [785. Is Graph Bipartite? (Medium)](https://leetcode.com/problems/is-graph-bipartite/)
-* [886. Possible Bipartition (Medium)](https://leetcode.com/problems/possible-bipartition/)
+* [785. Is Graph Bipartite? \(Medium\)](https://leetcode.com/problems/is-graph-bipartite/)
+* [886. Possible Bipartition \(Medium\)](https://leetcode.com/problems/possible-bipartition/)
+

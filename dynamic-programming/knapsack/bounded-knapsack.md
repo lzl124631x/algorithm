@@ -1,2 +1,2 @@
-# Bounded Knapsack Problem
+# Bounded Knapsack
 

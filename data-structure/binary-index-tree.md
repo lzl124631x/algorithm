@@ -1,4 +1,4 @@
-# Binary Indexed Tree
+# Binary Index Tree
 
 aka Fenwick Tree.
 
@@ -32,7 +32,7 @@ public:
 };
 ```
 
-The implementation for [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable/submissions/)
+The implementation for [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/submissions/)
 
 ```cpp
 // OJ: https://leetcode.com/problems/range-sum-query-mutable/
@@ -66,12 +66,12 @@ public:
     NumArray(vector<int>& nums) : nums(nums), tree(nums.size()) {
         for (int i = 0; i < nums.size(); ++i) tree.update(i + 1, nums[i]);
     }
-    
+
     void update(int i, int val) {
         tree.update(i + 1, val - nums[i]);
         nums[i] = val;
     }
-    
+
     int sumRange(int i, int j) {
         return tree.rangeQuery(i + 1, j + 1);
     }
@@ -83,6 +83,7 @@ public:
 * [https://leetcode.com/problems/range-sum-query-mutable/discuss/75753/Java-using-Binary-Indexed-Tree-with-clear-explanation](https://leetcode.com/problems/range-sum-query-mutable/discuss/75753/Java-using-Binary-Indexed-Tree-with-clear-explanation)
 * [https://www.topcoder.com/community/competitive-programming/tutorials/binary-indexed-trees/](https://www.topcoder.com/community/competitive-programming/tutorials/binary-indexed-trees/)
 * [https://oi-wiki.org/ds/fenwick/](https://oi-wiki.org/ds/fenwick/)
-* https://www.youtube.com/watch?v=WbafSgetDDk
-* https://visualgo.net/en/fenwicktree
-* https://www.luogu.com.cn/problem/solution/P3374
+* [https://www.youtube.com/watch?v=WbafSgetDDk](https://www.youtube.com/watch?v=WbafSgetDDk)
+* [https://visualgo.net/en/fenwicktree](https://visualgo.net/en/fenwicktree)
+* [https://www.luogu.com.cn/problem/solution/P3374](https://www.luogu.com.cn/problem/solution/P3374)
+

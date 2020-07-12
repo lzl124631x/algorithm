@@ -99,6 +99,7 @@ public:
 
 * [207. Course Schedule \(Medium\)](https://leetcode.com/problems/course-schedule/)
 * [210. Course Schedule II \(Medium\)](https://leetcode.com/problems/course-schedule-ii/)
-* [329. Longest Increasing Path in a Matrix (Hard)](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
+* [329. Longest Increasing Path in a Matrix \(Hard\)](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
 * [Stable Wall](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003379bb)
 * [Fox And Names](https://codeforces.com/contest/510/problem/C)
+

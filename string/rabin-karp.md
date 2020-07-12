@@ -47,7 +47,7 @@ public:
 };
 ```
 
-The following function is used in [718. Maximum Length of Repeated Subarray (Medium)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) to generate the rolling hash.
+The following function is used in [718. Maximum Length of Repeated Subarray \(Medium\)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) to generate the rolling hash.
 
 ```cpp
 vector<int> rolling(vector<int> &A, int len) {
@@ -69,8 +69,8 @@ vector<int> rolling(vector<int> &A, int len) {
 ## Problem
 
 * [28. Implement strStr\(\) \(Easy\)](https://leetcode.com/problems/implement-strstr/)
-* [1044. Longest Duplicate Substring (Hard)](https://leetcode.com/problems/longest-duplicate-substring/)
-* [718. Maximum Length of Repeated Subarray (Medium)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
+* [1044. Longest Duplicate Substring \(Hard\)](https://leetcode.com/problems/longest-duplicate-substring/)
+* [718. Maximum Length of Repeated Subarray \(Medium\)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 
 ## Reference
 

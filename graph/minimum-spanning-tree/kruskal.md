@@ -1,18 +1,18 @@
-# Kruskal's Algorithm
+# Kruskal
 
 Kruskal's Algorithm is a minimum-spanning-tree algorithm which finds a minimal spanning tree for a connected weighted graph.
 
 It's a **greedy** algorithm.
 
-It uses **UnionFind** (aka Disjoint Set).
+It uses **UnionFind** \(aka Disjoint Set\).
 
 ## Algorithm
 
-* create a forest F (a set of trees), where each vertex in the graph is a separate tree
+* create a forest F \(a set of trees\), where each vertex in the graph is a separate tree
 * create a set S containing all the edges in the graph
 * while S is nonempty and F is not yet spanning
-    * remove an edge with minimum weight from S
-    * if the removed edge connects two different trees then add it to the forest F, combining two trees into a single tree
+  * remove an edge with minimum weight from S
+  * if the removed edge connects two different trees then add it to the forest F, combining two trees into a single tree
 
 At the termination of the algorithm, the forest forms a minimum spanning forest of the graph. If the graph is connected, the forest has a single component and forms a minimum spanning tree
 
@@ -58,5 +58,6 @@ int kruskal(int N, vector<vector<int>> edges) {
 
 ## Reference
 
-* https://en.wikipedia.org/wiki/Kruskal%27s_algorithm
-* https://www.luogu.com.cn/problem/P3366
+* [https://en.wikipedia.org/wiki/Kruskal%27s\_algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
+* [https://www.luogu.com.cn/problem/P3366](https://www.luogu.com.cn/problem/P3366)
+

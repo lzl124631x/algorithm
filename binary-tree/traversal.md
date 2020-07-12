@@ -163,4 +163,5 @@ public:
 
 ## Problems
 
-* [124. Binary Tree Maximum Path Sum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+* [124. Binary Tree Maximum Path Sum \(Hard\)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+

@@ -44,4 +44,5 @@ public:
 
 ## Problems
 
-* [212. Word Search II (Hard)](https://leetcode.com/problems/word-search-ii/)
+* [212. Word Search II \(Hard\)](https://leetcode.com/problems/word-search-ii/)
+

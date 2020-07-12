@@ -88,15 +88,16 @@ for (int j = 0; j < N; ++j) {
 Find Minimum
 
 * [76. Minimum Window Substring \(Hard\)](https://leetcode.com/problems/minimum-window-substring/)
-* [209. Minimum Size Subarray Sum (Medium)](https://leetcode.com/problems/minimum-size-subarray-sum/)
+* [209. Minimum Size Subarray Sum \(Medium\)](https://leetcode.com/problems/minimum-size-subarray-sum/)
 
 Find Maximum
 
 * [3. Longest Substring Without Repeating Characters \(Medium\)](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 * [159. Longest Substring with At Most Two Distinct Characters \(Hard\)](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)
 * [340. Longest Substring with At Most K Distinct Characters \(Hard\)](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
-* [1493. Longest Subarray of 1's After Deleting One Element (Medium)](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/submissions/)
+* [1493. Longest Subarray of 1's After Deleting One Element \(Medium\)](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/submissions/)
 
 Fixed Window Size
 
-* [1461. Check If a String Contains All Binary Codes of Size K (Medium)](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/)
+* [1461. Check If a String Contains All Binary Codes of Size K \(Medium\)](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/)
+

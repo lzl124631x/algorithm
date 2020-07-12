@@ -19,4 +19,5 @@ The algorithem is as follows \([wiki](https://en.wikipedia.org/wiki/Eulerian_pat
 ## Problems
 
 * [753. Cracking the Safe \(Hard\)](https://leetcode.com/problems/cracking-the-safe/)
-* [332. Reconstruct Itinerary (Medium)](https://leetcode.com/problems/reconstruct-itinerary/)
+* [332. Reconstruct Itinerary \(Medium\)](https://leetcode.com/problems/reconstruct-itinerary/)
+

@@ -10,6 +10,8 @@ Note that we should only use this algorithm on a **weighted** graph. If it's an 
 
 ## Algorithm
 
+**Summary: Use heap to store the cost of nodes. Each time pop the heap top node, whose shortest path is determimed once popped, and use its outbound edges to relax its neighbors and push the relaxed neighbors into the heap.**
+
 Given `V` vertices and `E` edges. The all weights of all edges are non-negative. Find the smallest distance from a source node `S` to all other nodes.
 
 We split the `V` vertices into two sets:

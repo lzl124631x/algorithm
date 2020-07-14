@@ -1,12 +1,14 @@
 # Kruskal
 
-Kruskal's Algorithm is a minimum-spanning-tree algorithm which finds a minimal spanning tree for a connected weighted graph.
+Kruskal's Algorithm is a minimum-spanning-tree algorithm which finds a minimal spanning tree for a connected weighted graph. A minimum-spanning-tree is a tree (without cycles) connecting all the vertices and with the smallest cost.
 
 It's a **greedy** algorithm.
 
 It uses **UnionFind** \(aka Disjoint Set\).
 
 ## Algorithm
+
+**Summary: Try to include the edges one by one from smallest cost to greatest cost. Skip those causing cycles. Stop once all nodes are connected.**
 
 * create a forest F \(a set of trees\), where each vertex in the graph is a separate tree
 * create a set S containing all the edges in the graph
@@ -42,17 +44,17 @@ public:
 };
 
 int kruskal(int N, vector<vector<int>> edges) {
-    sort(begin(edges), end(edges), [](const vector<int> &a, const vector<int> &b) { return a[2] < b[2]; });
+    sort(begin(edges), end(edges), [](const vector<int> &a, const vector<int> &b) { return a[2] < b[2]; }); // Sort the edges in ascending order of weight.
     UnionFind uf(N);
     int cost = 0;
-    for (auto &e : edges) {
+    for (auto &e : edges) { // try the edges from smallest weight to greatest weight
         int u = e[0], v = e[1], w = e[2];
-        if (uf.connected(u, v)) continue;
-        uf.connect(u, v);
-        cost += w;
-        if (uf.getSize() == 1) break;
+        if (uf.connected(u, v)) continue; // If this edge will cause cycle, skip it.
+        uf.connect(u, v); // otherwise, pick this edge, connect its vertices.
+        cost += w; // add its weight to the minimum-spanning-tree's cost
+        if (uf.getSize() == 1) break; // Once all nodes are connected, terminate.
     }
-    return uf.getSize() == 1 ? cost : -1;
+    return uf.getSize() == 1 ? cost : -1; // If all nodes are connected, return the cost; otherwise, this graph doesn't have minimum-spanning-tree.
 }
 ```
 

@@ -40,31 +40,31 @@ class NumArray {
     vector<int> tree;
     int N;
     void buildTree(vector<int> &nums) {
-        for (int i = 0, j = N; i < N;) tree[j++] = nums[i++];
-        for (int i = N - 1; i > 0; --i) tree[i] = tree[2 * i] + tree[2 * i + 1];
+        for (int i = 0, j = N; i < N;) tree[j++] = nums[i++]; // the input array values are stored in `tree[N...(2 * N - 1)]`
+        for (int i = N - 1; i > 0; --i) tree[i] = tree[2 * i] + tree[2 * i + 1]; // from `tree[N-1]` to `tree[1]`, build the non-leaf nodes. Note that we don't use `tree[0]`.
     }
 public:
     NumArray(vector<int>& nums) {
         if (nums.empty()) return;
         N = nums.size();
         tree = vector<int>(N * 2);
-        buildTree(nums);
+        buildTree(nums); // Segment tree requires initialization.
     }
 
     void update(int i, int val) {
-        i += N;
+        i += N; // Offset N to get the leaf node
         tree[i] = val;
         while (i > 0) {
-            i /= 2;
-            tree[i] = tree[2 * i] + tree[2 * i + 1];
+            i /= 2; // Move to the parent node
+            tree[i] = tree[2 * i] + tree[2 * i + 1]; // Update the parent node
         }
     }
 
     int sumRange(int i, int j) {
-        i += N;
+        i += N; // Offset N to get the leaf nodes
         j += N;
         int sum = 0;
-        while (i <= j) {
+        while (i <= j) { // When the range is not empty
             if (i % 2) sum += tree[i++];
             if (j % 2 == 0) sum += tree[j--];
             i /= 2;

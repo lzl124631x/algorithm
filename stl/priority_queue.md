@@ -52,27 +52,27 @@ The element with the highest value is always pointed by _first_.
 #include <vector>       // std::vector
 
 int main () {
-  int myints[] = {10,20,30,5,15};
-  std::vector<int> v(myints,myints+5);
+    int myints[] = {10,20,30,5,15};
+    std::vector<int> v(myints,myints+5);
 
-  std::make_heap (v.begin(),v.end());
-  std::cout << "initial max heap   : " << v.front() << '\n';
+    std::make_heap (v.begin(),v.end());
+    std::cout << "initial max heap   : " << v.front() << '\n';
 
-  std::pop_heap (v.begin(),v.end()); v.pop_back();
-  std::cout << "max heap after pop : " << v.front() << '\n';
+    std::pop_heap (v.begin(),v.end()); v.pop_back();
+    std::cout << "max heap after pop : " << v.front() << '\n';
 
-  v.push_back(99); std::push_heap (v.begin(),v.end());
-  std::cout << "max heap after push: " << v.front() << '\n';
+    v.push_back(99); std::push_heap (v.begin(),v.end());
+    std::cout << "max heap after push: " << v.front() << '\n';
 
-  std::sort_heap (v.begin(),v.end());
+    std::sort_heap (v.begin(),v.end());
 
-  std::cout << "final sorted range :";
-  for (unsigned i=0; i<v.size(); i++)
-    std::cout << ' ' << v[i];
+    std::cout << "final sorted range :";
+    for (unsigned i=0; i<v.size(); i++)
+        std::cout << ' ' << v[i];
 
-  std::cout << '\n';
+    std::cout << '\n';
 
-  return 0;
+    return 0;
 }
 ```
 
@@ -99,3 +99,24 @@ Sorts the elements in the heap range `[first,last)` into ascending order.
 
 The range loses its properties as a heap.
 
+## Custom Comparator
+
+```cpp
+// Assume there is a `m` variable in the context and `m[a]` is the frequency of `a`
+// In following code, the element with the highest frequency is the root.
+auto cmp = [&](int a, int b) { return m[a] < m[b]; };
+priority_queue<int, vector<int>, decltype(cmp)> q(cmp);
+```
+
+Another way
+
+```cpp
+class Cmp {
+public:
+    bool operator() (const pair<int, int>& a, const pair<int, int>& b) const {
+        return a.second < b.second;
+    }
+};
+
+priority_queue<pair<int, int>, vector<pair<int, int>>, Cmp> q(m.begin(), m.end()); // Assume there is an `m` storing pairs of `value, frequency`.
+```

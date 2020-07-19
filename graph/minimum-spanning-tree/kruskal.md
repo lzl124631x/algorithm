@@ -1,6 +1,6 @@
 # Kruskal
 
-Kruskal's Algorithm is a minimum-spanning-tree algorithm which finds a minimal spanning tree for a connected weighted graph. A minimum-spanning-tree is a tree (without cycles) connecting all the vertices and with the smallest cost.
+Kruskal's Algorithm is a minimum-spanning-tree algorithm which finds a minimal spanning tree for a connected weighted graph. 
 
 It's a **greedy** algorithm.
 
@@ -21,6 +21,8 @@ At the termination of the algorithm, the forest forms a minimum spanning forest 
 ## Implementation
 
 ```cpp
+// Time: O(ElogE)
+// Space: O(V)
 class UnionFind {
     vector<int> id;
     int size;

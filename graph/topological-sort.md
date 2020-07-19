@@ -68,25 +68,23 @@ Don't forget to reverse the `ans` before returning.
 // Time: O(V + E)
 // Space: O(V + E)
 class Solution {
-    vector<int> ans;
-    unordered_map<int, vector<int>> G;
-    vector<int> state;
+    vector<vector<int>> G;
+    vector<int> ans, state; // -1 unvisited, 0 visiting, 1 visited
     bool dfs(int u) {
-        if (state[u]) return state[u] == 1;
-        state[u] = -1;
+        if (state[u] != -1) return state[u];
+        state[u] = 0;
         for (int v : G[u]) {
             if (!dfs(v)) return false;
         }
-        state[u] = 1;
         ans.push_back(u);
-        return true;
+        return state[u] = 1;
     }
 public:
-    vector<int> findOrder(int N, vector<vector<int>>& E) {
-        state.assign(N, 0);
+    vector<int> findOrder(int n, vector<vector<int>>& E) {
+        G.assign(n, {});
+        state.assign(n, -1);
         for (auto &e : E) G[e[1]].push_back(e[0]);
-        for (int i = 0; i < N; ++i) {
-            if (state[i]) continue;
+        for (int i = 0; i < n; ++i) {
             if (!dfs(i)) return {};
         }
         reverse(begin(ans), end(ans));

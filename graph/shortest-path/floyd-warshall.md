@@ -1,6 +1,6 @@
 # Floyd Warshall
 
-Floyd-Warshall algorithm is an algorithm for finding the shorted paths in a weighted graph with positive or negative edge weights \(but no negative cycles\). A single execution of the algorithm will find the lengths \(summed weights\) of shortest paths between all pairs of vertices.
+Floyd-Warshall algorithm is an algorithm for finding the shorted paths **between all pairs of vertices** in a weighted directed graph with positive or negative edge weights \(but no negative cycles\).
 
 Floyd-Warshall algorithm and Bellman-Ford algorithm are both DP algorithms. Floyd-Warshall tries every **vertice** for each pair of vertices to find the shortest path between the vertice pair, while Bellman-Ford tries every **edge** `V-1` times to find the shortest path between a specific source node to all other nodes.
 

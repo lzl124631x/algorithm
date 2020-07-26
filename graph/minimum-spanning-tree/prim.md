@@ -4,7 +4,7 @@ Prim's algorithm is a **greedy** algorithm that finds a minimum spanning tree fo
 
 ## Algorithm
 
-**Summary: f**
+**Summary: Starting from a random node, pick its minimum outbound edge**
 
 ## Reference
 

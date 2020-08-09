@@ -8,4 +8,4 @@ Requirements: 1. Random Access 1. Sorted
 
 * [275. H-Index II \(Medium\)](https://leetcode.com/problems/h-index-ii/)
 * [1044. Longest Duplicate Substring \(Hard\)](https://leetcode.com/problems/longest-duplicate-substring/)
-
+* [1539. Kth Missing Positive Number (Easy)](https://leetcode.com/problems/kth-missing-positive-number/)

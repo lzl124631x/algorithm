@@ -86,3 +86,44 @@ for (int i = 0; i < N; ++i) pre[i + 1] = pre[i] + A[i];
 
 `unordered_set` requires `hash` function being defined but `pair<int, int>` doesn't have that built-in definition.
 
+### How to iterate `multiset` or `multimap`?
+
+Use `equal_range`.
+
+```cpp
+multiset<int> s;
+s.insert(1);
+s.insert(2);
+s.insert(1);
+for (auto i = s.begin(); i != s.end();) {
+    auto range = s.equal_range(*i);
+    for (auto j = range.first; j != range.second; ++j) {
+        cout << *j << endl;
+    }
+    i = range.second;
+}
+/*
+1
+1
+2
+*/
+```
+
+```cpp
+multimap<int, int> m;
+m.emplace(1, 1);
+m.emplace(1, 2);
+m.emplace(2, 3);
+for (auto i = m.begin(); i != m.end();) {
+    auto range = m.equal_range(i->first);
+    for (auto j = range.first; j != range.second; ++j) {
+        cout << j->first << " " << j->second << endl;
+    }
+    i = range.second;
+}
+/*
+1 1
+1 2
+2 3
+*/
+```

@@ -17,13 +17,13 @@ For example, assume there is a `inLeft` function checking whether the current `M
 
 ```
 // Initially
-L                                         R
-v                                         v
+L                                          R
+v                                          v
 [      inLeft      ] [       !inLeft       ]
 
 // Finally
-                  R L
-                  v v
+                   R L
+                   v v
 [      inLeft      ] [       !inLeft       ]
 ```
 

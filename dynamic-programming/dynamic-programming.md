@@ -64,6 +64,6 @@ Example: Travelling salesman problem \(TSP\)
 
 * [1349. Maximum Students Taking Exam \(Hard\)](https://leetcode.com/problems/maximum-students-taking-exam/)
 
-### Uncategoried
+### Uncategorized
 
 * [1000. Minimum Cost to Merge Stones (Hard)](https://leetcode.com/problems/minimum-cost-to-merge-stones/)

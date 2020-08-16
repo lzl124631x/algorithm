@@ -51,6 +51,7 @@ We scan the sequence one by one, make decisions at each step.
 
 * [1478. Allocate Mailboxes \(Hard\)](https://leetcode.com/problems/allocate-mailboxes/)
 * [410. Split Array Largest Sum \(Hard\)](https://leetcode.com/problems/split-array-largest-sum/)
+* [1140. Stone Game II (Medium)](https://leetcode.com/problems/stone-game-ii/)
 
 Second Type 375 1246
 
@@ -69,4 +70,3 @@ Example: Travelling salesman problem \(TSP\)
 ### Uncategoried
 
 * [1000. Minimum Cost to Merge Stones \(Hard\)](https://leetcode.com/problems/minimum-cost-to-merge-stones/)
-

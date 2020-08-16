@@ -68,7 +68,7 @@
 * [Monoqueue](monoqueue.md)
 * [Monotonic Stack](monotonic-stack.md)
 * [Overflow](overflow.md)
+* [Prefix State Map](prefix-state-map.md)
 * [Reverse Polish Notation](reverse-polish-notation.md)
 * [Sqrt Decomposition](sqrt-decomposition.md)
 * [Stack](stack.md)
-* [State And Hash Table](state-and-hash-table.md)

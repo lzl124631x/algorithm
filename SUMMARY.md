@@ -69,6 +69,7 @@
 * [Monotonic Stack](monotonic-stack.md)
 * [Overflow](overflow.md)
 * [Prefix State Map](prefix-state-map.md)
+* [Prefix Sum](prefix-sum.md)
 * [Reverse Polish Notation](reverse-polish-notation.md)
 * [Sqrt Decomposition](sqrt-decomposition.md)
 * [Stack](stack.md)

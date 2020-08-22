@@ -136,6 +136,7 @@ public:
 
 **Problems that are easier if we just use binary search library function**
 * [300. Longest Increasing Subsequence (Medium)](https://leetcode.com/problems/longest-increasing-subsequence/)
+* [497. Random Point in Non-overlapping Rectangles (Medium)](https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/)
 
 **Problems on arrays that are not sorted or monotonic**
 * [162. Find Peak Element (Medium)](https://leetcode.com/problems/find-peak-element/)

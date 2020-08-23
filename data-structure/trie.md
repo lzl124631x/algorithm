@@ -45,4 +45,4 @@ public:
 ## Problems
 
 * [212. Word Search II \(Hard\)](https://leetcode.com/problems/word-search-ii/)
-
+* [1032. Stream of Characters (Hard)](https://leetcode.com/problems/stream-of-characters/submissions/)

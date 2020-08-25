@@ -36,6 +36,7 @@ We scan the sequence one by one, make decisions at each step.
 
 #### Problems
 
+* [983. Minimum Cost For Tickets (Medium)](https://leetcode.com/problems/minimum-cost-for-tickets/)
 * [691. Stickers to Spell Word](https://leetcode.com/problems/stickers-to-spell-word/)
 * [174. Dungeon Game \(Hard\)](https://leetcode.com/problems/dungeon-game/)
 * [576. Out of Boundary Paths \(Medium\)](https://leetcode.com/problems/out-of-boundary-paths/)

@@ -20,7 +20,7 @@ int combination(int k, int n) {
 }
 ```
 
-## When `n` is large
+## When `n` is large -- Dynamic Programming
 
 To avoid overflow, we will be asked to return the answer modulo some prime number (`1e9+7` on LeetCode).
 

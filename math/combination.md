@@ -30,6 +30,16 @@ We need to use this equation:
 
 $$ C_n^k = C_{n-1}^{k-1} + C_{n-1}^k $$
 
+This is actually Pascal Triangle.
+
+```
+      1
+    1   1
+   1  2  1
+ 1  3   3  1
+1  4  6  4  1
+```
+
 This can be done using DP.
 
 ```

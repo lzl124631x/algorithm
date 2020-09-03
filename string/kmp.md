@@ -2,12 +2,21 @@
 
 KMP \(Knuth-Morris-Pratt\) algorithm is a substring search algorithm.
 
-LPS: Longest proper Prefix which is also Suffix.
+LPS: Longest proper Prefix which is also Suffix. For example, `"abcdeabc"` has the LPS `"abs"`. Note that the string itself can't be an LPS of itself.
 
 ## Algorithm
 
 1. Generate the LPS array.
 2. Take advantage of the LPS array so that once we find a mismatch, we can efficiently jump to an earlier point and continue searching.
+
+For the pattern string `t` we are searching, the `lps` array is of the same length as `t`. `lps[i]` is the length of LPS of `t[0..i]`.
+
+Example:
+
+```
+t   = a b a b x a b a b x g
+lps = 0 0 1 2 0 1 2 3 4 5 0
+```
 
 ## Implementation
 

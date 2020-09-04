@@ -1,4 +1,4 @@
-# Dfs
+# Depth First Search (DFS)
 
 ## Problems
 

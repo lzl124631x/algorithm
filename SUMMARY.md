@@ -65,6 +65,7 @@
 * [Discretization](discretization.md)
 * [Divide And Conquer](divide-and-conquer.md)
 * [Interval Scheduling Maximization Problem](interval-scheduling-maximization-problem.md)
+* [Io Optimization](io-optimization.md)
 * [Line Sweep](line-sweep.md)
 * [Memset 3 F](memset-3f.md)
 * [Minmax](minmax.md)

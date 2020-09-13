@@ -25,6 +25,12 @@
 
 `unordered_set`, `unordered_map`, `unordered_multiset`, `unordered_multimap` are not sorted and organize their elements using hash tables. When you don't care about the ordering, use them. Their average time complexities are constants.
 
+## array
+
+If you know the length of the array, use `array<int, N>` where `N` is the fixed length (e.g. `array<int, 3>`), instead of `vector<int>`, because `array` will be more performant than `vector`.
+
+One example problem is [1584. Min Cost to Connect All Points (Medium)](https://leetcode.com/problems/min-cost-to-connect-all-points/). If you use `vector<int>` to store an edge, the runtime is ~1500ms, and memory is 177MB while `array<int, 3>` only takes 500ms and 58MB.
+
 ## Algorithm
 
 ### iota

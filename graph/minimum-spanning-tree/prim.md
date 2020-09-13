@@ -4,7 +4,11 @@ Prim's algorithm is a **greedy** algorithm that finds a minimum spanning tree fo
 
 ## Algorithm
 
-**Summary: Starting from a random node, pick its minimum outbound edge**
+**Summary: Starting from a random node, pick its minimum outbound edge that doesn't form cicle, and add the node to the tree**
+
+* Initialize the tree with a random single node.
+* Grow the tree by one edge: of the edges that connect the tree to vertices not yet in the tree, find the minimum-weight edge, and transfer it to the tree.
+* Repeat until all nodes are in the tree.
 
 ## Reference
 

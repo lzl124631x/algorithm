@@ -60,7 +60,7 @@ int kruskal(int N, vector<vector<int>> edges) {
 }
 ```
 
-When the run time limitation is tight and it's a dense graph `E ~= N^2`, using `sort` might cause TLE. We need to use `heap` instead.
+When the run time limitation is tight and it's a dense graph `E ~= V^2`, using `sort` might cause TLE. We need to use `heap` instead, which will reduce the time complexity from `V^2 * log(V^2)` to `K * log(V^2)` where `K` is the number of edges we need to scan to complete the tree. `K` is usually way smaller than `V^2`.
 
 The following solution is for [1584. Min Cost to Connect All Points (Medium)](https://leetcode.com/problems/min-cost-to-connect-all-points/).
 

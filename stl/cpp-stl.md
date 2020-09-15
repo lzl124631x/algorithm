@@ -25,6 +25,8 @@
 
 `unordered_set`, `unordered_map`, `unordered_multiset`, `unordered_multimap` are not sorted and organize their elements using hash tables. When you don't care about the ordering, use them. Their average time complexities are constants.
 
+**unordered** containers have greater initialization overhead compared to **ordered** counterparts. So don't create and destroy temporary **unordered** containers over and over again within loop which will significantly degrade the run time performance.
+
 ## array
 
 If you know the length of the array, use `array<int, N>` where `N` is the fixed length (e.g. `array<int, 3>`), instead of `vector<int>`, because `array` will be more performant than `vector`.
@@ -82,6 +84,16 @@ vector<int> pre(N + 1);
 partial_sum(begin(A), end(A), begin(pre) + 1);
 // Or simply
 for (int i = 0; i < N; ++i) pre[i + 1] = pre[i] + A[i];
+```
+
+### unique
+
+`unique` function removes **consecutive** duplicate elements. So if we want to get the uniqueness of the elements in the entire container, use `sort` first.
+
+```cpp
+// v is a vector<int>
+sort(begin(v), end(v));
+v.resize(unique(begin(v), end(v)) - begin(v));
 ```
 
 ## Miscellaneous

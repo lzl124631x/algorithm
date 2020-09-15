@@ -40,6 +40,8 @@ int prim(int N, int M, vector<vector<int>> &edges) { // N nodes, M edges. edges 
 }
 ```
 
+TODO: heap version prim
+
 ## Reference
 
 * https://en.wikipedia.org/wiki/Prim%27s_algorithm

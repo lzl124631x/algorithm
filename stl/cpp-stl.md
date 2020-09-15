@@ -88,6 +88,8 @@ for (int i = 0; i < N; ++i) pre[i + 1] = pre[i] + A[i];
 
 ### unique
 
+[https://en.cppreference.com/w/cpp/algorithm/unique](https://en.cppreference.com/w/cpp/algorithm/unique)
+
 `unique` function removes **consecutive** duplicate elements. So if we want to get the uniqueness of the elements in the entire container, use `sort` first.
 
 ```cpp

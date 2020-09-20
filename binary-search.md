@@ -78,7 +78,7 @@ public:
 };
 ```
 
-### [1539. Kth Missing Positive Number (Easy)](https://leetcode.com/problems/kth-missing-positive-number/submissions/)
+### [1539. Kth Missing Positive Number (Easy)](https://leetcode.com/problems/kth-missing-positive-number/)
 
 Let `L = 0, R = N - 1, M = (L + R) / 2`, and `f(M) = A[M] - M - 1` is the count of missing numbers in the subarray `A[0..M]`.
 

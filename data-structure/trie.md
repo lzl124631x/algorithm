@@ -45,5 +45,5 @@ public:
 ## Problems
 
 * [212. Word Search II \(Hard\)](https://leetcode.com/problems/word-search-ii/)
-* [1032. Stream of Characters (Hard)](https://leetcode.com/problems/stream-of-characters/submissions/)
+* [1032. Stream of Characters (Hard)](https://leetcode.com/problems/stream-of-characters/)
 * [839. Similar String Groups (Hard)](https://leetcode.com/problems/similar-string-groups/)

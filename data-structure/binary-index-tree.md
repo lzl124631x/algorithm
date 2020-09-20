@@ -32,7 +32,7 @@ public:
 };
 ```
 
-The implementation for [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/submissions/)
+The implementation for [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/)
 
 ```cpp
 // OJ: https://leetcode.com/problems/range-sum-query-mutable/

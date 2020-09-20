@@ -37,7 +37,7 @@ vector: [    8,              ...         2  ]        [ 10 ]
 
 ## Related functions
 
-Note: try to solve [215. Kth Largest Element in an Array \(Medium\)](https://leetcode.com/problems/kth-largest-element-in-an-array/submissions/) using the following functions.
+Note: try to solve [215. Kth Largest Element in an Array \(Medium\)](https://leetcode.com/problems/kth-largest-element-in-an-array/) using the following functions.
 
 ### `make_heap`
 

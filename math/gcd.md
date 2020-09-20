@@ -26,4 +26,4 @@ int gcd(int a, int b) {
 
 ## Problems
 
-* [858. Mirror Reflection (Medium)](https://leetcode.com/problems/mirror-reflection/submissions/)
+* [858. Mirror Reflection (Medium)](https://leetcode.com/problems/mirror-reflection/)

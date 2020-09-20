@@ -45,7 +45,7 @@ We scan the sequence one by one, make decisions at each step.
 * [446. Arithmetic Slices II - Subsequence \(Hard\)](https://leetcode.com/problems/arithmetic-slices-ii-subsequence/)
 * [1463. Cherry Pickup II \(Hard\)](https://leetcode.com/problems/cherry-pickup-ii/)
 * [1473. Paint House III \(Hard\)](https://leetcode.com/problems/paint-house-iii/)
-* [44. Wildcard Matching \(Hard\)](https://leetcode.com/problems/wildcard-matching/submissions/)
+* [44. Wildcard Matching \(Hard\)](https://leetcode.com/problems/wildcard-matching/)
 
 ### Interval DP
 

@@ -54,8 +54,8 @@ public:
 
 Each vertex has three states:
 
-1. 0 =  unvisited
-2. -1 = being visited in the current DFS session. If we visit a node with state -1, it means there is a circle in the graph.
+1. -1 =  unvisited
+2. 0 = being visited in the current DFS session. If we visit a node with state 0, it means there is a circle in the graph.
 3. 1 = has been visited in a prevous DFS session and this vertex is not in a circle.
 
 It's a post-order DFS -- the node is pushed into the answer after all its subsequent nodes are visited.

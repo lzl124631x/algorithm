@@ -51,6 +51,12 @@ function lowbit(int x) {
 }
 ```
 
+## Count bit 1s
+
+```cpp
+__builtin_popcount(n);
+```
+
 ## Reference
 
 * [https://oi-wiki.org/math/bit/](https://oi-wiki.org/math/bit/)

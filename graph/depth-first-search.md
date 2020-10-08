@@ -10,3 +10,4 @@
 * [216. Combination Sum III \(Medium\)](https://leetcode.com/problems/combination-sum-iii/)
 * [212. Word Search II \(Hard\)](https://leetcode.com/problems/word-search-ii/)
 * [1601. Maximum Number of Achievable Transfer Requests (Hard)](https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests/)
+* [1219. Path with Maximum Gold (Medium)](https://leetcode.com/problems/path-with-maximum-gold/)

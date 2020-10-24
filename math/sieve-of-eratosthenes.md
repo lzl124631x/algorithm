@@ -12,6 +12,8 @@ Then the next prime is `5`, we mark all its multiples as composite. Again, we sh
 
 And so on. Until we've visited all the numbers within the maximum number.
 
+![](../.gitbook/assets/Sieve_of_Eratosthenes_animation.gif)
+
 ## Implementation
 
 ```cpp

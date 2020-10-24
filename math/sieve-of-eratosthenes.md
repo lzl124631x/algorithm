@@ -38,6 +38,12 @@ public:
 };
 ```
 
+## Problems
+
+* [204. Count Primes (Easy)](https://leetcode.com/problems/count-primes/)
+* [1175. Prime Arrangements (Easy)](https://leetcode.com/problems/prime-arrangements/)
+* [1627. Graph Connectivity With Threshold (Hard)](https://leetcode.com/problems/graph-connectivity-with-threshold/)
+
 ## Reference
 
 * https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes

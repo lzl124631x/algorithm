@@ -11,7 +11,7 @@ class UnionFind {
     vector<int> id;
 public:
     UnionFind(int n) : id(n) {
-        for (int i = 0; i < n; ++i) id[i] = i;
+        iota(begin(id), end(id), 0);
     }
     void connect(int a, int b) {
         id[find(a)] = find(b);
@@ -40,7 +40,7 @@ private:
     }
 public:
     UnionFind(int n) : id(n), rank(n, 0), cnt(n) {
-        for (int i = 0; i < n; ++i) id[i] = i;
+        iota(begin(id), end(id), 0);
     }
     void connect(int i, int j) {
         int p = find(i), q = find(j);
@@ -66,7 +66,7 @@ class UnionFind {
     vector<int> id, size;
 public:
     UnionFind(int n) : id(n), size(n, 1) {
-        for (int i = 0; i < n; ++i) id[i] = i;
+        iota(begin(id), end(id), 0);
     }
     void connect(int a, int b) {
         int x = find(a), y = find(b);

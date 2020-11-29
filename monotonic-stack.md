@@ -41,4 +41,4 @@ Take [402. Remove K Digits (Medium)](https://leetcode.com/problems/remove-k-digi
 * [85. Maximal Rectangle \(Hard\)](https://leetcode.com/problems/maximal-rectangle/)
 * [456. 132 Pattern \(Medium\)](https://leetcode.com/problems/132-pattern/)
 * [1504. Count Submatrices With All Ones \(Medium\)](https://leetcode.com/problems/count-submatrices-with-all-ones/)
-
+* [1673. Find the Most Competitive Subsequence (Medium)](https://leetcode.com/problems/find-the-most-competitive-subsequence/)

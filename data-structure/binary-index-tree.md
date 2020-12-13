@@ -13,6 +13,7 @@ Update: `O(logN)`
 ## Implementation
 
 ```cpp
+// Author: github.com/lzl124631x
 class BIT {
     vector<int> sum;
     static inline int lowbit(int x) { return x & -x; }
@@ -77,6 +78,49 @@ public:
     }
 };
 ```
+
+The implementation for [1649. Create Sorted Array through Instructions (Hard)](https://leetcode.com/problems/create-sorted-array-through-instructions/)
+
+```cpp
+// OJ: https://leetcode.com/problems/create-sorted-array-through-instructions/
+// Author: github.com/lzl124631x
+// Time: O(NlogM) where M is the range of A[i]
+// Space: O(M)
+// Ref: https://leetcode.com/problems/create-sorted-array-through-instructions/discuss/927531/JavaC%2B%2BPython-Binary-Indexed-Tree
+int c[100001] = {};
+class Solution {
+public:
+    static inline int lowbit(int x) { return x & -x; }
+    int createSortedArray(vector<int>& A) {
+        memset(c, 0, sizeof(c));
+        int ans = 0, N = A.size(), mod = 1e9 + 7;
+        for (int i = 0; i < N; ++i) {
+            ans = (ans + min(get(A[i] - 1), i - get(A[i]))) % mod;
+            update(A[i]);
+        }
+        return ans;
+    }
+    void update(int x) {
+        for (; x < 100001; x += lowbit(x)) c[x]++;
+    }
+    int get(int x) { // returns the sum of numbers smaller than x
+        int ans = 0;
+        for (; x > 0; x -= lowbit(x)) ans += c[x];
+        return ans;
+    }
+};
+```
+
+## Note
+
+When querying, keep ADDing low bit.
+
+When updating, keep REMOVING low bit.
+
+## Problems
+
+* [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/)
+* [1649. Create Sorted Array through Instructions (Hard)](https://leetcode.com/problems/create-sorted-array-through-instructions/)
 
 ## Reference
 

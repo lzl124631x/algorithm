@@ -89,6 +89,7 @@ public:
 * [990. Satisfiability of Equality Equations \(Medium\)](https://leetcode.com/problems/satisfiability-of-equality-equations/)
 * [924. Minimize Malware Spread \(Hard\)](https://leetcode.com/problems/minimize-malware-spread/)
 * [947. Most Stones Removed with Same Row or Column \(Medium\)](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
+* [1202. Smallest String With Swaps (Medium)](https://leetcode.com/problems/smallest-string-with-swaps/)
 
 静态联通性 200 130 952 \(等价类\) 959 990
 

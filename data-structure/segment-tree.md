@@ -148,6 +148,7 @@ When we want to update an interval all at once, we need to use lazy propagation 
 * [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/)
 * [699. Falling Squares \(Hard\)](https://leetcode.com/problems/falling-squares/)
 * [1505. Minimum Possible Integer After at Most K Adjacent Swaps On Digits \(Hard\)](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
+* [327. Count of Range Sum (Hard)](https://leetcode.com/problems/count-of-range-sum/)
 
 ## Reference
 

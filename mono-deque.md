@@ -1,6 +1,6 @@
-# Monoqueue
+# Mono-deque
 
-One typical usage of monoqueue is to find the maximum/minimum value in a sliding window.
+One typical usage of mono-deque is to find the maximum/minimum value in a sliding window.
 
 If we are looking for the **maximum** value, we can use a **descending** monoqueue. Example: [1499. Max Value of Equation \(Hard\)](https://leetcode.com/problems/max-value-of-equation/).
 

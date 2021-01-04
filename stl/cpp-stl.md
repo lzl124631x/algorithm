@@ -98,6 +98,25 @@ sort(begin(v), end(v));
 v.resize(unique(begin(v), end(v)) - begin(v));
 ```
 
+### next_permutation
+
+[https://en.cppreference.com/w/cpp/algorithm/next_permutation](https://en.cppreference.com/w/cpp/algorithm/next_permutation)
+
+Permutes the range `[first, last)` into the next permutation, where the set of all permutations is ordered lexicographically with respect to `operator<` or `comp`. Returns true if such a "next permutation" exists; otherwise transforms the range into the lexicographically first permutation (as if by `std::sort(first, last, comp)`) and returns false.
+
+```cpp
+string s = "aba";
+sort(s.begin(), s.end());
+do {
+    cout << s << endl;
+} while (next_permutation(s.begin(), s.end()));
+/*
+aab
+aba
+baa
+*/
+```
+
 ## Miscellaneous
 
 ### Why `unordered_set<pair<int, int>>` doesn't work while `set<pair<int, int>>` work?

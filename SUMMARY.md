@@ -75,7 +75,7 @@
 * [Discretization](discretization.md)
 * [Divide And Conquer](divide-and-conquer.md)
 * [Gray Code](gray-code.md)
-* [Interval Scheduling Maximization Problem](interval-scheduling-maximization-problem.md)
+* [Interval Scheduling Maximization](interval-scheduling-maximization.md)
 * [Io Optimization](io-optimization.md)
 * [Line Sweep](line-sweep.md)
 * [Longest Common Subsequence](longest-common-subsequence.md)

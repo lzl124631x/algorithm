@@ -1,6 +1,6 @@
-# Interval Scheduling Maximization Problem (ISMP)
+# Interval Scheduling Maximization (ISM)
 
-The interval scheduling maximization problem (ISMP) is to find a largest compatible set - a set of non-overlapping intervals of maximum size. The goal here is to execute as many tasks as possible.
+The interval scheduling maximization (ISM) problem is to find a largest compatible set - a set of non-overlapping intervals of maximum size. The goal here is to execute as many tasks as possible.
 
 ## Algorithm
 
@@ -34,6 +34,7 @@ public:
 
 * [1520. Maximum Number of Non-Overlapping Substrings (Medium)](https://leetcode.com/problems/maximum-number-of-non-overlapping-substrings/)
 * [435. Non-overlapping Intervals (Medium)](https://leetcode.com/problems/non-overlapping-intervals/)
+* [646. Maximum Length of Pair Chain (Medium)](https://leetcode.com/problems/maximum-length-of-pair-chain/)
 
 ## Reference
 

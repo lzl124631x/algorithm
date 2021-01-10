@@ -39,6 +39,7 @@
     * [Floyd Warshall](graph/shortest-path/floyd-warshall.md)
     * [Johnson](graph/shortest-path/johnson.md)
     * [Shortest Path Faster Algorithm](graph/shortest-path/shortest-path-faster-algorithm.md)
+  * [Bi Directional Breadth First Search](graph/bi-directional-breadth-first-search.md)
   * [Bipartite](graph/bipartite.md)
   * [Breadth First Search](graph/breadth-first-search.md)
   * [Component Coloring](graph/component-coloring.md)

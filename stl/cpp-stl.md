@@ -49,9 +49,12 @@ Get the next permutation of a given input array. [Example use case](https://gith
 
 [https://en.cppreference.com/w/cpp/algorithm/nth\_element](https://en.cppreference.com/w/cpp/algorithm/nth_element)
 
-do a quick select such that the `n`-th element in the array is the `n`-th element in sorted order. All elements before it are less than or equal to it.
+do a quick select such that the `n`-th element in the array is the `n`-th element (0-based) in sorted order. All elements before it are less than or equal to it.
 
-[Example use case](https://leetcode.com/problems/the-k-strongest-values-in-an-array/discuss/674384/C%2B%2BJavaPython-Two-Pointers-%2B-3-Bonuses)
+Example use case:
+
+* https://leetcode.com/problems/the-k-strongest-values-in-an-array/discuss/674384/C%2B%2BJavaPython-Two-Pointers-%2B-3-Bonuses
+* [215. Kth Largest Element in an Array (Medium)](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
 Complexity: Linear in `std::distance(first, last)` on average.
 

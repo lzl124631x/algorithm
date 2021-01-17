@@ -5,7 +5,7 @@ K Subset partitioning: partition the original array into `K` subsets and find th
 Candidate Solutions:
 
 1. DFS + Optimizations
-2. DP
+2. DP on Subsets
 
 
 ## Problems
@@ -32,13 +32,23 @@ So we add the visited values into a `unordered_set` and skip visiting the same s
 
 Another trick is sorting the `A`. Pick the order that can get a feasible partition as fast as possible.
 
-### DP
+### DP on Subsets
 
-Traverse all the subsets: `for (int mask = 0; mask < (1 << N); ++mask)`
+#### Traverse all the subsets
 
-Check if `A[i]` is included in the current subset: `mask & (1 << i)`
+```cpp
+for (int mask = 0; mask < (1 << N); ++mask)
+```
 
-Traverse subsets of a set `mask` in **descending** order of subset size: 
+#### Check if `A[i]` is included in the current subset
+
+```cpp
+mask & (1 << i)
+// Or
+mask >> i & 1 // less typing
+```
+
+#### Traverse subsets of a set `mask` in **descending** order of subset size
 
 ```cpp
 for (int sub = mask; sub; sub = (sub - 1) & mask) {
@@ -46,7 +56,7 @@ for (int sub = mask; sub; sub = (sub - 1) & mask) {
 }
 ```
 
-Traverse subsets of a set `mask` in **ascending** order of subset size:
+#### Traverse subsets of a set `mask` in **ascending** order of subset size
 
 ```cpp
 for (int other = mask; other; other = (other - 1) & mask) {
@@ -55,7 +65,7 @@ for (int other = mask; other; other = (other - 1) & mask) {
 }
 ```
 
-Given `N` elements, traverse subsets of size `K` (Gosper's Hack):
+#### Given `N` elements, traverse subsets of size `K` (Gosper's Hack)
 
 ```cpp
 int sub = (1 << k) - 1;            
@@ -65,9 +75,9 @@ while (sub < (1 << N)) {
     int r = sub + c;
     sub = (((r ^ sub) >> 2) / c) | r;
 }
-```
-
-Traverse all the subsets of `N` elements, and for each subset `mask`, traverse its sub-subset `sub`:
+``` 
+ 
+#### Traverse all the subsets of `N` elements, and for each subset `mask`, traverse its sub-subset `sub`:
 
 ```cpp
 // Time: O(3^N)
@@ -93,3 +103,46 @@ Since `(1 + x)^N = C(N, 0) * x^0 + C(N, 1) * x^1 + ... + C(N, N) * x^N`, let `x 
 **Intuitive proof:**
 
 For each bit index `i` (`0 <= i < N`), the `i`-th bits of `mask` and `bit` must be one of `11, 10, 00`, and can't be `01`. So each bit has `3` possibilities, the total complexity is `O(3^N)`.
+
+#### Calculate subset sums
+
+```cpp
+// Time: O(N * 2^N)
+for (int mask = 0; mask < (1 << N); ++mask) {
+    for (int i = 0; i < N; ++i) {
+        if (mask >> i & 1) sum[mask] += A[i];
+    }
+}
+```
+
+Or
+
+```cpp
+// Time: O(2^N)
+for (int mask = 1; mask < (1 << N); ++mask) {
+    sum[mask] = sum[mask - lowbit(mask)] + A[log2(lowbit(mask))];
+}
+```
+
+#### Generate `logs` array
+
+`logs[n]` is `floor(log2(n))`.
+
+```
+logs[1] = 0
+logs[2] = 1
+logs[3] = 1
+logs[4] = 2
+logs[5] = 2
+logs[6] = 2
+logs[7] = 2
+logs[8] = 3
+...
+```
+
+```cpp
+// Time: O(2^N)
+for (int mask = 2; mask < (1 << N); ++mask) {
+    logs[mask] = logs[mask >> 1] + 1;
+}
+```

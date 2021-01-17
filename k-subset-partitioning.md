@@ -54,7 +54,7 @@ for (int other = mask; other; other = (other - 1) & mask) {
 }
 ```
 
-Given `N` elements, traverse subsets of size `K`:
+Given `N` elements, traverse subsets of size `K` (Gosper's Hack):
 
 ```cpp
 int sub = (1 << k) - 1;            

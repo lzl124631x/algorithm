@@ -48,6 +48,13 @@ mask & (1 << i)
 mask >> i & 1 // less typing
 ```
 
+#### Complement of a subset
+
+```cpp
+// Assume `sub` is a subset of `mask`
+int complement = sub ^ mask;
+```
+
 #### Traverse subsets of a set `mask` in **descending** order of subset size
 
 ```cpp
@@ -115,14 +122,16 @@ for (int mask = 0; mask < (1 << N); ++mask) {
 }
 ```
 
-Or
+Or 
 
 ```cpp
 // Time: O(2^N)
 for (int mask = 1; mask < (1 << N); ++mask) {
-    sum[mask] = sum[mask - lowbit(mask)] + A[log2(lowbit(mask))];
+    sum[mask] = sum[mask - lowbit(mask)] + A[__builtin_ctz(lowbit(mask))];
 }
 ```
+
+where `lowbit(x) = x & -x`, and `__builtin_ctz(x)` counts the trailing zeros in `x`. Since `lowbit(mask)` is a power of two, `__builtin_ctz(lowbit(mask)) == log2(lowbit(mask))`.
 
 #### Generate `logs` array
 

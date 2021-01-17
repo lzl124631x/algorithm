@@ -57,6 +57,18 @@ function lowbit(int x) {
 __builtin_popcount(n);
 ```
 
+## Count trailing zeros
+
+```cpp
+__builtin_ctz(n);
+```
+
+## Count leading zeros
+
+```cpp
+__builtin_clz(n);
+```
+
 ## Reference
 
 * [https://oi-wiki.org/math/bit/](https://oi-wiki.org/math/bit/)

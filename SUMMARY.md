@@ -81,6 +81,7 @@
 * [Gray Code](gray-code.md)
 * [Interval Scheduling Maximization](interval-scheduling-maximization.md)
 * [Io Optimization](io-optimization.md)
+* [K Subset Partitioning](k-subset-partitioning.md)
 * [Line Sweep](line-sweep.md)
 * [Longest Common Subsequence](longest-common-subsequence.md)
 * [Longest Increasing Subsequence](longest-increasing-subsequence.md)

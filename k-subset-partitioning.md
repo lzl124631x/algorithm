@@ -3,6 +3,7 @@
 K Subset partitioning: partition the original array into `K` subsets and find the optimial result.
 
 Candidate Solutions:
+
 1. DFS + Optimizations
 2. DP
 

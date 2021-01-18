@@ -33,7 +33,7 @@ The time complexity of one operation in `UnionFind` containing `N` elements is `
 class UnionFind {
 private:
     vector<int> id, rank;
-    int cnt;
+    int cnt; // `cnt` is the number of connected components in the graph
     int find (int i) {
         if (id[i] == i) return i;
         return id[i] = find(id[i]);
@@ -64,6 +64,7 @@ We can use a `size` array to keep track of the size of each union.
 ```cpp
 class UnionFind {
     vector<int> id, size;
+    int cnt;
 public:
     UnionFind(int n) : id(n), size(n, 1) {
         iota(begin(id), end(id), 0);
@@ -73,6 +74,7 @@ public:
         if (x == y) return;
         id[x] = y;
         size[y] += size[x];
+        --cnt;
     }
     int find(int a) {
         return id[a] == a ? a : (id[a] = find(id[a]));
@@ -80,6 +82,7 @@ public:
     int getSize(int a) {
         return size[find(a)];
     }
+    int getCount() { return cnt; }
 };
 ```
 

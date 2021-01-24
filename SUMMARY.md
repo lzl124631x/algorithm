@@ -58,6 +58,7 @@
   * [Fast Pow](math/fast-pow.md)
   * [Gcd](math/gcd.md)
   * [Sieve Of Eratosthenes](math/sieve-of-eratosthenes.md)
+  * [Sum Of Sequence](math/sum-of-sequence.md)
 - Miscellaneous
   * [Bin Packing](miscellaneous/bin-packing.md)
 - [Stl](stl/README.md)

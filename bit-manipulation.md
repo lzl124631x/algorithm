@@ -69,6 +69,14 @@ __builtin_ctz(n);
 __builtin_clz(n);
 ```
 
+## Check if `n` is power of 2
+
+```cpp
+__builtin_popcount(n) == 1
+// or
+n & (n - 1) == 0
+```
+
 ## Reference
 
 * [https://oi-wiki.org/math/bit/](https://oi-wiki.org/math/bit/)

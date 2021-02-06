@@ -2,7 +2,7 @@
 
 KMP \(Knuth-Morris-Pratt\) algorithm is a substring search algorithm.
 
-LPS: Longest proper Prefix which is also Suffix. For example, `"abcdeabc"` has the LPS `"abs"`. Note that the string itself can't be an LPS of itself.
+LPS: Longest proper Prefix which is also Suffix. For example, `"abcdeabc"` has the LPS `"abc"`. Note that the string itself can't be an LPS of itself.
 
 ## Algorithm
 
@@ -63,6 +63,7 @@ public:
 * [28. Implement strStr\(\) \(Easy\)](https://leetcode.com/problems/implement-strstr/)
 * [214. Shortest Palindrome \(Hard\)](https://leetcode.com/problems/shortest-palindrome/)
 * [1392. Longest Happy Prefix \(Hard\)](https://leetcode.com/problems/longest-happy-prefix/)
+* [459. Repeated Substring Pattern (Easy)](https://leetcode.com/problems/repeated-substring-pattern/)
 
 ## Reference
 

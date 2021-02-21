@@ -78,7 +78,7 @@ If we can use Fabonacci Heap, the time complexity will be reduced to `O(E + Vlog
 Another way to prevent visting the same node twice is as follows:
 
 ```cpp
-// Time: O(VlogE)
+// Time: O(ElogE)
 // Space: O(E)
 typedef unordered_map<int, unordered_map<int, int>> Graph;
 typedef pair<int, int> iPair;
@@ -108,6 +108,7 @@ vector<int> dijkstra(Graph &graph, int N, int source) {
 * [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)
 * [787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 * [1514. Path with Maximum Probability (Medium)](https://leetcode.com/problems/path-with-maximum-probability/)
+* [1368. Minimum Cost to Make at Least One Valid Path in a Grid (Hard)](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
 
 ## Reference
 

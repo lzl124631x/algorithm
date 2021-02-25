@@ -32,6 +32,8 @@ C++ has a built-in `__gcd` function.
 __gcd(6, 20); // 2
 ```
 
+Since C++11, we can directly use `gcd`.
+
 ## Problems
 
 * [858. Mirror Reflection (Medium)](https://leetcode.com/problems/mirror-reflection/)

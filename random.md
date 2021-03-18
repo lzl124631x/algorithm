@@ -16,3 +16,7 @@ double randomDouble(double mn, double mx) {
     return mn + d * (mx - mn);
 }
 ```
+
+## Problems
+
+* [478. Generate Random Point in a Circle (Medium)](https://leetcode.com/problems/generate-random-point-in-a-circle/)

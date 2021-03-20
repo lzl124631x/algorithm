@@ -169,3 +169,12 @@ for (auto i = m.begin(); i != m.end();) {
 2 3
 */
 ```
+
+### Erase map element during traversal
+
+```cpp
+for (auto it = m.begin(); it != m.end();) {
+    if (shouldRemove(it)) it = m.erase(it);
+    else ++it;
+}
+```

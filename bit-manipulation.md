@@ -13,13 +13,13 @@ NOT 0111 (decimal 7)
 
 So if `val` is some non-negative number, the following:
 
-```text
+```cpp
 for (int i = val; ~i; --i)
 ```
 
 is equivalent to
 
-```text
+```cpp
 for (int i = val; i >= 0; --i)
 ```
 
@@ -37,7 +37,7 @@ for (int i = val; i >= 0; --i)
 
 ## Check a bit at `index`
 
-`(target >> index) & 1`
+`target >> index & 1`
 
 ## Set a bit at `index` with `x`
 
@@ -47,7 +47,7 @@ for (int i = val; i >= 0; --i)
 
 ```cpp
 function lowbit(int x) {
-    return x & (-x);
+    return x & -x;
 }
 ```
 

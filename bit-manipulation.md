@@ -74,7 +74,7 @@ __builtin_clz(n);
 ```cpp
 __builtin_popcount(n) == 1
 // or
-n & (n - 1) == 0
+(n & (n - 1)) == 0 // & has lower precedence than ==. Must add the parenthesis.
 ```
 
 ## Reference

@@ -66,6 +66,11 @@ Example: Travelling salesman problem \(TSP\)
 
 * [1349. Maximum Students Taking Exam \(Hard\)](https://leetcode.com/problems/maximum-students-taking-exam/)
 
+### Longest Palindromic Subsequence
+
+*  [516. Longest Palindromic Subsequence (Medium)](https://leetcode.com/problems/longest-palindromic-subsequence/)
+*  [1771. Maximize Palindrome Length From Subsequences (Hard)](https://leetcode.com/problems/maximize-palindrome-length-from-subsequences/)
+
 ### Uncategorized
 
 * [1000. Minimum Cost to Merge Stones (Hard)](https://leetcode.com/problems/minimum-cost-to-merge-stones/)

@@ -70,3 +70,8 @@ Example: Travelling salesman problem \(TSP\)
 
 * [1000. Minimum Cost to Merge Stones (Hard)](https://leetcode.com/problems/minimum-cost-to-merge-stones/)
 * [1368. Minimum Cost to Make at Least One Valid Path in a Grid (Hard)](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/): BFS + DP
+  
+
+### Links
+
+* [DP Problem Classifications - Helpful Notes](https://leetcode.com/problems/longest-palindromic-subsequence/discuss/222605/DP-Problem-Classifications-Helpful-Notes)

@@ -19,3 +19,7 @@
 * [421. Maximum XOR of Two Numbers in an Array (Medium)](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)
 * [1707. Maximum XOR With an Element From Array (Hard)](https://leetcode.com/problems/maximum-xor-with-an-element-from-array/)
 * [1803. Count Pairs With XOR in a Range (Hard)](https://leetcode.com/problems/count-pairs-with-xor-in-a-range/)
+
+## BIT (Binary Index Tree) or Segment Tree
+
+* [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable/)

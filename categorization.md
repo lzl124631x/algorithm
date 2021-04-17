@@ -23,3 +23,7 @@
 ## BIT (Binary Index Tree) or Segment Tree
 
 * [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable/)
+
+## Backtracking
+
+* [51. N-Queens (Hard)](https://leetcode.com/problems/n-queens/)

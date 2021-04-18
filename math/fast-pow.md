@@ -1,5 +1,9 @@
 # Fast Pow
 
+Take `3^3` for example. `3^3 = 3^(11) = 3^(10) * 3^(01) = 9^(01) * 3^(01)`.
+
+So we can keep doing `exp >>= 1` and `base = (base * base)`. We only do `ans = (ans * base)` when `exp & 1 == 1`.
+
 ## Implementation
 
 ```cpp

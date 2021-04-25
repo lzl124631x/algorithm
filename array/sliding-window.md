@@ -44,33 +44,44 @@ When finding maximum:
 * this template works when initially counter condition is valid, so we are extending valid window as large as possible until it becomes invalid.
 * the counter condition should be `true` for **invalid** window, i.e. shrinking the invalid window until it becomes valid again.
 
-## Tip 2
+## Find Maximum Window
 
-To find maximum, I previously have been using this template:
+### Template 1: Extending Right by One and Shrinking Left Until Valid
+
+The best template I've found so far:
 
 ```cpp
-int i = 0, j = 0;
-while (j < N) {
-    while (j < N && valid()) ++j;
-    ans = max(ans, j - i);
-    while (!valid()) ++j;
+int i = 0, j = 0, ans = 0;
+for (; j < N; ++j) {
+    // CODE: use A[j] to update state which might make the window invalid
+    for (; !valid(); ++i) { // when invalid, keep shrinking the left edge until it's valid again
+        // CODE: update state using A[i]
+    }
+    ans = max(ans, j - i + 1); // the window [i, j] is the maximum window we've found thus far
 }
+return ans;
 ```
 
-Now I found this template is simpler:
+Essentially, we want to **keep the window valid** at the end of each outer `for` loop.
+
+### Template 2: Non-shrinkable Window
 
 ```cpp
 int i = 0, j = 0;
 for (; j < N; ++j) {
-    // use A[j] to update state.
-    while (!valid()) ++i; // and update state using A[i]
-    ans = max(ans, j - i);
+    // CODE: use A[j] to update state which might make the window invalid
+    if (!valid()) { // Increment the left edge ONLY when the window is invalid. In this way, the window GROWs when it's valid, and SHIFTs when it's invalid
+        // CODE: update state using A[i]
+        ++i;
+    }
+    // after `++j` in the for loop, this window `[i, j)` of length `j - i` MIGHT be valid.
 }
+return j - i; // There must be a maximum window of size `j - i`.
 ```
 
-Because with this template, you don't need to think about when to stop extending `j`, we just always extending `j`.
+Essentially, we GROW the window when it's valid, and SHIFT the window when it's invalid.
 
-Similarly, to find minimum window:
+## Find Minimum Window
 
 ```cpp
 int i = 0;

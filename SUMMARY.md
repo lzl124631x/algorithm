@@ -58,6 +58,7 @@
   * [Factorial](math/factorial.md)
   * [Fast Pow](math/fast-pow.md)
   * [Gcd](math/gcd.md)
+  * [Geometry](math/geometry.md)
   * [Modular Multiplicative Inverse](math/modular-multiplicative-inverse.md)
   * [Sieve Of Eratosthenes](math/sieve-of-eratosthenes.md)
   * [Stars And Bars](math/stars-and-bars.md)

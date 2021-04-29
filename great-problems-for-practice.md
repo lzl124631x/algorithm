@@ -1,8 +1,10 @@
-# Categorization
+# Great problems for practice
 
 215: Quick Select; Manually Implement Heap; API usage of `nth_element`, `make_heap`, `push_heap`, `pop_heap`
 
 1235: DP + Binary search because of sparse value (compared to continuous indexes)
+
+1830: permutation rank with duplicates
 
 ## DP on Subsets OR DFS to Fill Buckets
 
@@ -29,3 +31,17 @@
 * [51. N-Queens (Hard)](https://leetcode.com/problems/n-queens/)
 * [698. Partition to K Equal Sum Subsets (Medium)](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/submissions/)
 * [473. Matchsticks to Square (Medium)](https://leetcode.com/problems/matchsticks-to-square/)
+
+## Stack operation on string
+
+* [1003. Check If Word Is Valid After Substitutions (Medium)](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/)
+* [1209. Remove All Adjacent Duplicates in String II (Medium)](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/)
+
+## Permutation
+
+* [60. Permutation Sequence (Hard)](https://leetcode.com/problems/permutation-sequence/)
+* [31. Next Permutation (Medium)](https://leetcode.com/problems/next-permutation/)
+
+## Mono Stack / Mono Deque
+
+* [907. Sum of Subarray Minimums (Medium)](https://leetcode.com/problems/sum-of-subarray-minimums/)

@@ -1,10 +1,12 @@
 # Great problems for practice
 
-215: Quick Select; Manually Implement Heap; API usage of `nth_element`, `make_heap`, `push_heap`, `pop_heap`
+[215. Kth Largest Element in an Array (Medium)](https://leetcode.com/problems/kth-largest-element-in-an-array/): Quick Select; Manually Implement Heap; API usage of `nth_element`, `make_heap`, `push_heap`, `pop_heap`
 
-1235: DP + Binary search because of sparse value (compared to continuous indexes)
+[1235. Maximum Profit in Job Scheduling (Hard)](https://leetcode.com/problems/maximum-profit-in-job-scheduling/): DP + Binary search because of sparse value (compared to continuous indexes)
 
-1830: permutation rank with duplicates
+[1830. Minimum Number of Operations to Make String Sorted (Hard)](https://leetcode.com/problems/minimum-number-of-operations-to-make-string-sorted/): permutation rank with duplicates
+
+[472. Concatenated Words (Hard)](https://leetcode.com/problems/concatenated-words/): Trie + DP
 
 ## DP on Subsets OR DFS to Fill Buckets
 

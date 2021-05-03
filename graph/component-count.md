@@ -6,6 +6,8 @@ Count connected components in a graph.
 
 ## Implementation
 
+[323. Number of Connected Components in an Undirected Graph (Medium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
+
 Implement a function `int getComponentCount(vector<vector<int>> &G)`, where `G` is an adjacency list representation of the graph, and the return value is the count of components in the graph.
 
 ### DFS
@@ -103,4 +105,4 @@ int getComponentCount(vector<vector<int>> &G) {
 
 * [947. Most Stones Removed with Same Row or Column \(Medium\)](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
 * [200. Number of Islands \(Medium\)](https://leetcode.com/problems/number-of-islands/)
-
+* [323. Number of Connected Components in an Undirected Graph (Medium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)

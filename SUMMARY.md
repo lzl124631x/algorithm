@@ -96,6 +96,7 @@
 * [Minmax](minmax.md)
 * [Mono Deque](mono-deque.md)
 * [Monotonic Stack](monotonic-stack.md)
+* [Offline Query](offline-query.md)
 * [Overflow](overflow.md)
 * [P And Np](p-and-np.md)
 * [Prefix State Map](prefix-state-map.md)

@@ -43,3 +43,4 @@ Take [402. Remove K Digits (Medium)](https://leetcode.com/problems/remove-k-digi
 * [1504. Count Submatrices With All Ones \(Medium\)](https://leetcode.com/problems/count-submatrices-with-all-ones/)
 * [1673. Find the Most Competitive Subsequence (Medium)](https://leetcode.com/problems/find-the-most-competitive-subsequence/)
 * [907. Sum of Subarray Minimums (Medium)](https://leetcode.com/problems/sum-of-subarray-minimums/)
+* [1856. Maximum Subarray Min-Product (Medium)](https://leetcode.com/problems/maximum-subarray-min-product/)

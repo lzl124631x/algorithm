@@ -46,3 +46,4 @@ So in the end we just need to traverse `delta` array to recover the `U` array.
 ## Problems
 
 * [1674. Minimum Moves to Make Array Complementary (Medium)](https://leetcode.com/problems/minimum-moves-to-make-array-complementary/)
+* [1854. Maximum Population Year (Easy)](https://leetcode.com/problems/maximum-population-year/)

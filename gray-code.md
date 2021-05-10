@@ -52,7 +52,7 @@ int rev_g (int g) {
 
 ## Problems
 
-# [1238. Circular Permutation in Binary Representation (Medium)](https://leetcode.com/problems/circular-permutation-in-binary-representation/)
+* [1238. Circular Permutation in Binary Representation (Medium)](https://leetcode.com/problems/circular-permutation-in-binary-representation/)
 
 ## References
 

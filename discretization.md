@@ -43,5 +43,5 @@ vector<int> discretize(vector<int> &input) {
 
 ## Problem
 
-* \[699. Falling Squares \(Hard\)\]\([https://leetcode.com/problems/falling-squares/](https://leetcode.com/problems/falling-squares/)
+* [699. Falling Squares (Hard)](https://leetcode.com/problems/falling-squares/)
 

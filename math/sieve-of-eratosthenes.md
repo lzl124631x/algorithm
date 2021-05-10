@@ -21,6 +21,7 @@ And so on. Until we've visited all the numbers within the maximum number.
 // Author: github.com/lzl124631x
 // Time: O(NloglogN)
 // Space: O(N)
+// Ref: https://leetcode.com/problems/count-primes/solution/
 class Solution {
 public:
     int countPrimes(int n) {
@@ -31,7 +32,7 @@ public:
             if (!prime[i]) continue;
             ++ans;
             if (i > bound) continue; // If i > bound, then i * i must be greater than `n`, skip. This can prevent overflow caused by `i * i`.
-            for (int j = i * i; j < n; j += i) prime[j] = false;
+            for (int j = i * i; j < n; j += i) prime[j] = false; // note that we start from `i * i` instead of `2` because all multiples of `2, 3, ..., (i-1)` must be marked already
         }
         return ans;
     }

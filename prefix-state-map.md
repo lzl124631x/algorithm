@@ -35,3 +35,4 @@ for (int i = 0; i < A.size(); ++i) {
 * [1371. Find the Longest Substring Containing Vowels in Even Counts \(Medium\)](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/)
 * [1542. Find Longest Awesome Substring (Hard)](https://leetcode.com/problems/find-longest-awesome-substring/)
 * [1590. Make Sum Divisible by P (Medium)](https://leetcode.com/problems/make-sum-divisible-by-p)
+* [974. Subarray Sums Divisible by K (Medium)](https://leetcode.com/problems/subarray-sums-divisible-by-k/)

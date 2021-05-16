@@ -65,6 +65,35 @@ int combination(int k, int n, int mod) {
 }
 ```
 
+## Sum of combinations
+
+We can use the following equation to get some useful conclusions:
+
+$$
+(a + b)^n = C_n^0\cdot a^0\cdot b^n + C_n^1\cdot a^1\cdot b^{n-1} + \dots + C_n^n\cdot a^n\cdot b^0
+$$
+
+Let `a = 1, b = 1`, we have
+
+$$
+C_n^0 + C_n^1 + C_n^2 + \dots + C_n^{n-1} + C_n^n = 2^n
+$$
+
+Let `a = 1, b = -1`, we have
+
+$$
+C_n^0 - C_n^1 + C_n^2 - C_n^3 + C_n^4 - C_n^5 + \dots = 0
+$$
+
+So 
+
+$$
+\sum_{p}C_n^p = \sum_{q}C_n^q = 2^{n-1}
+$$
+where `p` and `q` represent all the even and odd numbers in `[0, n]`, respectively. 
+
+We can use this trick in [1863. Sum of All Subset XOR Totals (Easy)](https://leetcode.com/problems/sum-of-all-subset-xor-totals/)
+
 ## Problems
 
 * [1569. Number of Ways to Reorder Array to Get Same BST (Hard)](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/)

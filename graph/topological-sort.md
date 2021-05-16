@@ -102,3 +102,4 @@ public:
 * [Fox And Names](https://codeforces.com/contest/510/problem/C)
 * [802. Find Eventual Safe States (Medium)](https://leetcode.com/problems/find-eventual-safe-states/)
 * [1857. Largest Color Value in a Directed Graph (Hard)](https://leetcode.com/problems/largest-color-value-in-a-directed-graph/)
+* [1462. Course Schedule IV (Medium)](https://leetcode.com/problems/course-schedule-iv/)

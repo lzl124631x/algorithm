@@ -44,6 +44,7 @@ We scan the sequence one by one, make decisions at each step.
 * [1463. Cherry Pickup II (Hard)](https://leetcode.com/problems/cherry-pickup-ii/)
 * [1473. Paint House III (Hard)](https://leetcode.com/problems/paint-house-iii/)
 * [44. Wildcard Matching (Hard)](https://leetcode.com/problems/wildcard-matching/)
+* [1866. Number of Ways to Rearrange Sticks With K Sticks Visible (Hard)](https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/)
 
 ### Interval DP
 

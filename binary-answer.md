@@ -4,19 +4,18 @@ On a small scale of input, the binary answer problems are solvable by linear sca
 
 Binary search the answer in a known range. Assume the range is `[L, R]`, and the current value we are checking is `M = (L + R) / 2`.
 
-If we can write a function `valid(M)` to check if `M` is valid, and the problem satisfies the following monotone requirement:
+We can use "Binary Answer" solution if we can write a predicate function `valid(M)` that has **monotocity**:
 
-* If `i` is **valid**, then for all `k < i`, `k` is **valid**
-* If `j` is **invalid**, then for all `k > j`, `k` is **invalid**
+* If `valid(i) == true`, then `valid(j) == true` for all `j <= i`.
+* If `valid(i) == false`, then `valid(j) == false` for all `j >= i`.
 
-Then we can use binary answer.
+![](.gitbook/assets/binary-answer-1.png)
 
-```text
-[                  Answer Range                  ]
-[       Valid Range    ][      Invalid Range     ]
-                       ^
-binary search to find  ┘
-```
+Our goal is the find the maximum `i` that `valid(i) == true`.
+
+We can use two pointers `L = minVal, R = maxVal`, and keep using binary search to move the pointers towards each other until they swap order.
+
+![](.gitbook/assets/binary-answer-2.png)
 
 ## Pseudo Code
 
@@ -29,7 +28,7 @@ while (L <= R) {
     if (valid(M)) L = M + 1;  // You can also `ans = L` here to store the answer
     else R = M - 1;
 }
-return R >= minVal ? R : -1;
+return R >= minVal ? R : NOT_FOUND;
 ```
 
 ## Problems
@@ -42,3 +41,5 @@ return R >= minVal ? R : -1;
 * [719. Find K-th Smallest Pair Distance (Hard)](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)
 * [1283. Find the Smallest Divisor Given a Threshold (Medium)](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/)
 * [1802. Maximum Value at a Given Index in a Bounded Array (Medium)](https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
+* [1870. Minimum Speed to Arrive on Time (Medium)](https://leetcode.com/problems/minimum-speed-to-arrive-on-time/)
+* [1648. Sell Diminishing-Valued Colored Balls (Medium)](https://leetcode.com/problems/sell-diminishing-valued-colored-balls/)

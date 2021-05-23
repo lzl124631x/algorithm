@@ -13,7 +13,7 @@ We can use "Binary Answer" solution if we can write a predicate function `valid(
 
 Our goal is the find the maximum `i` that `valid(i) == true`.
 
-We can use two pointers `L = minVal, R = maxVal`, and keep using binary search to move the pointers towards each other until they swap order.
+We can use two pointers `L = minVal, R = maxVal`, and keep using binary search to move the pointers towards each other until they swap order. In the end, `R` will point to the largest value that is valid, `L` will point to the smallest value that is invalid.
 
 ![](.gitbook/assets/binary-answer-2.png)
 

@@ -51,6 +51,7 @@ We scan the sequence one by one, make decisions at each step.
 * [1478. Allocate Mailboxes (Hard)](https://leetcode.com/problems/allocate-mailboxes/)
 * [410. Split Array Largest Sum (Hard)](https://leetcode.com/problems/split-array-largest-sum/)
 * [1547. Minimum Cost to Cut a Stick (Hard)](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/)
+* [1140. Stone Game II (Medium)](https://leetcode.com/problems/stone-game-ii/)
 * [1563. Stone Game V (Hard)](https://leetcode.com/problems/stone-game-v/)
 
 Second Type 375 1246

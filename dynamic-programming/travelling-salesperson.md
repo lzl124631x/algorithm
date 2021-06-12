@@ -11,3 +11,4 @@ To eliminate repetitive computations, we need to observe the fact that there is 
 ## Problems
 
 * [1879. Minimum XOR Sum of Two Arrays (Hard)](https://leetcode.com/problems/minimum-xor-sum-of-two-arrays/)
+* [943. Find the Shortest Superstring (Hard)](https://leetcode.com/problems/find-the-shortest-superstring/)

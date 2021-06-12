@@ -70,6 +70,19 @@ for (int i = 0; i < N; ++i) {
 return dp[N][C];
 ```
 
+### Space Optimization
+
+```cpp
+// Time: O(NC)
+// Space: O(C)
+vector<int> dp(C + 1);
+for (int i = 0; i < N; ++i) {
+    for (int c = w[i]; c <= C; ++c) {
+        dp[c] = max( dp[c], dp[c - w[i]] + v[i] );
+    }
+}
+```
+
 ## Problems
 
 * [518. Coin Change 2 \(Medium\)](https://leetcode.com/problems/coin-change-2/)

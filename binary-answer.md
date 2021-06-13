@@ -1,15 +1,22 @@
 # Binary Answer
 
-On a small scale of input, the binary answer problems are solvable by linear scaning the answers. When the input scale is large, we need to use binary answer to reduce the scaning complexity from linear `O(N)` to binary `O(logN)`.
+## What's Binary Answer
+When the search range is small, the binary answer problems are solvable by linear scaning the answer range. For example, assume the answer range is `[0, 100]`, we can check `0`, then `1`, ..., then `100`, and we return the maximum number that is valid.
 
-Binary search the answer in a known range. Assume the range is `[L, R]`, and the current value we are checking is `M = (L + R) / 2`.
+However, when the answer range is large, say `[0, 10^5]`, linear scanning the entire answer range will get TLE. 
 
-We can use "Binary Answer" solution if we can write a predicate function `valid(M)` that has **monotocity**:
+So, instead of doing `O(N)` linear scanning, we binary search in the answer range which reduces the time complexity to `O(logN)`.
+
+## When can we use Binary Answer?
+
+We can use "Binary Answer" solution if we can write a predicate function `valid(i)` that has **monotocity**:
 
 * If `valid(i) == true`, then `valid(j) == true` for all `j <= i`.
 * If `valid(i) == false`, then `valid(j) == false` for all `j >= i`.
 
 ![](.gitbook/assets/binary-answer-1.png)
+
+## Algorithm
 
 Our goal is the find the maximum `i` that `valid(i) == true`.
 

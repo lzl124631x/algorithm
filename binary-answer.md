@@ -26,17 +26,19 @@ We can use two pointers `L = minVal, R = maxVal`, and keep using binary search t
 
 ## Pseudo Code
 
-Assume the answer is monotonically descreasing \(from valid to invalid\), and we are looking for the maximum valid value.
+Assume the answer range is monotonically going from valid to invalid, and we are looking for the maximum valid value.
 
 ```cpp
 int L = minVal, R = maxVal
 while (L <= R) {
     int M = (L + R) / 2;
-    if (valid(M)) L = M + 1;  // You can also `ans = L` here to store the answer
+    if (valid(M)) L = M + 1;
     else R = M - 1;
 }
 return R >= minVal ? R : NOT_FOUND;
 ```
+
+If we are looking for the minimal invalid value, simply return `L <= maxVal ? L : NOT_FOUND`.
 
 ## Problems
 

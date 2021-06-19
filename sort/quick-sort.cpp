@@ -1,28 +1,27 @@
 // OJ: https://leetcode.com/problems/sort-an-array/
 // Author: github.com/lzl124631x
-// Time: O(NlogN) on average
-// Space: O(1)
+// Time: O(NlogN) on average, O(N^2) in the worst case
+// Space: O(logN) on average, O(N) in the worst case
 class Solution {
-private:
-    int partition(vector<int> &nums, int L, int R, int pivot) {
-        swap(nums[pivot], nums[R]);
+    int partition(vector<int> &A, int L, int R, int pivot) {
+        swap(A[pivot], A[R]);
         for (int i = L; i < R; ++i) {
-            if (nums[i] >= nums[R]) continue;
-            swap(nums[i], nums[L++]);
+            if (A[i] >= A[R]) continue;
+            swap(A[i], A[L++]);
         }
-        swap(nums[L], nums[R]);
+        swap(A[L], A[R]);
         return L;
     }
-    void quickSort(vector<int> &nums, int L, int R) {
+    void quickSort(vector<int> &A, int L, int R) {
         if (L >= R) return;
-        int M = partition(nums, L, R, rand() % (R - L + 1) + L);
-        quickSort(nums, L, M - 1);
-        quickSort(nums, M + 1, R);
+        int M = partition(A, L, R, rand() % (R - L + 1) + L);
+        quickSort(A, L, M - 1);
+        quickSort(A, M + 1, R);
     }
 public:
-    vector<int> sortArray(vector<int>& nums) {
-        srand (time(NULL));
-        quickSort(nums, 0, nums.size() - 1);
-        return nums;
+    vector<int> sortArray(vector<int>& A) {
+        srand(NULL);
+        quickSort(A, 0, A.size() - 1);
+        return A;
     }
 };

@@ -11,3 +11,9 @@ I put all my notes for algorithms here.
 * Think about edge cases.
 * First talk about the brute force solution, then think about better approaches.
 * Think out loud!
+
+## Resources
+
+William Fiset
+* https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw
+* https://github.com/williamfiset/Algorithms

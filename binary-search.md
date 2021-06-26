@@ -125,10 +125,99 @@ public:
 };
 ```
 
+## Comparisons between `L <= R` and `L < R`
+[34. Find First and Last Position of Element in Sorted Array (Medium)](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+### Solution 1. Binary Search (L <= R)
+
+Pro:
+* `M` is always `(L + R) / 2`
+* Symmetrical and no-brainer: `L = M + 1` and `R = M - 1`.
+
+Con:
+* `L` and `R` might go out of boundary.  
+**Solution**: Simply do a out-of-boundary check.
+* Need to think about using `L` or `R` in the end.  
+**Solution**: Take the first binary search for example, if `A[M] < target`, we move `L`. If `A[M] >= target`, we move `R`. In the end, `L` and `R` will swap order, so `R` will point to the last `A[i] < target`, and `L` will point to the first `A[i] >= target`. Thus, we should use `L` as the left boundary.
+
+```cpp
+// OJ: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+// Author: github.com/lzl124631x
+// Time: O(logN)
+// Space: O(1)
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& A, int target) {
+        if (A.empty()) return {-1,-1};
+        int N = A.size(), L = 0, R = N - 1;
+        while (L <= R) {
+            int M = (L + R) / 2;
+            if (A[M] < target) L = M + 1;
+            else R = M - 1;
+        }
+        if (L >= N || A[L] != target) return {-1,-1};
+        int left = L;
+        L = 0, R = N - 1;
+        while (L <= R) {
+            int M = (L + R) / 2;
+            if (A[M] > target) R = M - 1;
+            else L = M + 1;
+        }
+        return {left, R};
+    }
+};
+```
+
+### Solution 2. Binary Search (L < R)
+
+Pro:
+* In the end, `L` and `R` points to the same position.
+
+Con:
+* Need to think about setting `L = M` or `R = M`.
+**Solution**: Take the first binary search for example. If `A[M] < target`, we want to move `L` to `M + 1` because `A[M] != target`. If `A[M] >= target`, we want to move `R` to `M`. Since we are using `R = M`, we need to make sure `M != R`, thus we should round down `M` as `(L + R) / 2`.
+
+Now consider the second binary search. If `A[M] > target`, we want to move `R` to `M - 1`. If `A[M] <= target`, we want to move `L` to `M`. Since we are using `L = M`, we need to make sure `M != R`, thus we should round up `M` as `(L + R + 1) / 2`.
+
+Overall, if we do `L = M`, we round up. If we do `R = M`, we round down.
+
+Round up: `(L + R) / 2` or `L + (R - L) / 2`.
+
+Round down: `(L + R + 1) / 2` or `R - (R - L) / 2`.
+
+```cpp
+// OJ: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+// Author: github.com/lzl124631x
+// Time: O(logN)
+// Space: O(1)
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& A, int target) {
+        if (A.empty()) return {-1,-1};
+        int N = A.size(), L = 0, R = N - 1;
+        while (L < R) {
+            int M = (L + R) / 2;
+            if (A[M] < target) L = M + 1;
+            else R = M;
+        }
+        if (A[L] != target) return {-1,-1};
+        int left = L;
+        L = 0, R = N - 1;
+        while (L < R) {
+            int M = (L + R + 1) / 2;
+            if (A[M] > target) R = M - 1;
+            else L = M;
+        }
+        return {left, L};
+    }
+};
+```
+
 ## Problems
 
 **Problems that are good for practicing handwriting binary search**
 * [704. Binary Search (Easy)](https://leetcode.com/problems/binary-search/)
+* [34. Find First and Last Position of Element in Sorted Array (Medium)](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+* [35. Search Insert Position (Easy)](https://leetcode.com/problems/search-insert-position/)
 * [275. H-Index II \(Medium\)](https://leetcode.com/problems/h-index-ii/)
 * [1539. Kth Missing Positive Number (Easy)](https://leetcode.com/problems/kth-missing-positive-number/)
 * [1044. Longest Duplicate Substring \(Hard\)](https://leetcode.com/problems/longest-duplicate-substring/)
@@ -146,3 +235,4 @@ public:
 **Problems that I had to use `while (L < R)`**
 * [153. Find Minimum in Rotated Sorted Array (Medium)](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 * [154. Find Minimum in Rotated Sorted Array II (Hard)](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+* [658. Find K Closest Elements (Medium)](https://leetcode.com/problems/find-k-closest-elements/)

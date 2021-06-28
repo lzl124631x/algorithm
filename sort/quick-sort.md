@@ -5,6 +5,31 @@ Core algorithm
 * `quickSort(L, M - 1)`
 * `quickSort(M + 1, R)`
 
+## Why do we need to randomly select a pivot?
+
+The performance of quick sort is highly dependent on the selection of the pivot element.
+
+Imagine we want to sort `A = [5,2,3,1,4]`.
+
+If we always choose a bad pivot element, we can only reduce the scale by one each time.
+
+```
+pivot = 1, A = [(1),5,2,3,4]
+pivot = 2, A = [(1,2),5,3,4]
+pivot = 3, A = [(1,2,3),5,4]
+pivot = 4, A = [(1,2,3,4,5)]
+```
+
+If we always choose a good pivot element, we reduce the scale exponentially.
+
+```
+pivot = 2, A = [2,1,(3),5,4]
+pivot = 1, A = [(1,2,3),5,4]
+pivot = 4, A = [(1,2,3,4,5)]
+```
+
+As you can see, Quick Select performs better if we can approximately partition around the median.
+
 ## Algorithm
 
 ```cpp

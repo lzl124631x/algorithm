@@ -8,25 +8,23 @@
 // Time: O(NlogN)
 // Space: O(N)
 class Solution {
-private:
-    void _mergeSort(vector<int> &nums, vector<int> &tmp, int start, int end) {
-        if (start + 1 >= end) return;
-        int mid = (start + end) / 2;
-        _mergeSort(nums, tmp, start, mid);
-        _mergeSort(nums, tmp, mid, end);
-        for (int i = start, j = mid, k = 0; i < mid || j < end; ++k) {
-            tmp[k] = (i >= mid || (j < end && nums[j] < nums[i])) ? nums[j++] : nums[i++];
+    vector<int> tmp;
+    void mergeSort(vector<int> &A, int begin, int end) {
+        if (begin + 1 >= end) return;
+        int mid = (begin + end) / 2, i = begin, j = mid, k = begin;
+        mergeSort(A, begin, mid);
+        mergeSort(A, mid, end);
+        while (i < mid || j < end) {
+            if (j >= end || (i < mid && A[i] < A[j])) tmp[k++] = A[i++];
+            else tmp[k++] = A[j++];
         }
-        for (int i = start; i < end; ++i) nums[i] = tmp[i - start];
-    }
-    void mergeSort(vector<int> &nums, int start, int end) {
-        vector<int> tmp(end - start);
-        _mergeSort(nums, tmp, start, end);
+        for (i = begin; i < end; ++i) A[i] = tmp[i];
     }
 public:
-    vector<int> sortArray(vector<int>& nums) {
-        mergeSort(nums, 0, nums.size());
-        return nums;
+    vector<int> sortArray(vector<int>& A) {
+        tmp.assign(A.size(), 0);
+        mergeSort(A, 0, A.size());
+        return A;
     }
 };
 ```

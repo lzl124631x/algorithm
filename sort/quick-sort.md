@@ -11,7 +11,7 @@ The performance of quick sort is highly dependent on the selection of the pivot 
 
 Imagine we want to sort `A = [5,2,3,1,4]`.
 
-If we always choose a bad pivot element, we can only reduce the scale by one each time.
+If we always choose a bad pivot element, we can only reduce the scale by one each time. The time complexity degrades to `O(N^2)`.
 
 ```
 pivot = 1, A = [(1),5,2,3,4]
@@ -20,7 +20,7 @@ pivot = 3, A = [(1,2,3),5,4]
 pivot = 4, A = [(1,2,3,4,5)]
 ```
 
-If we always choose a good pivot element, we reduce the scale exponentially.
+If we always choose a good pivot element, we reduce the scale exponentially. The time complexity is `O(NlogN)`.
 
 ```
 pivot = 2, A = [2,1,(3),5,4]

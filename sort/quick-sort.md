@@ -1,3 +1,13 @@
+# Quick Sort
+
+Core algorithm
+* `M = partition(L, R)`
+* `quickSort(L, M - 1)`
+* `quickSort(M + 1, R)`
+
+## Algorithm
+
+```cpp
 // OJ: https://leetcode.com/problems/sort-an-array/
 // Author: github.com/lzl124631x
 // Time: O(NlogN) on average, O(N^2) in the worst case
@@ -25,3 +35,4 @@ public:
         return A;
     }
 };
+```

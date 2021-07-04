@@ -99,6 +99,8 @@ public:
 * The hashes are `unsigned int`.
 * No mod number `m` is needed! It will automatically mod by `2^32` when overflow happens.
 
+Note that we should use `unsigned long long` for the hash to avoid hash conflict. For example in [1923. Longest Common Subpath (Hard)](https://leetcode.com/problems/longest-common-subpath/).
+
 ```cpp
 // OJ: https://leetcode.com/problems/implement-strstr/
 // Author: github.com/lzl124631x
@@ -107,7 +109,7 @@ public:
 class Solution {
 public:
     int strStr(string s, string t) {
-        unsigned S = s.size(), T = t.size(), d = 16777619, p = 1, hs = 0, ht = 0; // we can use d = 29 as well or some other prime greater than the size of the character set.
+        unsigned long long S = s.size(), T = t.size(), d = 16777619, p = 1, hs = 0, ht = 0; // we can use d = 29 as well or some other prime greater than the size of the character set.
         if (!S || !T || T > S) return T ? -1 : 0;
         for (int i = 0; i < S; ++i) {
             hs = hs * d + s[i] - 'a';
@@ -168,6 +170,7 @@ vector<int> rolling(vector<int> &A, int len) {
 * [718. Maximum Length of Repeated Subarray \(Medium\)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 * [214. Shortest Palindrome (Hard)](https://leetcode.com/problems/shortest-palindrome/)
 * [1297. Maximum Number of Occurrences of a Substring (Medium)](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/)
+* [1923. Longest Common Subpath (Hard)](https://leetcode.com/problems/longest-common-subpath/)
 
 ## Reference
 

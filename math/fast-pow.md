@@ -11,8 +11,8 @@ int modpow(int base, int exp, int mod) {
     base %= mod;
     long ans = 1;
     while (exp > 0) {
-        if (exp & 1) ans = (ans * base) % mod;
-        base = ((long)base * base) % mod;
+        if (exp & 1) ans = ans * base % mod;
+        base = (long)base * base % mod;
         exp >>= 1;
     }
     return ans;

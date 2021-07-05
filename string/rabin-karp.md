@@ -54,7 +54,7 @@ public:
 };
 ```
 
-## Version 2
+### Version 2
 
 * This version is translated from standard golang implementation.
 * The hashes are `unsigned int`.
@@ -96,10 +96,8 @@ public:
 
 ### Version 3
 
-* The hashes are `unsigned int`.
+* The hashes are `unsigned long long`. Using `unsigned long long` can **reduce** the chance of hash conflict. (Example:  [1923. Longest Common Subpath (Hard)](https://leetcode.com/problems/longest-common-subpath/))
 * No mod number `m` is needed! It will automatically mod by `2^32` when overflow happens.
-
-Note that we should use `unsigned long long` for the hash to avoid hash conflict. For example in [1923. Longest Common Subpath (Hard)](https://leetcode.com/problems/longest-common-subpath/).
 
 ```cpp
 // OJ: https://leetcode.com/problems/implement-strstr/

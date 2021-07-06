@@ -52,3 +52,4 @@ If we are looking for the minimal invalid value, simply return `L <= maxVal ? L 
 * [1802. Maximum Value at a Given Index in a Bounded Array (Medium)](https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 * [1870. Minimum Speed to Arrive on Time (Medium)](https://leetcode.com/problems/minimum-speed-to-arrive-on-time/)
 * [1648. Sell Diminishing-Valued Colored Balls (Medium)](https://leetcode.com/problems/sell-diminishing-valued-colored-balls/)
+* [1062. Longest Repeating Substring (Medium)](https://leetcode.com/problems/longest-repeating-substring/)

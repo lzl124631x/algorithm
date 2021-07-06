@@ -169,6 +169,7 @@ vector<int> rolling(vector<int> &A, int len) {
 * [214. Shortest Palindrome (Hard)](https://leetcode.com/problems/shortest-palindrome/)
 * [1297. Maximum Number of Occurrences of a Substring (Medium)](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/)
 * [1923. Longest Common Subpath (Hard)](https://leetcode.com/problems/longest-common-subpath/)
+* [1062. Longest Repeating Substring (Medium)](https://leetcode.com/problems/longest-repeating-substring/)
 
 ## Reference
 

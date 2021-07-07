@@ -170,6 +170,7 @@ vector<int> rolling(vector<int> &A, int len) {
 * [1297. Maximum Number of Occurrences of a Substring (Medium)](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/)
 * [1923. Longest Common Subpath (Hard)](https://leetcode.com/problems/longest-common-subpath/)
 * [1062. Longest Repeating Substring (Medium)](https://leetcode.com/problems/longest-repeating-substring/)
+* [718. Maximum Length of Repeated Subarray (Medium)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 
 ## Reference
 

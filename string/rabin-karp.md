@@ -107,7 +107,7 @@ public:
 class Solution {
 public:
     int strStr(string s, string t) {
-        unsigned long long S = s.size(), T = t.size(), d = 16777619, p = 1, hs = 0, ht = 0; // we can use d = 29 as well or some other prime greater than the size of the character set.
+        unsigned long long S = s.size(), T = t.size(), d = 1099511628211, p = 1, hs = 0, ht = 0; // we can use d = 29 as well or some other prime greater than the size of the character set.
         if (!S || !T || T > S) return T ? -1 : 0;
         for (int i = 0; i < S; ++i) {
             hs = hs * d + s[i] - 'a';
@@ -127,9 +127,29 @@ public:
 };
 ```
 
-### Why 16777619?
+### Why 1099511628211?
 
-`16777619` is the FNV(Fowler–Noll–Vo) prime for 32 bit integer. When using FNV prime, the hash values produced are more scattered throughout the hash space.
+`1099511628211` is the FNV(Fowler–Noll–Vo) prime for 64 bit integer. When using FNV prime, the hash values produced are more scattered throughout the hash space.
+
+```
+// Ref: https://www.jianshu.com/p/da951d62bb67
+32 bit FNV_prime = 224 + 28 + 0x93 = 16777619
+
+64 bit FNV_prime = 240 + 28 + 0xb3 = 1099511628211
+
+128 bit FNV_prime = 288 + 28 + 0x3b = 309485009821345068724781371
+
+256 bit FNV_prime = 2168 + 28 + 0x63 = 374144419156711147060143317175368453031918731002211
+
+512 bit FNV_prime = 2344 + 28 + 0x57 =
+35835915874844867368919076489095108449946327955754392558399825615420669938882575
+126094039892345713852759
+
+1024 bit FNV_prime = 2680 + 28 + 0x8d =
+50164565101131186554345988110352789550307653454047907443030175238311120551081474
+51509157692220295382716162651878526895249385292291816524375083746691371804094271
+873160484737966720260389217684476157468082573
+```
 
 See more in [FNV prime](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function#FNV_prime)
 
@@ -145,20 +165,62 @@ Examples:
 The following function is used in [718. Maximum Length of Repeated Subarray \(Medium\)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) to generate the rolling hash.
 
 ```cpp
-vector<int> rolling(vector<int> &A, int len) {
-    vector<int> ans(A.size() - len + 1);
-    long h = 0, p = 1, mod = 1e9+7, d = 113;
+vector<ULL> rolling(vector<int> &A, int len) {
+    unsigned long long d = 1099511628211, h = 0, p = 1;
+    vector<ULL> ans;
     for (int i = 0; i < A.size(); ++i) {
-        h = (h * d + A[i]) % mod;
-        if (i < len - 1) p = (p * d) % mod;
-        else {
-            ans[i - len + 1] = h;
-            h = (h - A[i - len + 1] * p) % mod;
-            if (h < 0) h += mod;
-        }
+        h = h * d + A[i];
+        if (i < len) p *= d;
+        else h -= A[i - len] * p;
+        if (i >= len - 1) ans.push_back(h);
     }
     return ans;
 }
+```
+
+## Prefix Hash Array
+
+```cpp
+// Generate Prefix Hash Array
+unsigned long long d = 1099511628211, h[501] = {}, p[501] = {1}, N = s.size();
+for (int i = 0; i < N; ++i) {
+    p[i + 1] = p[i] * d;
+    h[i + 1] = h[i] * d + s[i];
+}
+// Access a hash of a substring of s[begin, end)
+unsigned long long hash(int begin, int end) {
+    return h[end] - h[begin] * p[end - begin];
+}
+```
+
+Example: [1698. Number of Distinct Substrings in a String (Medium)](https://leetcode.com/problems/number-of-distinct-substrings-in-a-string/)
+
+```cpp
+// OJ: https://leetcode.com/problems/number-of-distinct-substrings-in-a-string/
+// Author: github.com/lzl124631x
+// Time: O(N^2)
+// Space: O(N^2)
+class Solution {
+    unsigned long long d = 1099511628211, h[501] = {}, p[501] = {1};
+    unsigned long long hash(int begin, int end) {
+        return h[end] - h[begin] * p[end - begin];
+    }
+public:
+    int countDistinct(string s) {
+        int N = s.size();
+        for (int i = 0; i < N; ++i) {
+            p[i + 1] = p[i] * d;
+            h[i + 1] = h[i] * d + s[i];
+        }
+        unordered_set<unsigned long long> seen;
+        for (int len = 1; len <= N; ++len) {
+            for (int i = 0; i + len <= N; ++i) {
+                seen.insert(hash(i, i + len));
+            }
+        }
+        return seen.size();
+    }
+};
 ```
 
 ## Problem
@@ -171,6 +233,7 @@ vector<int> rolling(vector<int> &A, int len) {
 * [1923. Longest Common Subpath (Hard)](https://leetcode.com/problems/longest-common-subpath/)
 * [1062. Longest Repeating Substring (Medium)](https://leetcode.com/problems/longest-repeating-substring/)
 * [718. Maximum Length of Repeated Subarray (Medium)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
+* [1698. Number of Distinct Substrings in a String (Medium)](https://leetcode.com/problems/number-of-distinct-substrings-in-a-string/)
 
 ## Reference
 

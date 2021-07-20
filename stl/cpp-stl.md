@@ -56,6 +56,22 @@ Example use case:
 * https://leetcode.com/problems/the-k-strongest-values-in-an-array/discuss/674384/C%2B%2BJavaPython-Two-Pointers-%2B-3-Bonuses
 * [215. Kth Largest Element in an Array (Medium)](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
+Take [215. Kth Largest Element in an Array (Medium)](https://leetcode.com/problems/kth-largest-element-in-an-array/) for example, we are looking for the first `0 ~ k - 1`th element that are **greater** than other elements.
+
+```cpp
+// OJ: https://leetcode.com/problems/kth-largest-element-in-an-array/
+// Author: github.com/lzl124631x
+// Time: O(N) on average, O(N^2) in the worst case
+// Space: O(1)
+class Solution {
+public:
+    int findKthLargest(vector<int>& A, int k) {
+        nth_element(begin(A), begin(A) + k - 1, end(A), greater<int>());
+        return A[k - 1];
+    }
+};
+```
+
 Complexity: Linear in `std::distance(first, last)` on average.
 
 ### partial\_sort

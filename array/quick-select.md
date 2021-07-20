@@ -8,42 +8,17 @@ The time complexity is `O(N)` on average, and `O(N^2)` in the worst case.
 
 Quick select with elements sorted in ascending order.
 
-**Initialization**:
-
-Randomly select a index `r` and use `A[r]` as the pivot
-
-Swap `A[r]` with the last element `A[R]`.
-
-**Loop and Swap**:
-1. Since we swapped pivot to the back, we must move the left pointer `i` first.
-2. Then move the right pointer `j`
-3. If `i < j`, we swap `A[i]` and `A[j]`.
-4. Continue the loop until `i == j`.
-
-**Finally**:
-
-In the end `i == j`, and `A[i] >= pivot`. So we swap `A[i]` with `A[R]`.
-
-**Note**:
-
-* Since we moved pivot to the back, we must move the left pointer `i` first to ensure that after the loop, `A[i] >= pivot` so that we can safely `swap(A[i], A[R])`.
-* All the conditions must be `i < j`. In the end `i == j`.
-* When comparing `A[i]` or `A[j]` with pivot, must include the equal sign. Numbers that equal `pivot` might scatter in both the left and right part and this is fine.
-* For `swap(A[i], A[j])`, we must not do `swap(A[i++], A[j--])`, because that might cause `i == j` and we'll miss checking the last `A[i]`.
-
 ```cpp
 // OJ: https://leetcode.com/problems/kth-largest-element-in-an-array/
 // Author: github.com/lzl124631x
 // Time: O(N) on averge, O(N^2) in the worst case
 // Space: O(1)
 class Solution {
-    int quickSelect(vector<int> &A, int L, int R, int r) {
-        int pivot = A[r], i = L, j = R;
-        swap(A[r], A[R]);
-        while (i < j) {
-            while (i < j && A[i] <= pivot) ++i;
-            while (i < j && A[j] >= pivot) --j;
-            if (i < j) swap(A[i], A[j]);
+    int partition(vector<int> &A, int L, int R) {
+        int i = L, pivotIndex = L + rand() % (R - L + 1), pivot = A[pivotIndex];
+        swap(A[pivotIndex], A[R]);
+        for (int j = L; j < R; ++j) {
+            if (A[j] < pivot) swap(A[i++], A[j]);
         }
         swap(A[i], A[R]);
         return i;
@@ -51,12 +26,11 @@ class Solution {
 public:
     int findKthLargest(vector<int>& A, int k) {
         int L = 0, R = A.size() - 1;
-        k = A.size() - k;
-        srand(NULL);
+        k = A.size() - k + 1;
         while (true) {
-            int M = quickSelect(A, L, R, L + rand() % (R - L + 1));
-            if (M == k) return A[k];
-            if (M > k) R = M - 1;
+            int M = partition(A, L, R);
+            if (M + 1 == k) return A[M];
+            if (M + 1 > k) R = M - 1;
             else L = M + 1;
         }
     }
@@ -71,13 +45,11 @@ Quick select with elements sorted in descending order.
 // Time: O(N) on averge, O(N^2) in the worst case
 // Space: O(1)
 class Solution {
-    int quickSelect(vector<int> &A, int L, int R, int r) {
-        int pivot = A[r], i = L, j = R;
-        swap(A[r], A[R]);
-        while (i < j) {
-            while (i < j && A[i] >= pivot) ++i; // for descending order, the only two changes we need to make are the comparison signs with the pivot
-            while (i < j && A[j] <= pivot) --j;
-            if (i < j) swap(A[i], A[j]);
+    int partition(vector<int> &A, int L, int R) {
+        int i = L, pivotIndex = L + rand() % (R - L + 1), pivot = A[pivotIndex];
+        swap(A[pivotIndex], A[R]);
+        for (int j = L; j < R; ++j) {
+            if (A[j] > pivot) swap(A[i++], A[j]);
         }
         swap(A[i], A[R]);
         return i;
@@ -85,18 +57,17 @@ class Solution {
 public:
     int findKthLargest(vector<int>& A, int k) {
         int L = 0, R = A.size() - 1;
-        --k;
         while (true) {
-            int M = quickSelect(A, L, R, L + rand() % (R - L + 1));
-            if (M == k) return A[M];
-            if (M < k) L = M + 1;
-            else R = M - 1;
+            int M = partition(A, L, R);
+            if (M + 1 == k) return A[M];
+            if (M + 1 > k) R = M - 1;
+            else L = M + 1;
         }
     }
 };
 ```
 
-Or use STL
+Or STL
 
 ```cpp
 // OJ: https://leetcode.com/problems/kth-largest-element-in-an-array/

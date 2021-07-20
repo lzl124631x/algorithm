@@ -2,7 +2,7 @@
 
 ## Preorder
 
-[144. Binary Tree Preorder Traversal \(Medium\)](https://leetcode.com/problems/binary-tree-preorder-traversal/)
+[145. Binary Tree Postorder Traversal (Easy)](https://leetcode.com/problems/binary-tree-postorder-traversal/))
 
 See more my solutions [here](https://github.com/lzl124631x/LeetCode/tree/master/leetcode/144.%20Binary%20Tree%20Preorder%20Traversal)
 
@@ -58,7 +58,7 @@ public:
 
 ## Inorder
 
-[94. Binary Tree Inorder Traversal \(Medium\)](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+[94. Binary Tree Inorder Traversal (Easy)](https://leetcode.com/problems/binary-tree-inorder-traversal/)
 
 See more my solutions [here](https://github.com/lzl124631x/LeetCode/blob/master/leetcode/94.%20Binary%20Tree%20Inorder%20Traversal)
 
@@ -89,7 +89,7 @@ public:
 
 ## Postorder
 
-[145. Binary Tree Postorder Traversal \(Hard\)](https://leetcode.com/problems/binary-tree-postorder-traversal/)
+[145. Binary Tree Postorder Traversal (Easy)](https://leetcode.com/problems/binary-tree-postorder-traversal/)
 
 See more my solutions [here](https://github.com/lzl124631x/LeetCode/blob/master/leetcode/145.%20Binary%20Tree%20Postorder%20Traversal)
 

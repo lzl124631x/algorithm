@@ -54,3 +54,4 @@ If we are looking for the minimal invalid value, simply return `L <= maxVal ? L 
 * [1648. Sell Diminishing-Valued Colored Balls (Medium)](https://leetcode.com/problems/sell-diminishing-valued-colored-balls/)
 * [1062. Longest Repeating Substring (Medium)](https://leetcode.com/problems/longest-repeating-substring/)
 * [718. Maximum Length of Repeated Subarray (Medium)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
+* [778. Swim in Rising Water (Hard)](https://leetcode.com/problems/swim-in-rising-water/)

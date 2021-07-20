@@ -74,6 +74,8 @@ public:
 
 Complexity: Linear in `std::distance(first, last)` on average.
 
+Note: [Difference between `nth_element` and `partial_sort`](https://stackoverflow.com/a/54227430/3127828)
+
 ### partial\_sort
 
 [https://en.cppreference.com/w/cpp/algorithm/partial\_sort](https://en.cppreference.com/w/cpp/algorithm/partial_sort)

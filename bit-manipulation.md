@@ -215,6 +215,29 @@ for (int mask = 1; mask < (1 << N); ++mask) {
 
 where `lowbit(x) = x & -x`, and `__builtin_ctz(x)` counts the trailing zeros in `x`. Since `lowbit(mask)` is a power of two, `__builtin_ctz(lowbit(mask)) == log2(lowbit(mask))`.
 
+## Generate `logs` array
+
+`logs[n]` is `floor(log2(n))`.
+
+```
+logs[1] = 0
+logs[2] = 1
+logs[3] = 1
+logs[4] = 2
+logs[5] = 2
+logs[6] = 2
+logs[7] = 2
+logs[8] = 3
+...
+```
+
+```cpp
+// Time: O(2^N)
+for (int mask = 2; mask < (1 << N); ++mask) {
+    logs[mask] = logs[mask >> 1] + 1;
+}
+```
+
 ## Reference
 
 * [https://oi-wiki.org/math/bit/](https://oi-wiki.org/math/bit/)

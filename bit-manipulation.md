@@ -77,6 +77,14 @@ __builtin_popcount(n) == 1
 (n & (n - 1)) == 0 // & has lower precedence than ==. Must add the parenthesis.
 ```
 
+## Traverse all the non-empty subsets of a mask
+
+```cpp
+for (int m = mask; m; m = (m - 1) & mask) {
+    // `m` is a subset of `mask`
+}
+```
+
 ## Reference
 
 * [https://oi-wiki.org/math/bit/](https://oi-wiki.org/math/bit/)

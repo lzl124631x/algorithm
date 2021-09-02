@@ -245,14 +245,14 @@ public:
             r[i] = cur;
         }
         
-        int mx = 0, p = -1;
+        int len = 1, start = 0;
         for (int i = 2; i <= 2 * N; ++i) {
-            if (r[i] - 1 > mx) {
-                mx = r[i] - 1;
-                p = (i - r[i]) / 2;
+            if (r[i] - 1 > len) {
+                len = r[i] - 1;
+                start = (i - r[i]) / 2;
             }
         }
-        return s.substr(p, mx);
+        return s.substr(start, len);
     }
 };
 ```

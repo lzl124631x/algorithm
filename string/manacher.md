@@ -91,7 +91,7 @@ t = "^*a*b*c*b*$"
 
 For `t[6] = 'c'`, the corresponding `j` could be `4` and `r[j] = 2`. Since `j + r[j] == i == 6`, we expand at `t[6]` brute-forcely. And we will get `r[6] = 4`.
 
-Since `i + r[i] = 6 + 4 = 10 > j + r[j] = 6`, we will make `i = 6` be the new center `j`.
+Since `i + r[i] = 6 + 4 = 10 > j + r[j] = 6`, we will make `i = 6` the new center `j`.
 
 **Case 2: j + r[j] > i**:
 

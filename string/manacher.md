@@ -127,7 +127,7 @@ t = "^*c*a*a*c*c*c*a*a*d*b*$"
 r =    2125212383212?
         [      j      ]
       [   k   ]          // not all this range for `k` can be symmetrised.
-        [ k ]     [ i ]  // we can only symmetrise part covered by the range for `j`
+        [ k ]     [ i ]  // we can only symmetrise the part covered by the range for `j`
 ```
 
 Since `k-r[k] < j-r[j]`, not the entire range for `k` can be symmetrised relative to `j`. We can only symmetrise the range `[j-r[j]+1, 2*k-j+r[j]-1]`. So `r[i]` is at least `k - (j-r[j]+1) + 1 = k-j+r[j] = j+r[j]-i`.
@@ -268,3 +268,8 @@ Thus, the overall time complexity of Manacher is `O(N)`.
 ## Reference
 
 * [[Algorithm][018] 最长回文子串 Manacher [OTTFF]](https://www.bilibili.com/video/BV1AX4y1F79W)
+
+## Problems
+
+* [5. Longest Palindromic Substring (Medium)](https://leetcode.com/problems/longest-palindromic-substring/)
+* [647. Palindromic Substrings (Medium)](https://leetcode.com/problems/palindromic-substrings/)

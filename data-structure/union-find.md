@@ -61,6 +61,8 @@ public:
 
 We can use a `size` array to keep track of the size of each union.
 
+`cnt` keeps track of the number of unions.
+
 ```cpp
 class UnionFind {
     vector<int> id, size;

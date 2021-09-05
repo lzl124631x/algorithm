@@ -66,7 +66,7 @@ class UnionFind {
     vector<int> id, size;
     int cnt;
 public:
-    UnionFind(int n) : id(n), size(n, 1) {
+    UnionFind(int n) : id(n), size(n, 1), cnt(n) {
         iota(begin(id), end(id), 0);
     }
     void connect(int a, int b) {

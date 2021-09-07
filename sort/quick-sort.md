@@ -32,6 +32,12 @@ As you can see, Quick Select performs better if we can approximately partition a
 
 ## Algorithm
 
+**Lomuto's partition**:
+* Easy to implement
+* Less efficient than Hoare's partition.
+
+The logic is very similar to [283. Move Zeroes (Easy)](https://leetcode.com/problems/move-zeroes/).
+
 ```cpp
 // OJ: https://leetcode.com/problems/sort-an-array/
 // Author: github.com/lzl124631x
@@ -40,11 +46,11 @@ As you can see, Quick Select performs better if we can approximately partition a
 class Solution {
     int partition(vector<int> &A, int L, int R, int pivot) {
         swap(A[pivot], A[R]);
-        for (int i = L; i < R; ++i) {
-            if (A[i] >= A[R]) continue;
-            swap(A[i], A[L++]);
+        for (int i = L; i < R; ++i) { // `i` is the read pointer, `L` is the write pointer
+            if (A[i] >= A[R]) continue; // we are looking for numbers < A[R]. So skipping those `>= A[R]`.
+            swap(A[i], A[L++]); // once found, swap it to `A[L]` and move `L` forward.
         }
-        swap(A[L], A[R]);
+        swap(A[L], A[R]); // swap the pivot value to `A[L]`.
         return L;
     }
     void quickSort(vector<int> &A, int L, int R) {
@@ -56,6 +62,45 @@ class Solution {
 public:
     vector<int> sortArray(vector<int>& A) {
         srand(NULL);
+        quickSort(A, 0, A.size() - 1);
+        return A;
+    }
+};
+```
+
+Or
+
+**Hoare's partition**:
+* Tricker to implement
+* More efficient than Lomuto's partition because it does **three** times fewer swaps on average, and it creates efficient partitions even when all values are equal.
+
+```cpp
+// OJ: https://leetcode.com/problems/sort-an-array/
+// Author: github.com/lzl124631x
+// Time: O(NlogN) on average, O(N^2) in the worst case
+// Space: O(logN) on average, O(N) in the worst case
+class Solution {
+private:
+    int partition(vector<int> &A, int L, int R, int pivot) {
+        swap(A[pivot], A[R]);
+        int i = L, j = R;
+        while (i < j) {
+            while (i < j && A[i] < A[R]) ++i;
+            while (i < j && A[j] >= A[R]) --j;
+            swap(A[i], A[j]);
+        }
+        swap(A[i], A[R]);
+        return i;
+    }
+    void quickSort(vector<int> &A, int L, int R) {
+        if (L >= R) return;
+        int M = partition(A, L, R, rand() % (R - L + 1) + L);
+        quickSort(A, L, M - 1);
+        quickSort(A, M + 1, R);
+    }
+public:
+    vector<int> sortArray(vector<int>& A) {
+        srand (time(NULL));
         quickSort(A, 0, A.size() - 1);
         return A;
     }

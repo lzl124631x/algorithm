@@ -71,7 +71,7 @@ public:
 Or
 
 **Hoare's partition**:
-* Tricker to implement
+* Trickier to implement
 * More efficient than Lomuto's partition because it does **three** times fewer swaps on average, and it creates efficient partitions even when all values are equal.
 
 ```cpp

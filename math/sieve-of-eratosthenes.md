@@ -1,4 +1,4 @@
-# Sieve of Eratosthenes
+# Sieve of Eratosthenes (埃拉托斯特尼筛法)
 
 The sieve of Eratosthenes is an algorithm for finding all prime numbers up to any given limit.
 

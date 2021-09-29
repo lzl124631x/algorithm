@@ -6,7 +6,6 @@
   * [Kadane](array/kadane.md)
   * [Permutation](array/permutation.md)
   * [Quick Select](array/quick-select.md)
-  * [Sliding Window With Heap](array/sliding-window-with-heap.md)
   * [Sliding Window](array/sliding-window.md)
   * [Two Pointers](array/two-pointers.md)
 - [Binary Tree](binary-tree/README.md)

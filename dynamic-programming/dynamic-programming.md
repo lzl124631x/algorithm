@@ -78,6 +78,7 @@ Example: Travelling salesman problem \(TSP\)
 * [1000. Minimum Cost to Merge Stones (Hard)](https://leetcode.com/problems/minimum-cost-to-merge-stones/)
 * [1368. Minimum Cost to Make at Least One Valid Path in a Grid (Hard)](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/): BFS + DP
 * [1815. Maximum Number of Groups Getting Fresh Donuts (Hard)](https://leetcode.com/problems/maximum-number-of-groups-getting-fresh-donuts/): Greedy + DP
+* [1937. Maximum Number of Points with Cost (Medium)](https://leetcode.com/problems/maximum-number-of-points-with-cost/)
 
 ### Links
 

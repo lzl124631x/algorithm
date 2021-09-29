@@ -130,4 +130,4 @@ When updating, keep REMOVING low bit.
 * [https://www.youtube.com/watch?v=WbafSgetDDk](https://www.youtube.com/watch?v=WbafSgetDDk)
 * [https://visualgo.net/en/fenwicktree](https://visualgo.net/en/fenwicktree)
 * [https://www.luogu.com.cn/problem/solution/P3374](https://www.luogu.com.cn/problem/solution/P3374)
-
+* [树状数组（Binary Indexed Tree），看这一篇就够了](https://blog.csdn.net/Yaokai_AssultMaster/article/details/79492190)

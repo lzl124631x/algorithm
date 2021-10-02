@@ -46,9 +46,7 @@ When finding maximum:
 
 ## Find Maximum Window
 
-### Template 1: Extending Right by One and Shrinking Left Until Valid
-
-The best template I've found so far:
+### Template 1: Shrinkable Sliding Window
 
 ```cpp
 int i = 0, j = 0, ans = 0;
@@ -64,7 +62,7 @@ return ans;
 
 Essentially, we want to **keep the window valid** at the end of each outer `for` loop.
 
-### Template 2: Non-shrinkable Window
+### Template 2: Non-shrinkable Sliding Window
 
 ```cpp
 int i = 0, j = 0;
@@ -96,6 +94,10 @@ for (int j = 0; j < N; ++j) {
 }
 ```
 
+## Discuss
+
+[C++ Maximum Sliding Window Cheatsheet Template!](https://leetcode.com/problems/frequency-of-the-most-frequent-element/discuss/1175088/C%2B%2B-Maximum-Sliding-Window-Cheatsheet-Template!)
+
 ## Problems
 
 Find Minimum
@@ -108,6 +110,7 @@ Find Maximum
 * [3. Longest Substring Without Repeating Characters \(Medium\)](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 * [159. Longest Substring with At Most Two Distinct Characters \(Hard\)](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)
 * [340. Longest Substring with At Most K Distinct Characters \(Hard\)](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
+* [1004. Max Consecutive Ones III (Medium)](https://leetcode.com/problems/max-consecutive-ones-iii/)
 * [1493. Longest Subarray of 1's After Deleting One Element \(Medium\)](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/)
 * [713. Subarray Product Less Than K (Medium)](https://leetcode.com/problems/subarray-product-less-than-k/)
 * [1838. Frequency of the Most Frequent Element (Medium)](https://leetcode.com/problems/frequency-of-the-most-frequent-element/)

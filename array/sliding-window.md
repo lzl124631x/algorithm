@@ -118,6 +118,7 @@ Find Maximum
 * [1493. Longest Subarray of 1's After Deleting One Element \(Medium\)](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/)
 * [1695. Maximum Erasure Value (Medium)](https://leetcode.com/problems/maximum-erasure-value/)
 * [1838. Frequency of the Most Frequent Element (Medium)](https://leetcode.com/problems/frequency-of-the-most-frequent-element/)
+* [2009. Minimum Number of Operations to Make Array Continuous (Hard)](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/)
 * [2024. Maximize the Confusion of an Exam (Medium)](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/)
 
 Find Minimum and Maximum

@@ -10,6 +10,10 @@ $$
 
 * [96. Unique Binary Search Trees \(Medium\)](https://leetcode.com/problems/unique-binary-search-trees/)
 
+Related:
+
+* [241. Different Ways to Add Parentheses (Medium)](https://leetcode.com/problems/different-ways-to-add-parentheses/)
+
 ## Reference
 
 * [https://en.wikipedia.org/wiki/Catalan\_number](https://en.wikipedia.org/wiki/Catalan_number)

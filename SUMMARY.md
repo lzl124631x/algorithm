@@ -1,6 +1,7 @@
 # Algorithm
 
 - [Array](array/README.md)
+  * [At Most To Equal](array/at-most-to-equal.md)
   * [Count Inversions In An Array](array/count-inversions-in-an-array.md)
   * [Interleaving Placement](array/interleaving-placement.md)
   * [Kadane](array/kadane.md)

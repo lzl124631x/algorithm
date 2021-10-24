@@ -50,7 +50,7 @@ public:
 };
 ```
 
-### DFS
+### DFS (Post-order Traversal)
 
 Each vertex has three states:
 
@@ -103,3 +103,4 @@ public:
 * [802. Find Eventual Safe States (Medium)](https://leetcode.com/problems/find-eventual-safe-states/)
 * [1857. Largest Color Value in a Directed Graph (Hard)](https://leetcode.com/problems/largest-color-value-in-a-directed-graph/)
 * [1462. Course Schedule IV (Medium)](https://leetcode.com/problems/course-schedule-iv/)
+* [2050. Parallel Courses III (Hard)](https://leetcode.com/problems/parallel-courses-iii/)

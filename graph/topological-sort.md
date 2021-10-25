@@ -52,6 +52,8 @@ public:
 
 ### DFS (Post-order Traversal)
 
+A DFS version topological sort must be a **Post-order DFS + Memoization**.
+
 Each vertex has three states:
 
 1. -1 =  unvisited

@@ -1,4 +1,4 @@
-# Gcd
+# Greatest Common Divisor (GCD)
 
 ## Euclidean algorithm
 

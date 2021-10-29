@@ -70,6 +70,7 @@
   * [Fast Pow](math/fast-pow.md)
   * [Gcd](math/gcd.md)
   * [Geometry](math/geometry.md)
+  * [Lcm](math/lcm.md)
   * [Median Minimizes Sum Of Absolute Deviations](math/median-minimizes-sum-of-absolute-deviations.md)
   * [Modular Multiplicative Inverse](math/modular-multiplicative-inverse.md)
   * [Round Up](math/round-up.md)

@@ -7,11 +7,11 @@ Dot product is also known as **scalar product** or **inner product**.
 
 Algebraically, the dot product is the sum of the products of the corresponding entries of the two sequences of numbers.
 
-Geometrically, it is the product of the Euclidean magnitudes of the two vectors and the cosine of the angle between them.
-
 $$
 \bm{a}\cdot \bm{b} = \sum_{i=1}^na_ib_i
 $$
+
+Geometrically, it is the product of the Euclidean magnitudes of the two vectors and the cosine of the angle between them.
 
 $$
 \bm{a}\cdot \bm{b}=\lvert \bm{a}\rvert\lvert \bm{b}\rvert\cos\theta

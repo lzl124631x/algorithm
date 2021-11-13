@@ -8,4 +8,10 @@ The name "offline" signifies the fact that we know all the queries upfront/offli
 
 ## Problems
 
+* [1707. Maximum XOR With an Element From Array (Hard)](https://leetcode.com/problems/maximum-xor-with-an-element-from-array/)
 * [1847. Closest Room (Hard)](https://leetcode.com/problems/closest-room/)
+* [2070. Most Beautiful Item for Each Query (Medium)](https://leetcode.com/problems/most-beautiful-item-for-each-query/)
+
+## Discuss
+
+https://leetcode.com/problems/most-beautiful-item-for-each-query/discuss/1576065/C%2B%2B-Offline-Query

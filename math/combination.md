@@ -1,21 +1,23 @@
 # Combination
 
-$$ C_n^k = \frac{A_n^k}{k!} = \frac{n!}{k! \cdot (n - k)!} = \frac{n\cdot(n-1)\cdot(n-2)\ldots(n-k+1)}{k!} $$
+$$ C_n^k = \frac{A_n^k}{k!} = \frac{n!}{k! \cdot (n - k)!} = \frac{(n-k+1)\cdot(n-k+2)\cdots n}{k!} $$
 
 ## When `n` is small
 
 We can the following equation:
 
-$$ C_n^k = \frac{n\cdot(n-1)\cdot(n-2)\ldots(n-k+1)}{k!} $$
+$$ C_n^k = \frac{(n-k+1)\cdot(n-k+2)\cdots n}{k!} $$
 
 ```cpp
 // Author: github.com/lzl124631x
-// Time: O(K)
+// Time: O(min(K, N - K))
 // Space: O(1)
-int combination(int k, int n) {
-    if (k == 0 || k == n) return 1;
-    long ans = 0;
-    for (int i = 1, j = n - k + 1; i <= k; ++i, ++j) ans = ans * j / i;
+int combination(int n, int k) {
+    k = min(k, n - k); // Since we loop in range [1, k], we make sure `k` is smaller than `n - k`
+    long ans = 1;
+    for (int i = 1; i <= k; ++i) {
+        ans = ans * (n - k + i) / i;
+    }
     return ans;
 }
 ```
@@ -24,23 +26,27 @@ int combination(int k, int n) {
 
 To avoid overflow, we will be asked to return the answer modulo some prime number (`1e9+7` on LeetCode).
 
-We can't change the above solution to `ans = ans * j / i % mod` because after the previous modulo operation this current `* j / i` operation might cause truncation.
+We can't change the above solution to `ans = ans * (n - k + i) / i % mod` because after the previous modulo operation this current `* (n - k + i) / i` operation might cause truncation.
 
 We need to use this equation:
 
 $$ C_n^k = C_{n-1}^{k-1} + C_{n-1}^k $$
 
-This is actually Pascal Triangle.
+Memo: Picking `k` elements from `n` elements is the same as the sum of the following:
+1. Pick the first element, and pick `k - 1` elements from the rest `n - 1` elements, i.e. $C_{n-1}^{k-1}$
+2. Skip the first element, and pick `k` elements from the rest `n - 1` elements, i.e. $C_{n-1}^k$
+
+This can be computed using Pascal Triangle and Dynamic Programming.
 
 ```
-      1
-    1   1
-   1  2  1
- 1  3   3  1
-1  4  6  4  1
+  k  0  1  2  3  4
+n  _______________
+0 |  1
+1 |  1  1
+2 |  1  2  1
+3 |  1  3  3  1
+4 |  1  4  6  4  1
 ```
-
-This can be done using DP.
 
 ```
 dp[i][j] = dp[i-1][j-1] + dp[i-1][j]
@@ -53,13 +59,15 @@ Since `dp[i][j]` only depends on `dp[i-1][j-1]` and `dp[i-1][j]`, we can use 1D 
 ```cpp
 // Author: github.com/lzl124631x
 // Time: O(NK)
-// Space: O(K)
-int combination(int k, int n, int mod) {
+// Space: O(min(K, N - K))
+int combination(int n, int k, int mod) {
     if (k > n - k) k = n - k;
     vector<int> dp(k + 1);
     dp[0] = 1;
     for (int i = 1; i <= n; ++i) {
-        for (int j = min(i, k); j > 0; --j) dp[j] = (dp[j] + dp[j - 1]) % mod;
+        for (int j = min(i, k); j > 0; --j) {
+            dp[j] = (dp[j] + dp[j - 1]) % mod;
+        }
     }
     return dp[k];
 }
@@ -96,4 +104,6 @@ We can use this trick in [1863. Sum of All Subset XOR Totals (Easy)](https://lee
 
 ## Problems
 
+* [62. Unique Paths (Medium)](https://leetcode.com/problems/unique-paths/)
 * [1569. Number of Ways to Reorder Array to Get Same BST (Hard)](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/)
+* [1863. Sum of All Subset XOR Totals (Easy)](https://leetcode.com/problems/sum-of-all-subset-xor-totals/)

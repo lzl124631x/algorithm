@@ -22,6 +22,8 @@ int combination(int n, int k) {
 }
 ```
 
+Try this in [62. Unique Paths (Medium)](https://leetcode.com/problems/unique-paths/)
+
 ## When `n` is large -- Dynamic Programming
 
 To avoid overflow, we will be asked to return the answer modulo some prime number (`1e9+7` on LeetCode).
@@ -72,6 +74,8 @@ int combination(int n, int k, int mod) {
     return dp[k];
 }
 ```
+
+Try this in [1569. Number of Ways to Reorder Array to Get Same BST (Hard)](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/)
 
 ## Sum of combinations
 

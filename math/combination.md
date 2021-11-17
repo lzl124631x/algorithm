@@ -2,7 +2,7 @@
 
 $$ C_n^k = \frac{A_n^k}{k!} = \frac{n!}{k! \cdot (n - k)!} = \frac{(n-k+1)\cdot(n-k+2)\cdots n}{k!} $$
 
-## When `n` is small
+## When `n` is small -- Iteration
 
 We can the following equation:
 

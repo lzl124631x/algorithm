@@ -13,11 +13,11 @@ public:
     UnionFind(int n) : id(n) {
         iota(begin(id), end(id), 0);
     }
-    void connect(int a, int b) {
-        id[find(a)] = find(b);
-    }
     int find(int a) {
         return id[a] == a ? a : (id[a] = find(id[a]));
+    }
+    void connect(int a, int b) {
+        id[find(a)] = find(b);
     }
     bool connected(int a, int b) {
         return find(a) == find(b);
@@ -31,16 +31,14 @@ The time complexity of one operation in `UnionFind` containing `N` elements is `
 
 ```cpp
 class UnionFind {
-private:
     vector<int> id, rank;
     int cnt; // `cnt` is the number of connected components in the graph
-    int find (int i) {
-        if (id[i] == i) return i;
-        return id[i] = find(id[i]);
-    }
 public:
     UnionFind(int n) : id(n), rank(n, 0), cnt(n) {
         iota(begin(id), end(id), 0);
+    }
+    int find(int a) {
+        return id[a] == a ? a : (id[a] = find(id[a]));
     }
     void connect(int i, int j) {
         int p = find(i), q = find(j);
@@ -71,15 +69,15 @@ public:
     UnionFind(int n) : id(n), size(n, 1), cnt(n) {
         iota(begin(id), end(id), 0);
     }
+    int find(int a) {
+        return id[a] == a ? a : (id[a] = find(id[a]));
+    }
     void connect(int a, int b) {
         int x = find(a), y = find(b);
         if (x == y) return;
         id[x] = y;
         size[y] += size[x];
         --cnt;
-    }
-    int find(int a) {
-        return id[a] == a ? a : (id[a] = find(id[a]));
     }
     int getSize(int a) {
         return size[find(a)];

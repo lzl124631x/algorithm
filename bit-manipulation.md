@@ -65,6 +65,13 @@ function lowbit(int x) {
 }
 ```
 
+Example:
+```
+        12 = (01100)2
+       -12 = (10100)2
+12 & (-12) = (00100)2
+```
+
 ## Count bit 1s
 
 ```cpp

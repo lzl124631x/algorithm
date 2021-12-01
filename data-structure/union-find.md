@@ -4,7 +4,9 @@
 
 ### Basic
 
-Note that there is a path compression in the `find` function.
+Note that there is a path compression in the `find` function. 
+
+The time complexity of one operation in `UnionFind` with `N` elements and path compression only is amortized `O(logN)`.
 
 ```cpp
 class UnionFind {
@@ -27,7 +29,7 @@ public:
 
 ### Merge using Rank
 
-The time complexity of one operation in `UnionFind` containing `N` elements is `O(alpha(N))` where `alpha(N)` is the inverse function of Ackermann function. Note that `O(alpha(N))` is even more efficient than `O(logN)`.
+The time complexity of one operation in `UnionFind` with `N` elements, path compression and union by rank is amortized `O(alpha(N))` where `alpha(N)` is the inverse function of Ackermann function. Note that `O(alpha(N))` is even more efficient than `O(logN)`.
 
 ```cpp
 class UnionFind {
@@ -43,7 +45,7 @@ public:
     void connect(int i, int j) {
         int p = find(i), q = find(j);
         if (p == q) return;
-        if (rank[p] > rank[q]) id[p] = q;
+        if (rank[p] > rank[q]) id[p] = q; // always use the node with lower rank as parent
         else {
             id[q] = p;
             if (rank[p] == rank[q]) rank[p]++;

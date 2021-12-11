@@ -2,6 +2,19 @@
 
 An integer is a palindrome if it reads the same from left to right as it does from right to left.
 
+## Check whether a number is a Palindrome
+
+```cpp
+// Author: github.com/lzl124631x
+// Time: O(lgN)
+// Space: O(1)
+bool isPalindrome(long n) {
+    long r = 0;
+    for (long tmp = n; tmp; tmp /= 10) r = r * 10 + tmp % 10;
+    return r == n;
+}
+```
+
 ## Generate Increasing Palindrome Numbers
 
 [866. Prime Palindrome (Medium)](https://leetcode.com/problems/prime-palindrome/) is a good problem for testing the code for generating palindromes.

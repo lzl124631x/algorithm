@@ -51,7 +51,7 @@ Get the next permutation of a given input array. [Example use case](https://gith
 
 do a quick select such that the `n`-th element in the array is the `n`-th element (0-based) in sorted order. All elements before it are less than or equal to it.
 
-Time complexity: `O(N)` on average, `O(NlogN)` in the worst case (Reference: https://en.wikipedia.org/wiki/Introselect)
+Time complexity: `O(N)` on average, `O(NlogN)` in the worst case (Reference: https://en.wikipedia.org/wiki/Introselect. Note that the worst case time complexity is `O(N^2)`. `nth_element` is using a mix of quick sort and heap sort)
 
 Example use case:
 

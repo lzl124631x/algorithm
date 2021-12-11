@@ -51,6 +51,8 @@ Get the next permutation of a given input array. [Example use case](https://gith
 
 do a quick select such that the `n`-th element in the array is the `n`-th element (0-based) in sorted order. All elements before it are less than or equal to it.
 
+Time complexity: `O(N)` on average, `O(NlogN)` in the worst case (Reference: https://en.wikipedia.org/wiki/Introselect)
+
 Example use case:
 
 * https://leetcode.com/problems/the-k-strongest-values-in-an-array/discuss/674384/C%2B%2BJavaPython-Two-Pointers-%2B-3-Bonuses
@@ -72,8 +74,6 @@ public:
 };
 ```
 
-Complexity: Linear in `std::distance(first, last)` on average.
-
 Note: [Difference between `nth_element` and `partial_sort`](https://stackoverflow.com/a/54227430/3127828)
 
 ### partial\_sort
@@ -86,7 +86,7 @@ The order of equal elements is not guaranteed to be preserved. The order of the 
 
 [Example use case](https://leetcode.com/problems/the-k-strongest-values-in-an-array/discuss/674384/C%2B%2BJavaPython-Two-Pointers-%2B-3-Bonuses)
 
-Complexity: Approximately `(last-first)log(middle-first)` applications of `cmp`
+Time Complexity: `O(NlogK)`
 
 ### partial\_sum
 

@@ -80,6 +80,6 @@ public:
 
 ## Problems
 
-* [332. Reconstruct Itinerary \(Medium\)](https://leetcode.com/problems/reconstruct-itinerary/)
+* [332. Reconstruct Itinerary (Hard)](https://leetcode.com/problems/reconstruct-itinerary/)
 * [753. Cracking the Safe \(Hard\)](https://leetcode.com/problems/cracking-the-safe/)
 * [2097. Valid Arrangement of Pairs (Hard)](https://leetcode.com/problems/valid-arrangement-of-pairs/)

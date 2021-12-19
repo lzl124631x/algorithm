@@ -69,4 +69,5 @@ return dp[C];
 
 * [416. Partition Equal Subset Sum \(Medium\)](https://leetcode.com/problems/partition-equal-subset-sum/)
 * [474. Ones and Zeroes \(Medium\)](https://leetcode.com/problems/ones-and-zeroes/)
+* [494. Target Sum (Medium)](https://leetcode.com/problems/target-sum/)
 

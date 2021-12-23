@@ -113,6 +113,11 @@ public:
 };
 ```
 
+## Problems
+
+* [1135. Connecting Cities With Minimum Cost (Medium)](https://leetcode.com/problems/connecting-cities-with-minimum-cost/)
+* [1584. Min Cost to Connect All Points (Medium)](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+
 ## Reference
 
 * [https://en.wikipedia.org/wiki/Kruskal%27s\_algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)

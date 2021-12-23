@@ -55,6 +55,7 @@
   * [Component Count](graph/component-count.md)
   * [Depth First Search](graph/depth-first-search.md)
   * [Eulerian Path](graph/eulerian-path.md)
+  * [Maximum Bipartite Matching](graph/maximum-bipartite-matching.md)
   * [Tarjan](graph/tarjan.md)
   * [Topological Sort](graph/topological-sort.md)
   * [Tree Diameter](graph/tree-diameter.md)

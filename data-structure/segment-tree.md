@@ -15,7 +15,7 @@ given an array, you need to do the following operations:
 * add `k` to every numbers in a index range.
 * get the sum of all the numbers within a index range.
 
-Except for sum, as long as the `merge` operation satisfies **associative law**, we can use segment tree as well.
+The `merge` operation can be `sum` or any operation that satisfies **associative law**.
 
 ```text
 merge(merge(a, b), c) = merge(a, merge(b, c))

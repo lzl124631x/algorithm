@@ -29,7 +29,7 @@ int prim(int N, int M, vector<vector<int>> &edges) { // N nodes, M edges. edges 
     for (int i = 0; i < N - 1; ++i) {
         seen[cur] = 1; // add this node to the MST
         for (auto &[v, w] : G[cur]) {
-            if (seen[v]) continue; // skip those neighbors that are already in the tree
+            if (seen[v]) continue; // skip those neighbors that are already in the MST
             dist[v] = min(dist[v], w); // Use the current node to update the distance of unvisited nodes.
         }
         cur = min_element(begin(dist), end(dist)) - begin(dist); // The node with the minimum distance is selected.

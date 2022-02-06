@@ -31,6 +31,8 @@ public:
 
 The time complexity of one operation in `UnionFind` with `N` elements, path compression and union by rank is amortized `O(alpha(N))` where `alpha(N)` is the inverse function of Ackermann function. Note that `O(alpha(N))` is even more efficient than `O(logN)`.
 
+![](./union-by-rank.png)
+
 ```cpp
 class UnionFind {
     vector<int> id, rank;

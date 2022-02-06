@@ -45,10 +45,10 @@ public:
     void connect(int i, int j) {
         int p = find(i), q = find(j);
         if (p == q) return;
-        if (rank[p] > rank[q]) id[p] = q; // always use the node with lower rank as parent
+        if (rank[p] > rank[q]) id[q] = p; // always use the node with GREATER rank as the root
         else {
-            id[q] = p;
-            if (rank[p] == rank[q]) rank[p]++;
+            id[p] = q;
+            if (rank[p] == rank[q]) rank[q]++;
         }
         --cnt;
     }

@@ -34,6 +34,13 @@ __gcd(6, 20); // 2
 
 Since C++11, we can directly use `gcd`.
 
+## Time Complexity
+
+https://www.geeksforgeeks.org/time-complexity-of-euclidean-algorithm/
+
+It's `O(log(min(A, B)))`
+
 ## Problems
 
 * [858. Mirror Reflection (Medium)](https://leetcode.com/problems/mirror-reflection/)
+* [2183. Count Array Pairs Divisible by K (Hard)](https://leetcode.com/problems/count-array-pairs-divisible-by-k/)

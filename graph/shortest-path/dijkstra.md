@@ -75,7 +75,7 @@ Time complexity analysis: In the worst case, each visited node will push new ite
 
 If we can use Fabonacci Heap, the time complexity will be reduced to `O(E + VlogV)`.
 
-Another way to prevent visting the same node twice is as follows:
+Another way to prevent visiting the same node twice is as follows:
 
 ```cpp
 // Time: O(ElogE)

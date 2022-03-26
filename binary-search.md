@@ -134,8 +134,8 @@ Pro:
 * Symmetrical and no-brainer: `L = M + 1` and `R = M - 1`.
 
 Con:
-* `L` and `R` might go out of boundary.  
-**Solution**: Simply do a out-of-boundary check.
+* `L` and `R` might go out of boundary in the end.  
+**Solution**: Simply do an out-of-boundary check.
 * Need to think about using `L` or `R` in the end.  
 **Solution**: Take the first binary search for example, if `A[M] < target`, we move `L`. If `A[M] >= target`, we move `R`. In the end, `L` and `R` will swap order, so `R` will point to the last `A[i] < target`, and `L` will point to the first `A[i] >= target`. Thus, we should use `L` as the left boundary.
 

@@ -73,6 +73,7 @@
   * [Geometry](math/geometry.md)
   * [Lcm](math/lcm.md)
   * [Median Minimizes Sum Of Absolute Deviations](math/median-minimizes-sum-of-absolute-deviations.md)
+  * [Mode](math/mode.md)
   * [Modular Multiplicative Inverse](math/modular-multiplicative-inverse.md)
   * [Palindrome](math/palindrome.md)
   * [Prime Number](math/prime-number.md)

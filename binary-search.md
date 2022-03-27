@@ -212,6 +212,10 @@ public:
 };
 ```
 
+### Other notes
+
+From [1337. The K Weakest Rows in a Matrix (Easy)](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/), we can see that the `L`, `R` values might be different for these two templates.
+
 ## Problems
 
 **Problems that are good for practicing handwriting binary search**

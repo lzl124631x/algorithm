@@ -83,6 +83,7 @@
   * [Sum Of Sequence](math/sum-of-sequence.md)
 - Miscellaneous
   * [Bin Packing](miscellaneous/bin-packing.md)
+  * [Floyds Tortoise And Hare](miscellaneous/floyds-tortoise-and-hare.md)
   * [Palindrome](miscellaneous/palindrome.md)
 - Sort
   * [Bubble Sort](sort/bubble-sort.md)

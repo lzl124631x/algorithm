@@ -71,6 +71,7 @@
   * [Fast Pow](math/fast-pow.md)
   * [Gcd](math/gcd.md)
   * [Geometry](math/geometry.md)
+  * [Get Digits](math/get-digits.md)
   * [Lcm](math/lcm.md)
   * [Median Minimizes Sum Of Absolute Deviations](math/median-minimizes-sum-of-absolute-deviations.md)
   * [Mode](math/mode.md)

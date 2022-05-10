@@ -160,11 +160,11 @@ Sample output:
 ## Given `N` elements, traverse subsets of size `K` (Gosper's Hack)
 
 ```cpp
+// Time Complexity: O(C(N, K))
 int sub = (1 << k) - 1;
 while (sub < (1 << N)) {
-    // `sub` has `K` elements and is a subset of `N` elements.
-    int c = sub & - sub;
-    int r = sub + c;
+    // Access `sub` here. `sub` has `K` elements and is a subset of `N` elements.
+    int c = sub & - sub, r = sub + c;
     sub = (((r ^ sub) >> 2) / c) | r;
 }
 ``` 

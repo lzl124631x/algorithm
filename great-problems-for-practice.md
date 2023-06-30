@@ -1,4 +1,4 @@
-# Great problems for practice
+# Great Problems For Practice
 
 [215. Kth Largest Element in an Array (Medium)](https://leetcode.com/problems/kth-largest-element-in-an-array/): Quick Select; Manually Implement Heap; API usage of `nth_element`, `make_heap`, `push_heap`, `pop_heap`
 
@@ -8,7 +8,7 @@
 
 [472. Concatenated Words (Hard)](https://leetcode.com/problems/concatenated-words/): Trie + DP
 
-## DP on Subsets OR DFS to Fill Buckets
+## DP on Subsets OR Backtrack to Fill Buckets
 
 * [698. Partition to K Equal Sum Subsets (Medium)](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
 * [473. Matchsticks to Square (Medium)](https://leetcode.com/problems/matchsticks-to-square/)

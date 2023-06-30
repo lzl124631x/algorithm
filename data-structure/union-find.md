@@ -98,11 +98,16 @@ public:
 * [947. Most Stones Removed with Same Row or Column \(Medium\)](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
 * [1202. Smallest String With Swaps (Medium)](https://leetcode.com/problems/smallest-string-with-swaps/)
 
+### Back in Time
+
+Since Union Find can only BUILD connection gradually, when we see problems that BREAK connection gradually with multiple steps, we can traverse the steps in reverse order so as to BUILD the connections gradually.
+
+* [803. Bricks Falling When Hit (Hard)](https://leetcode.com/problems/bricks-falling-when-hit)
+* [1970. Last Day Where You Can Still Cross (Hard)](https://leetcode.com/problems/last-day-where-you-can-still-cross)
+
 静态联通性 200 130 952 \(等价类\) 959 990
 
 动态连通性. find和union穿插的. 305
-
-时光倒流 803
 
 懒标记 权值线段树 218 307 308 315 327 493 699 715 732 850 1157 1353
 

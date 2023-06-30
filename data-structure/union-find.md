@@ -93,7 +93,6 @@ public:
 ## Problems
 
 * [1319. Number of Operations to Make Network Connected \(Medium\)](https://leetcode.com/problems/number-of-operations-to-make-network-connected/)
-* [990. Satisfiability of Equality Equations \(Medium\)](https://leetcode.com/problems/satisfiability-of-equality-equations/)
 * [924. Minimize Malware Spread \(Hard\)](https://leetcode.com/problems/minimize-malware-spread/)
 * [947. Most Stones Removed with Same Row or Column \(Medium\)](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
 * [1202. Smallest String With Swaps (Medium)](https://leetcode.com/problems/smallest-string-with-swaps/)
@@ -103,6 +102,7 @@ public:
 * [130. Surrounded Regions (Medium)](https://leetcode.com/problems/surrounded-regions/)
 * [200. Number of Islands (Medium)](https://leetcode.com/problems/number-of-islands/)
 * [959. Regions Cut By Slashes (Medium)](https://leetcode.com/problems/regions-cut-by-slashes/) **Split into sub-cells**
+* [990. Satisfiability of Equality Equations (Medium)](https://leetcode.com/problems/satisfiability-of-equality-equations/)
 
 ### Back in Time
 
@@ -111,7 +111,7 @@ Since Union Find can only BUILD connection gradually, when we see problems that 
 * [803. Bricks Falling When Hit (Hard)](https://leetcode.com/problems/bricks-falling-when-hit)
 * [1970. Last Day Where You Can Still Cross (Hard)](https://leetcode.com/problems/last-day-where-you-can-still-cross)
 
-静态联通性 952 \(等价类\) 959 990
+静态联通性 952 \(等价类\)
 
 动态连通性. find和union穿插的. 305
 

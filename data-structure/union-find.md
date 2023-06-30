@@ -104,6 +104,12 @@ public:
 * [959. Regions Cut By Slashes (Medium)](https://leetcode.com/problems/regions-cut-by-slashes/) **Split into sub-cells**
 * [990. Satisfiability of Equality Equations (Medium)](https://leetcode.com/problems/satisfiability-of-equality-equations/)
 
+### Dynamic Connection
+
+Involves multiple steps to build the connection gradually.
+
+* [305. Number of Islands II (Hard)](https://leetcode.com/problems/number-of-islands-ii)
+
 ### Back in Time
 
 Since Union Find can only BUILD connection gradually, when we see problems that BREAK connection gradually with multiple steps, we can traverse the steps in reverse order so as to BUILD the connections gradually.
@@ -112,8 +118,6 @@ Since Union Find can only BUILD connection gradually, when we see problems that 
 * [1970. Last Day Where You Can Still Cross (Hard)](https://leetcode.com/problems/last-day-where-you-can-still-cross)
 
 静态联通性 952 \(等价类\)
-
-动态连通性. find和union穿插的. 305
 
 懒标记 权值线段树 218 307 308 315 327 493 699 715 732 850 1157 1353
 

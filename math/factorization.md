@@ -7,10 +7,9 @@ Get all the prime factors of `n`.
 ```cpp
 vector<int> factors(int n) {
     vector<int> ans;
-    for (int d = 2; d * d <= n; ++d) {
-        if (n % d) continue; // if `n` is not divisible by `d`, skip
-        ans.push_back(d); // this is a factor of `n`.
-        while (n % d == 0) n /= d; // remove this factor from `n`.
+    for (int d = 2; d * d <= n; ++d) { // This `d * d <= n` is key to reduce time complexity.
+        if (n % d == 0) ans.push_back(d); // if `n` is divisible by `d`, add `d` as a factor
+        while (n % d == 0) n /= d; // keep removing this factor from `n` until `n` is no longer divisible by `d`
     }
     if (n > 1) ans.push_back(n); // If `n` is still not `1`, then the remaining `n` is a prime factor.
     return ans;

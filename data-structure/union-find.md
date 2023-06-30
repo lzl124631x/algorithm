@@ -98,6 +98,12 @@ public:
 * [947. Most Stones Removed with Same Row or Column \(Medium\)](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
 * [1202. Smallest String With Swaps (Medium)](https://leetcode.com/problems/smallest-string-with-swaps/)
 
+### Static Connection
+
+* [130. Surrounded Regions (Medium)](https://leetcode.com/problems/surrounded-regions/)
+* [200. Number of Islands (Medium)](https://leetcode.com/problems/number-of-islands/)
+* [959. Regions Cut By Slashes (Medium)](https://leetcode.com/problems/regions-cut-by-slashes/) **Split into sub-cells**
+
 ### Back in Time
 
 Since Union Find can only BUILD connection gradually, when we see problems that BREAK connection gradually with multiple steps, we can traverse the steps in reverse order so as to BUILD the connections gradually.
@@ -105,7 +111,7 @@ Since Union Find can only BUILD connection gradually, when we see problems that 
 * [803. Bricks Falling When Hit (Hard)](https://leetcode.com/problems/bricks-falling-when-hit)
 * [1970. Last Day Where You Can Still Cross (Hard)](https://leetcode.com/problems/last-day-where-you-can-still-cross)
 
-静态联通性 200 130 952 \(等价类\) 959 990
+静态联通性 952 \(等价类\) 959 990
 
 动态连通性. find和union穿插的. 305
 

@@ -103,6 +103,7 @@ public:
 * [200. Number of Islands (Medium)](https://leetcode.com/problems/number-of-islands/)
 * [959. Regions Cut By Slashes (Medium)](https://leetcode.com/problems/regions-cut-by-slashes/) **Split into sub-cells**
 * [990. Satisfiability of Equality Equations (Medium)](https://leetcode.com/problems/satisfiability-of-equality-equations/)
+* [952. Largest Component Size by Common Factor (Hard)](https://leetcode.com/problems/largest-component-size-by-common-factor/)
 
 ### Dynamic Connection
 
@@ -116,11 +117,3 @@ Since Union Find can only BUILD connection gradually, when we see problems that 
 
 * [803. Bricks Falling When Hit (Hard)](https://leetcode.com/problems/bricks-falling-when-hit)
 * [1970. Last Day Where You Can Still Cross (Hard)](https://leetcode.com/problems/last-day-where-you-can-still-cross)
-
-静态联通性 952 \(等价类\)
-
-懒标记 权值线段树 218 307 308 315 327 493 699 715 732 850 1157 1353
-
-lazy tag / lazy propogation 延迟修改
-
-树状数组 307

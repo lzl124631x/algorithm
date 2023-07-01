@@ -44,7 +44,9 @@ public:
 
 ## Problems
 
+* [208. Implement Trie (Prefix Tree) (Medium)](https://leetcode.com/problems/implement-trie-prefix-tree/) **Direct Implementation**
+
 * [212. Word Search II \(Hard\)](https://leetcode.com/problems/word-search-ii/)
-* [1032. Stream of Characters (Hard)](https://leetcode.com/problems/stream-of-characters/)
-* [839. Similar String Groups (Hard)](https://leetcode.com/problems/similar-string-groups/)
 * [745. Prefix and Suffix Search (Hard)](https://leetcode.com/problems/prefix-and-suffix-search/)
+* [839. Similar String Groups (Hard)](https://leetcode.com/problems/similar-string-groups/)
+* [1032. Stream of Characters (Hard)](https://leetcode.com/problems/stream-of-characters/)

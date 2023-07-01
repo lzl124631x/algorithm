@@ -27,6 +27,37 @@ public:
 };
 ```
 
+### Get Size of Union
+
+We can use a `size` array to keep track of the size of each union.
+
+`cnt` keeps track of the number of unions.
+
+```cpp
+class UnionFind {
+    vector<int> id, size;
+    int cnt;
+public:
+    UnionFind(int n) : id(n), size(n, 1), cnt(n) {
+        iota(begin(id), end(id), 0);
+    }
+    int find(int a) {
+        return id[a] == a ? a : (id[a] = find(id[a]));
+    }
+    void connect(int a, int b) {
+        int x = find(a), y = find(b);
+        if (x == y) return;
+        id[x] = y;
+        size[y] += size[x];
+        --cnt;
+    }
+    bool connected(int a, int b) { return find(a) == find(b); }
+    int getSize(int a) { return size[find(a)]; }
+    int getCount() { return cnt; }
+};
+```
+
+
 ### Merge using Rank
 
 The time complexity of one operation in `UnionFind` with `N` elements, path compression and union by rank is amortized `O(alpha(N))` where `alpha(N)` is the inverse function of Ackermann function. Note that `O(alpha(N))` is even more efficient than `O(logN)`.
@@ -59,51 +90,19 @@ public:
 };
 ```
 
-### Get Size of Union
-
-We can use a `size` array to keep track of the size of each union.
-
-`cnt` keeps track of the number of unions.
-
-```cpp
-class UnionFind {
-    vector<int> id, size;
-    int cnt;
-public:
-    UnionFind(int n) : id(n), size(n, 1), cnt(n) {
-        iota(begin(id), end(id), 0);
-    }
-    int find(int a) {
-        return id[a] == a ? a : (id[a] = find(id[a]));
-    }
-    void connect(int a, int b) {
-        int x = find(a), y = find(b);
-        if (x == y) return;
-        id[x] = y;
-        size[y] += size[x];
-        --cnt;
-    }
-    int getSize(int a) {
-        return size[find(a)];
-    }
-    int getCount() { return cnt; }
-};
-```
-
 ## Problems
-
-* [1319. Number of Operations to Make Network Connected \(Medium\)](https://leetcode.com/problems/number-of-operations-to-make-network-connected/)
-* [924. Minimize Malware Spread \(Hard\)](https://leetcode.com/problems/minimize-malware-spread/)
-* [947. Most Stones Removed with Same Row or Column \(Medium\)](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
-* [1202. Smallest String With Swaps (Medium)](https://leetcode.com/problems/smallest-string-with-swaps/)
 
 ### Static Connection
 
 * [130. Surrounded Regions (Medium)](https://leetcode.com/problems/surrounded-regions/)
 * [200. Number of Islands (Medium)](https://leetcode.com/problems/number-of-islands/)
+* [924. Minimize Malware Spread \(Hard\)](https://leetcode.com/problems/minimize-malware-spread/)
+* [947. Most Stones Removed with Same Row or Column \(Medium\)](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
+* [952. Largest Component Size by Common Factor (Hard)](https://leetcode.com/problems/largest-component-size-by-common-factor/)
 * [959. Regions Cut By Slashes (Medium)](https://leetcode.com/problems/regions-cut-by-slashes/) **Split into sub-cells**
 * [990. Satisfiability of Equality Equations (Medium)](https://leetcode.com/problems/satisfiability-of-equality-equations/)
-* [952. Largest Component Size by Common Factor (Hard)](https://leetcode.com/problems/largest-component-size-by-common-factor/)
+* [1202. Smallest String With Swaps (Medium)](https://leetcode.com/problems/smallest-string-with-swaps/)
+* [1319. Number of Operations to Make Network Connected \(Medium\)](https://leetcode.com/problems/number-of-operations-to-make-network-connected/)
 
 ### Dynamic Connection
 

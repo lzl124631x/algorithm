@@ -1,12 +1,15 @@
-# Combination
+# Combinatorics
 
+## Counting Combinations
 $$ C_n^k = \frac{A_n^k}{k!} = \frac{n!}{k! \cdot (n - k)!} = \frac{(n-k+1)\cdot(n-k+2)\cdots n}{k!} $$
 
-## When `n` is small -- Iteration
+### When `n` is small -- Iteration
 
-We can the following equation:
+We can use the following equation:
 
-$$ C_n^k = \frac{(n-k+1)\cdot(n-k+2)\cdots n}{k!} $$
+$$ C_n^k = \frac{(n-k+1)\cdot(n-k+2)\cdots n}{k!} = \frac{n-k+1}{1}\cdot\frac{n-k+2}{2}\cdots\frac{n}{k} $$
+
+We compute from **the smaller side** $\frac{n-k+1}{1}$ to avoid the potential non-divisible error caused by $\frac{n}{k}$.
 
 ```cpp
 // Author: github.com/lzl124631x
@@ -16,7 +19,7 @@ int combination(int n, int k) {
     k = min(k, n - k); // Since we loop in range [1, k], we make sure `k` is smaller than `n - k`
     long ans = 1;
     for (int i = 1; i <= k; ++i) {
-        ans = ans * (n - k + i) / i;
+        ans = ans * (n - k + i) / i; // compute from the smaller side
     }
     return ans;
 }
@@ -24,7 +27,7 @@ int combination(int n, int k) {
 
 Try this in [62. Unique Paths (Medium)](https://leetcode.com/problems/unique-paths/)
 
-## When `n` is large -- Dynamic Programming
+### When `n` is large -- Dynamic Programming
 
 To avoid overflow, we will be asked to return the answer modulo some prime number (`1e9+7` on LeetCode).
 
@@ -77,7 +80,7 @@ int combination(int n, int k, int mod) {
 
 Try this in [1569. Number of Ways to Reorder Array to Get Same BST (Hard)](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/)
 
-## Sum of combinations
+### Sum of combinations
 
 We can use the following equation to get some useful conclusions:
 
@@ -106,8 +109,15 @@ where `p` and `q` represent all the even and odd numbers in `[0, n]`, respective
 
 We can use this trick in [1863. Sum of All Subset XOR Totals (Easy)](https://leetcode.com/problems/sum-of-all-subset-xor-totals/)
 
-## Problems
+### Problems
 
 * [62. Unique Paths (Medium)](https://leetcode.com/problems/unique-paths/)
 * [1569. Number of Ways to Reorder Array to Get Same BST (Hard)](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/)
 * [1863. Sum of All Subset XOR Totals (Easy)](https://leetcode.com/problems/sum-of-all-subset-xor-totals/)
+
+## Generating Combinations
+
+### Problems
+
+* [77. Combinations (Medium)](https://leetcode.com/problems/combinations)
+* [1601. Maximum Number of Achievable Transfer Requests (Hard)](https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests/)

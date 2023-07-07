@@ -269,6 +269,7 @@ Find Minimum and Maximum
 
 * [992. Subarrays with K Different Integers (Hard)](https://leetcode.com/problems/subarrays-with-k-different-integers/)
 
-Fixed Window Size
+Fixed-length Sliding Window
 
 * [1461. Check If a String Contains All Binary Codes of Size K \(Medium\)](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/)
+* [2090. K Radius Subarray Averages (Medium)](https://leetcode.com/problems/k-radius-subarray-averages/)

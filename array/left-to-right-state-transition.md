@@ -7,4 +7,5 @@
 * [1769. Minimum Number of Operations to Move All Balls to Each Box (Medium)](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/)
 * [2033. Minimum Operations to Make a Uni-Value Grid (Medium)](https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid/)
 * [2155. All Divisions With the Highest Score of a Binary Array (Medium)](https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/)
+* [2448. Minimum Cost to Make Array Equal (Hard)](https://leetcode.com/problems/minimum-cost-to-make-array-equal)
 * [2615. Sum of Distances (Medium)](https://leetcode.com/problems/sum-of-distances)

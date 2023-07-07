@@ -66,7 +66,7 @@
   * [Regret Greedy](greedy/regret-greedy.md)
 - [Math](math/README.md)
   * [Catalan Number](math/catalan-number.md)
-  * [Combination](math/combination.md)
+  * [Combinatorics](math/combinatorics.md)
   * [Factorial](math/factorial.md)
   * [Factorization](math/factorization.md)
   * [Fast Pow](math/fast-pow.md)

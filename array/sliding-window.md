@@ -20,11 +20,31 @@ return ans;
 
 Essentially, we want to **keep the window valid** at the end of each outer `for` loop.
 
-Let's take [1838. Frequency of the Most Frequent Element (Medium)](https://leetcode.com/problems/frequency-of-the-most-frequent-element/) as an example.
+Let's apply this template to [1838. Frequency of the Most Frequent Element (Medium)](https://leetcode.com/problems/frequency-of-the-most-frequent-element/).
 
 1. What should we use as the `state`? It should be the sum of numbers in the window
 1. How to determine `invalid`? The window is invalid if `(j - i + 1) * A[j] - sum > k`.  
 `(j - i + 1)` is the length of the window `[i, j]`. We want to increase all the numbers in the window to equal `A[j]`, the number of operations needed is `(j - i + 1) * A[j] - sum` which should be `<= k`. For example, assume the window is `[1,2,3]`, increasing all the numbers to `3` will take `3 * 3 - (1 + 2 + 3)` operations.
+
+```cpp
+// OJ: https://leetcode.com/problems/frequency-of-the-most-frequent-element/
+// Author: github.com/lzl124631x
+// Time: O(NlogN)
+// Space: O(1)
+class Solution {
+public:
+    int maxFrequency(vector<int>& A, int k) {
+        sort(begin(A), end(A));
+        long i = 0, N = A.size(), ans = 1, sum = 0;
+        for (int j = 0; j < N; ++j) {
+            sum += A[j];
+            while ((j - i + 1) * A[j] - sum > k) sum -= A[i++];
+            ans = max(ans, j - i + 1);
+        }
+        return ans;
+    }
+};
+```
 
 ### Template 2: Non-shrinkable Sliding Window
 

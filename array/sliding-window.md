@@ -2,6 +2,8 @@
 
 ## Find Maximum Window
 
+See my post [C++ Maximum Sliding Window Cheatsheet Template!](https://leetcode.com/problems/frequency-of-the-most-frequent-element/discuss/1175088/C%2B%2B-Maximum-Sliding-Window-Cheatsheet-Template!)
+
 ### Template 1: Shrinkable Sliding Window
 
 ```cpp
@@ -50,10 +52,6 @@ for (int j = 0; j < N; ++j) {
     }
 }
 ```
-
-## Discuss
-
-[C++ Maximum Sliding Window Cheatsheet Template!](https://leetcode.com/problems/frequency-of-the-most-frequent-element/discuss/1175088/C%2B%2B-Maximum-Sliding-Window-Cheatsheet-Template!)
 
 ## Problems
 

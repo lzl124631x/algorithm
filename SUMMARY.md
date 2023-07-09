@@ -5,6 +5,7 @@
   * [Count Inversions In An Array](array/count-inversions-in-an-array.md)
   * [Interleaving Placement](array/interleaving-placement.md)
   * [Kadane](array/kadane.md)
+  * [Left To Right State Transition](array/left-to-right-state-transition.md)
   * [Permutation](array/permutation.md)
   * [Quick Select](array/quick-select.md)
   * [Sliding Window](array/sliding-window.md)

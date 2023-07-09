@@ -269,6 +269,12 @@ Find Minimum and Maximum
 
 * [992. Subarrays with K Different Integers (Hard)](https://leetcode.com/problems/subarrays-with-k-different-integers/)
 
-Fixed Window Size
+Fixed-length Sliding Window
 
+* [438. Find All Anagrams in a String (Medium)](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+* [567. Permutation in String (Medium)](https://leetcode.com/problems/permutation-in-string/)
+* [1100. Find K-Length Substrings With No Repeated Characters (Medium)](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/)
+* [1176. Diet Plan Performance (Easy)](https://leetcode.com/problems/diet-plan-performance/)
 * [1461. Check If a String Contains All Binary Codes of Size K \(Medium\)](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/)
+* [1888. Minimum Number of Flips to Make the Binary String Alternating (Medium)](https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/)
+* [2090. K Radius Subarray Averages (Medium)](https://leetcode.com/problems/k-radius-subarray-averages/)

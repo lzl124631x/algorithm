@@ -19,4 +19,5 @@ int kadane(vector<int> &A) {
 
 ## Problems
 
-* [363. Max Sum of Rectangle No Larger Than K (Hard)](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/solution/)
+* [363. Max Sum of Rectangle No Larger Than K (Hard)](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/)
+* [2272. Substring With Largest Variance (Hard)](https://leetcode.com/problems/substring-with-largest-variance)

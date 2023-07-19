@@ -9,6 +9,8 @@ Greedily select the interval with the **earliest ending time**.
 1. Sort the intervals in ascending order of the end time. (We don't care the start time)
 2. Scan through the intervals and greedily collect non-overlapping intervals.
 
+Memorize point 1: For all the intervals whose start times are not overlapping with earlier intervals, picking the one ending first must be optimal.
+
 ## Implementation
 
 ```cpp
@@ -32,9 +34,10 @@ public:
 
 ## Problem
 
-* [1520. Maximum Number of Non-Overlapping Substrings (Medium)](https://leetcode.com/problems/maximum-number-of-non-overlapping-substrings/)
 * [435. Non-overlapping Intervals (Medium)](https://leetcode.com/problems/non-overlapping-intervals/)
+* [452. Minimum Number of Arrows to Burst Balloons (Medium)](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
 * [646. Maximum Length of Pair Chain (Medium)](https://leetcode.com/problems/maximum-length-of-pair-chain/)
+* [1520. Maximum Number of Non-Overlapping Substrings (Medium)](https://leetcode.com/problems/maximum-number-of-non-overlapping-substrings/)
 
 ## Reference
 

@@ -1,12 +1,22 @@
 # Fast Pow
 
-Take `3^3` for example. `3^3 = 3^(11) = 3^(10) * 3^(01) = 9^(01) * 3^(01)`.
+Take `2^5` for example, $2^5 = 2^{4+1} = 2^4 * 2^1$
 
-So we can keep doing `exp >>= 1` and `base = (base * base)`. We only do `ans = (ans * base)` when `exp & 1 == 1`.
+Initially, `base = 2, ans = 1, exp = 5 = (101)`
+
+Here, the rightmost `1` means that we should multiply `ans` by `2^1`.
+
+The middle `0` means that we should NOT multiply `ans` by `2^2`.
+
+The leftmost `1` means that we should multiply `ans` by `2^4`.
+
+In sum, we can keep doing `exp >>= 1` and `base = (base * base)`. We only do `ans = (ans * base)` when `exp & 1 == 1`.
 
 ## Implementation
 
 ```cpp
+// Time: O(logE)
+// Space: O(1)
 int modpow(int base, int exp, int mod) {
     base %= mod;
     long ans = 1;

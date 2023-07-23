@@ -1,4 +1,4 @@
-# Binary Index Tree
+# Binary Indexed Tree
 
 aka Fenwick Tree.
 
@@ -6,9 +6,15 @@ aka Fenwick Tree.
 
 Fenwick tree was proposed to solve the [mutable range sum query problem](https://leetcode.com/problems/range-sum-query-mutable/).
 
-Query: `O(logN)`
+It supports:
+* Fast point update in `O(logN)` time
+* Range Query in `O(logN)` time
 
-Update: `O(logN)`
+Note that in addition to range sum, we can also use BIT to calculate range **multiplication**, range **xor**, range **maximum number**, range **minimum number** etc.
+
+## Binary Indexed
+
+![](.gitbook/assets/bit.png)
 
 ## Note
 

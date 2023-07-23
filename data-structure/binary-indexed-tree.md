@@ -153,7 +153,7 @@ public:
     void update(int x) {
         for (; x < 100001; x += lowbit(x)) c[x]++;
     }
-    int get(int x) { // returns the sum of numbers smaller than x
+    int get(int x) { // returns the sum of numbers <= x
         int ans = 0;
         for (; x > 0; x -= lowbit(x)) ans += c[x];
         return ans;
@@ -164,7 +164,10 @@ public:
 ## Problems
 
 * [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable/)
+* [308. Range Sum Query 2D - Mutable (Hard)](https://leetcode.com/problems/range-sum-query-2d-mutable)
+* [315. Count of Smaller Numbers After Self (Hard)](https://leetcode.com/problems/count-of-smaller-numbers-after-self)
 * [1649. Create Sorted Array through Instructions (Hard)](https://leetcode.com/problems/create-sorted-array-through-instructions/)
+* [2179. Count Good Triplets in an Array (Hard)](https://leetcode.com/problems/count-good-triplets-in-an-array/)
 
 ## Reference
 

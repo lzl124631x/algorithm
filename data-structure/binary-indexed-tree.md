@@ -70,7 +70,7 @@ public:
     void update(int i, int delta) { // Note: this `i` is 1-based.
         for (; i < sum.size(); i += lowbit(i)) sum[i] += delta;
     }
-    // Return A[0] + ... + A[i]
+    // Return A[1] + ... + A[i]
     int query(int i) { // Note: this `i` is 1-based.
         int ans = 0;
         for (; i; i -= lowbit(i)) ans += sum[i];

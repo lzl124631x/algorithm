@@ -16,6 +16,8 @@ Note that in addition to range sum, we can also use BIT to calculate range **mul
 
 ![](.gitbook/assets/bit.png)
 
+BIT nodes are indexed using the lowbit of their original index.
+
 ## Note
 
 `N + 1` elements.

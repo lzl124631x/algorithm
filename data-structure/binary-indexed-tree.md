@@ -1,6 +1,6 @@
 # Binary Indexed Tree
 
-E:\Projects\algorithm.gitbook\assets\bit.pngaka Fenwick Tree.
+![](<../.gitbook/assets/bit1 (1).png>)E:\Projects\algorithm.gitbook\assets\bit.pngaka Fenwick Tree.
 
 ## Motivation
 
@@ -19,13 +19,43 @@ Note that in addition to range sum, we can also use BIT to calculate range **mul
 
 BIT nodes are indexed using the lowbit of their original index.
 
+<figure><img src="../.gitbook/assets/bit1.png" alt=""><figcaption></figcaption></figure>
+
+For those with lowest bits at index 0 (we count the bit index from the right), the value is directly saved into BIT. These are the leaf nodes of the BIT.
+
+<figure><img src="../.gitbook/assets/bit2.png" alt=""><figcaption></figcaption></figure>
+
+For those with lowest bits at index 1, they are located at the 2nd layer from the bottom. We not only add their own values to BIT, but also add their child values to it. Their child indices are one less than their own indices. For example, `node[2]` (00010) has `node[1]` (00001) as its child, so `node[2] = A[2] + node[1] = 2 + 5 = 7`
+
+<figure><img src="../.gitbook/assets/bit3.png" alt=""><figcaption></figcaption></figure>
+
+For those with lowest bits at index 2,  they are located at the 3rd layer from the bottom. For example, `node[4]` (00100) has `node[3]` (00011) and `node[2]` (00010) as its direct children, so `node[4] = A[4] + node[3] + node[2] = -3 + 9 + 7 = 13`
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+## Sum Query
+
+<figure><img src="../.gitbook/assets/bit-sum.png" alt=""><figcaption></figcaption></figure>
+
+To calculate `sum(7) = A[1] + ... + A[7]`, we keep finding previous ranges by removing the lowbit from `7 = 111`. So, `sum(111) = node(111) + node(110) + node(100) = node[7] + node[6] + node[4]`
+
+<figure><img src="../.gitbook/assets/bit-sum2 (1).png" alt=""><figcaption></figcaption></figure>
+
+Another example, `sum(8) = sum(1000) = node(1000) = node[8]`
+
+## Update
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+To add `10` to `A[4]`, we need to update all the nodes containing`A[4]`. We find such nodes by adding lowbit. So, `A[4]` is contained by `node[100] = node[4]` and `node[1000] = node[8]`.
+
 ## Note
 
 `N + 1` elements.
 
-When updating, keep ADDing low bit.
+When querying, keep REMOVING low bit. (find the previous intervals)
 
-When querying, keep REMOVING low bit.
+When updating, keep ADDing low bit. (updating the tree towards higher levels)
 
 ## Implementation
 
@@ -40,7 +70,7 @@ public:
     void update(int i, int delta) { // Note: this `i` is 1-based.
         for (; i < sum.size(); i += lowbit(i)) sum[i] += delta;
     }
-    // Return A[0] + ... + A[i]
+    // Return A[1] + ... + A[i]
     int query(int i) { // Note: this `i` is 1-based.
         int ans = 0;
         for (; i; i -= lowbit(i)) ans += sum[i];

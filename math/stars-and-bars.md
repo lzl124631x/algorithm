@@ -1,4 +1,4 @@
-# Stars and Bars (隔板法)
+# Stars And Bars
 
 ## Problems
 
@@ -6,4 +6,4 @@
 
 ## Reference
 
-* https://en.wikipedia.org/wiki/Stars_and_bars_%28combinatorics%29
+* [https://en.wikipedia.org/wiki/Stars\_and\_bars\_%28combinatorics%29](https://en.wikipedia.org/wiki/Stars\_and\_bars\_\(combinatorics\))

@@ -1,12 +1,14 @@
 # Rabin Karp
 
+## Rabin Karp
+
 A string-searching algorithm that uses rolling hash to find an exact match of a pattern string in a text.
 
 The expected time complexity is `O(S+T)` where `S` and `T` are the lengths of the original string `s` and the pattern string `t` respectively.
 
 Its worst-case time complexity is `O(ST)`.
 
-## Algorithm
+### Algorithm
 
 First get the hash `ht` of the pattern string `t`.
 
@@ -14,9 +16,9 @@ We keep a sliding window of size `T` and compute the hash `hs` of the substring 
 
 Whenever `ht == hs`, the part in the window might be the same as `t`. In case of hash conflict, we linearly check the equity of them.
 
-## Implementation
+### Implementation
 
-### Version 1
+#### Version 1
 
 * The hashes are `signed long long`.
 * We need to use a number `m` to mod the hashes in case of overflow.
@@ -54,7 +56,7 @@ public:
 };
 ```
 
-### Version 2
+#### Version 2
 
 * This version is translated from standard golang implementation.
 * The hashes are `unsigned int`.
@@ -94,7 +96,7 @@ public:
 };
 ```
 
-### Version 3
+#### Version 3
 
 * The hashes are `unsigned long long`. Using `unsigned long long` can **reduce** the chance of hash conflict. (Example:  [1923. Longest Common Subpath (Hard)](https://leetcode.com/problems/longest-common-subpath/))
 * No mod number `m` is needed! It will automatically mod by `2^32` when overflow happens.
@@ -127,7 +129,7 @@ public:
 };
 ```
 
-### Why 1099511628211?
+#### Why 1099511628211?
 
 `1099511628211` is the FNV(Fowler–Noll–Vo) prime for 64 bit integer. When using FNV prime, the hash values produced are more scattered throughout the hash space.
 
@@ -151,18 +153,18 @@ public:
 873160484737966720260389217684476157468082573
 ```
 
-See more in [FNV prime](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function#FNV_prime)
+See more in [FNV prime](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo\_hash\_function#FNV\_prime)
 
-## Application
+### Application
 
 Rabin Karp algorithm or rolling hash is often used in problems where you need to find repeated subarray/substring in a long array/string.
 
 Examples:
 
-* [718. Maximum Length of Repeated Subarray \(Medium\)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
+* [718. Maximum Length of Repeated Subarray (Medium)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 * [1044. Longest Duplicate Substring (Hard)](https://leetcode.com/problems/longest-duplicate-substring/)
 
-The following function is used in [718. Maximum Length of Repeated Subarray \(Medium\)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) to generate the rolling hash.
+The following function is used in [718. Maximum Length of Repeated Subarray (Medium)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) to generate the rolling hash.
 
 ```cpp
 vector<ULL> rolling(vector<int> &A, int len) {
@@ -178,7 +180,7 @@ vector<ULL> rolling(vector<int> &A, int len) {
 }
 ```
 
-## Prefix Hash Array
+### Prefix Hash Array
 
 ```cpp
 // Generate Prefix Hash Array
@@ -223,11 +225,11 @@ public:
 };
 ```
 
-## Problem
+### Problem
 
-* [28. Implement strStr\(\) \(Easy\)](https://leetcode.com/problems/implement-strstr/)
-* [1044. Longest Duplicate Substring \(Hard\)](https://leetcode.com/problems/longest-duplicate-substring/)
-* [718. Maximum Length of Repeated Subarray \(Medium\)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
+* [28. Implement strStr() (Easy)](https://leetcode.com/problems/implement-strstr/)
+* [1044. Longest Duplicate Substring (Hard)](https://leetcode.com/problems/longest-duplicate-substring/)
+* [718. Maximum Length of Repeated Subarray (Medium)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 * [214. Shortest Palindrome (Hard)](https://leetcode.com/problems/shortest-palindrome/)
 * [1297. Maximum Number of Occurrences of a Substring (Medium)](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/)
 * [1923. Longest Common Subpath (Hard)](https://leetcode.com/problems/longest-common-subpath/)
@@ -235,13 +237,12 @@ public:
 * [718. Maximum Length of Repeated Subarray (Medium)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 * [1698. Number of Distinct Substrings in a String (Medium)](https://leetcode.com/problems/number-of-distinct-substrings-in-a-string/)
 
-## Reference
+### Reference
 
-* [https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp\_algorithm](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm)
+* [https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp\_algorithm](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp\_algorithm)
 * [https://www.youtube.com/watch?v=H4VrKHVG5qI](https://www.youtube.com/watch?v=H4VrKHVG5qI)
 * [https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/](https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/)
 
+## TODO
 
-# TODO
-
-https://codeforces.com/blog/entry/4898
+[https://codeforces.com/blog/entry/4898](https://codeforces.com/blog/entry/4898)

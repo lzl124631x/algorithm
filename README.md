@@ -1,4 +1,4 @@
-# Introduction
+# README
 
 I put all my notes for algorithms here.
 
@@ -15,5 +15,6 @@ I put all my notes for algorithms here.
 ## Resources
 
 William Fiset
-* https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw
-* https://github.com/williamfiset/Algorithms
+
+* [https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw](https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw)
+* [https://github.com/williamfiset/Algorithms](https://github.com/williamfiset/Algorithms)

@@ -1,4 +1,4 @@
-# Why programmers like to set Infinity to 0x3f3f3f3f?
+# Memset 3 F
 
 There is no fixed way to represent Infinity. The first option that might come to our mind is `0x7f ff ff ff = 2^31 - 1 = 2,147,483,647` which is the maximum value of 32-bit `int`.
 
@@ -11,4 +11,4 @@ A better choice is `0x3f 3f 3f 3f = 1,061,109,567`.
 
 ## Reference
 
-* https://www.kawabangga.com/posts/1153
+* [https://www.kawabangga.com/posts/1153](https://www.kawabangga.com/posts/1153)

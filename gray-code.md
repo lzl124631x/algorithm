@@ -20,7 +20,6 @@ For example
 n ^ (n>>1) = 0110
 ```
 
-
 ```cpp
 int g (int n) {
     return n ^ (n >> 1);
@@ -56,4 +55,4 @@ int rev_g (int g) {
 
 ## References
 
-* https://cp-algorithms.com/algebra/gray-code.html
+* [https://cp-algorithms.com/algebra/gray-code.html](https://cp-algorithms.com/algebra/gray-code.html)

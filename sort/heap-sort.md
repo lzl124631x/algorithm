@@ -1,5 +1,6 @@
-## Heap Sort
+# Heap Sort
 
+## Heap Sort
 
 ## Algorithm
 

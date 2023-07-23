@@ -1,12 +1,13 @@
 # Binary Indexed Tree
 
-aka Fenwick Tree.
+E:\Projects\algorithm.gitbook\assets\bit.pngaka Fenwick Tree.
 
 ## Motivation
 
 Fenwick tree was proposed to solve the [mutable range sum query problem](https://leetcode.com/problems/range-sum-query-mutable/).
 
 It supports:
+
 * Fast point update in `O(logN)` time
 * Range Query in `O(logN)` time
 
@@ -14,7 +15,7 @@ Note that in addition to range sum, we can also use BIT to calculate range **mul
 
 ## Binary Indexed
 
-![](.gitbook/assets/bit.png)
+<figure><img src="../.gitbook/assets/bit.png" alt=""><figcaption></figcaption></figure>
 
 BIT nodes are indexed using the lowbit of their original index.
 
@@ -52,7 +53,7 @@ public:
 };
 ```
 
-The implementation for [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/)
+The implementation for [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable/)
 
 ```cpp
 // OJ: https://leetcode.com/problems/range-sum-query-mutable/
@@ -132,7 +133,7 @@ public:
 
 ## Problems
 
-* [307. Range Sum Query - Mutable \(Medium\)](https://leetcode.com/problems/range-sum-query-mutable/)
+* [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable/)
 * [1649. Create Sorted Array through Instructions (Hard)](https://leetcode.com/problems/create-sorted-array-through-instructions/)
 
 ## Reference
@@ -143,4 +144,4 @@ public:
 * [https://www.youtube.com/watch?v=WbafSgetDDk](https://www.youtube.com/watch?v=WbafSgetDDk)
 * [https://visualgo.net/en/fenwicktree](https://visualgo.net/en/fenwicktree)
 * [https://www.luogu.com.cn/problem/solution/P3374](https://www.luogu.com.cn/problem/solution/P3374)
-* [树状数组（Binary Indexed Tree），看这一篇就够了](https://blog.csdn.net/Yaokai_AssultMaster/article/details/79492190)
+* [树状数组（Binary Indexed Tree），看这一篇就够了](https://blog.csdn.net/Yaokai\_AssultMaster/article/details/79492190)

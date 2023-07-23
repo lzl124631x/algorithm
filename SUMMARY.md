@@ -22,7 +22,7 @@
   * [Memset 3 F](cpp/memset-3f.md)
   * [Overflow](cpp/overflow.md)
 - [Data Structure](data-structure/README.md)
-  * [Binary Index Tree](data-structure/binary-index-tree.md)
+  * [Binary Indexed Tree](data-structure/binary-indexed-tree.md)
   * [Segment Tree And Binary Index Tree](data-structure/segment-tree-and-binary-index-tree.md)
   * [Segment Tree](data-structure/segment-tree.md)
   * [Stack](data-structure/stack.md)

@@ -47,3 +47,7 @@
 ## Mono Stack / Mono Deque
 
 * [907. Sum of Subarray Minimums (Medium)](https://leetcode.com/problems/sum-of-subarray-minimums/)
+
+## Binary Indexed Tree
+
+* [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable)

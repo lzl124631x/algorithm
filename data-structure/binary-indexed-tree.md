@@ -64,37 +64,37 @@ The implementation for [307. Range Sum Query - Mutable (Medium)](https://leetcod
 //      sumRange: O(logN)
 // Ref: https://www.youtube.com/watch?v=WbafSgetDDk
 class BIT {
-    vector<int> sum;
-    static inline int lowbit(int x) { return x & -x; }
+    vector<int> A;
+    static inline int lb(int x) { return x & -x; }
 public:
-    BIT(int N) : sum(N + 1) {};
-    void update(int i, int delta) {
-        for (; i < sum.size(); i += lowbit(i)) sum[i] += delta;
+    BIT(vector<int> nums) : A(nums.size() + 1) {
+        for (int i = 0; i < nums.size(); ++i) {
+            update(i + 1, nums[i]);
+        }
     }
     int query(int i) {
         int ans = 0;
-        for (; i; i -= lowbit(i)) ans += sum[i];
+        for (; i; i -= lb(i)) ans += A[i];
         return ans;
     }
-    int rangeQuery(int i, int j) {
+    int rangeQuery(int i, int j) { // i, j are inclusive
         return query(j) - query(i - 1);
+    }
+    void update(int i, int delta) {
+        for (; i < A.size(); i += lb(i)) A[i] += delta;
     }
 };
 class NumArray {
     BIT tree;
-    vector<int> nums;
+    vector<int> A;
 public:
-    NumArray(vector<int>& nums) : nums(nums), tree(nums.size()) {
-        for (int i = 0; i < nums.size(); ++i) tree.update(i + 1, nums[i]);
+    NumArray(vector<int>& A) : A(A), tree(A) {}
+    void update(int index, int val) {
+        tree.update(index + 1, val - A[index]);
+        A[index] = val;
     }
-
-    void update(int i, int val) {
-        tree.update(i + 1, val - nums[i]);
-        nums[i] = val;
-    }
-
-    int sumRange(int i, int j) {
-        return tree.rangeQuery(i + 1, j + 1);
+    int sumRange(int left, int right) {
+        return tree.rangeQuery(left + 1, right + 1);
     }
 };
 ```

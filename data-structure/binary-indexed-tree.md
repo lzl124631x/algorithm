@@ -29,7 +29,7 @@ For those with lowest bits at index 1, they are located at the 2nd layer from th
 
 <figure><img src="../.gitbook/assets/bit3.png" alt=""><figcaption></figcaption></figure>
 
-For those with lowest bits at index 2,  they are located at the 3rd layer from the bottom. For example, `node[4]` (00100) has `node[3]` (00011) and `node[2]` (00010) as its direct children, so `node[4] = A[4] + node[3] + node[2] = -3 + 9 + 7 = 13`
+For those with lowest bits at index 2, they are located at the 3rd layer from the bottom. For example, `node[4]` (00100) has `node[3]` (00011) and `node[2]` (00010) as its direct children, so `node[4] = A[4] + node[3] + node[2] = -3 + 9 + 7 = 13`
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -45,7 +45,7 @@ Another example, `sum(8) = sum(1000) = node(1000) = node[8]`
 
 ## Update
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 To add `10` to `A[4]`, we need to update all the nodes containing`A[4]`. We find such nodes by adding lowbit. So, `A[4]` is contained by `node[100] = node[4]` and `node[1000] = node[8]`.
 

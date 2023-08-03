@@ -44,6 +44,7 @@ public:
 * [204. Count Primes (Easy)](https://leetcode.com/problems/count-primes/)
 * [1175. Prime Arrangements (Easy)](https://leetcode.com/problems/prime-arrangements/)
 * [1627. Graph Connectivity With Threshold (Hard)](https://leetcode.com/problems/graph-connectivity-with-threshold/)
+* [2523. Closest Prime Numbers in Range (Medium)](https://leetcode.com/problems/closest-prime-numbers-in-range)
 
 ## Reference
 

@@ -257,6 +257,7 @@ Find Maximum
 * [1838. Frequency of the Most Frequent Element (Medium)](https://leetcode.com/problems/frequency-of-the-most-frequent-element/)
 * [2009. Minimum Number of Operations to Make Array Continuous (Hard)](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/)
 * [2024. Maximize the Confusion of an Exam (Medium)](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/)
+* [2730. Find the Longest Semi-Repetitive Substring (Medium)](https://leetcode.com/problems/find-the-longest-semi-repetitive-substring)
 
 The following problems are also solvable using the shrinkable template with the ["At Most to Equal" trick](https://leetcode.com/problems/count-vowel-substrings-of-a-string/discuss/1563765/c-on-time-sliding-window/1141941)
 

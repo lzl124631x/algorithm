@@ -1,4 +1,4 @@
-# Unbounded Knapsack (完全背包问题)
+# Unbounded Knapsack (无限背包问题)
 
 Given a list of items with weight `w[i]` and value `v[i]`, what's the maximum value you can get given a knapsack with capacity `C`, i.e. it can hold items with at most weight `C` in total. You can pick each item **unlimited times**.
 

@@ -1,4 +1,4 @@
-# Manacher's Algorithm - Finding all sub-palindromes in `O(N)` time
+# Manacher
 
 ## Algorithm
 
@@ -55,6 +55,7 @@ We only need to consider the indexes in `t` in range `[2, s.size() * 2]`, which 
 Let `r[i]` be the number of palindromes centered at `t[i]` (aka. the radius of the longest palindrome centered at `t[i]`).
 
 So we have:
+
 * the longest palindrome centered at `t[i]` is `t[i-r[i]+1 .. i+r[i]-1]`.
 * For any `k < r[i]`, substring `t[i-k .. i+k]` is a palindrome.
 * For any `k >= r[i]`, substring `t[i-k .. i+k]` is not a palindrome.
@@ -66,7 +67,9 @@ Example:
 t = "^*a*b*c*b*d*$"
         ^  ^  ^
 ```
+
 For center `t[6] = 'c'`, we have `r[6] = 4`:
+
 * The longest palindrome centered at `t[6]` is `t[3 .. 9] = "*b*c*b*"`
 * For any `k < 4`, substring `t[6-k .. 6+k]` is a palindrome. E.g. for `k = 2`, `t[4 .. 8] = "b*c*b"` is a palindrome.
 * For any `k >= 4`, substring `t[6-k .. 6+k]` is not a palindrome. E.g. for `k = 4`, `t[2 .. 10] = "a*b*c*b*d"` is not a palindrome.
@@ -79,12 +82,11 @@ For `i-1`, since `r[i-1] >= 1`, the corresponding reach `i-1 + r[i-1]` is at lea
 
 So, `j + r[j]` must be `>= i`.
 
-
-**Case 1: j + r[j] == i**:
+**Case 1: j + r\[j] == i**:
 
 Since the palindrome `t[j-r[j]+1 .. j+r[j]-1]` doesn't cover `t[i]`, we have no information to leverage, and have to expand from `t[i]` in a brute force way.
 
-Example: 
+Example:
 
 ```cpp
      01234567890
@@ -97,7 +99,7 @@ For `t[6] = 'c'`, the corresponding `j` could be `4` and `r[j] = 2`. Since `j + 
 
 Since `i + r[i] = 6 + 4 = 10 > j + r[j] = 6`, we will make `i = 6` the new center `j`.
 
-**Case 2: j + r[j] > i**:
+**Case 2: j + r\[j] > i**:
 
 Now we can leverage some symmetry information.
 
@@ -137,6 +139,7 @@ r =    2125212383212?
 Since `k-r[k] < j-r[j]`, not the entire range for `k` can be symmetrised relative to `j`. We can only symmetrise the range `[j-r[j]+1, 2*k-j+r[j]-1]`. So `r[i]` is at least `k - (j-r[j]+1) + 1 = k-j+r[j] = j+r[j]-i`.
 
 Assume:
+
 * the range for `j` is surrounded by index `p` and `s`.
 * `p` and `q` are symmetric relative to `k`.
 * `r` and `s` are symmetric relative to `i`.
@@ -169,7 +172,7 @@ r =    2123212383212?
 
 This is similar to case 2b that we know `r[i]` is at least `j+r[j]-i`, with the exception that `t[p] != t[q]` now.
 
-Given `t[p] != t[s]`, `t[q] == t[r]` and `t[p] != t[q]`, we can't know whether `t[r] == t[s]` or not. 
+Given `t[p] != t[s]`, `t[q] == t[r]` and `t[p] != t[q]`, we can't know whether `t[r] == t[s]` or not.
 
 So, we have to do brute force expansion with `r[i]` being at least `j+r[j]-i`.
 
@@ -236,7 +239,7 @@ public:
             t += '*';
         }
         t += '$'; // inflating the `s` ( example: "abc" becomes "^*a*b*c*$" )
-        
+
         int N = s.size(), M = t.size(), j = 1; // `j` is the index with the furthest reach `j + r[j]`
         vector<int> r(M, 1); // `r[i]` is the number of palindromes with `t[i]` as the center (aka. the radius of the longest palindrome centered at `t[i]`)
         for (int i = 2; i <= 2 * N; ++i) {
@@ -245,7 +248,7 @@ public:
             if (i + cur > j + r[j]) j = i; // if the current reach is greater than the old reach, update `j`
             r[i] = cur;
         }
-        
+
         int len = 1, start = 0;
         for (int i = 2; i <= 2 * N; ++i) {
             if (r[i] - 1 > len) {
@@ -268,7 +271,7 @@ Thus, the overall time complexity of Manacher is `O(N)`.
 
 ## Reference
 
-* [[Algorithm][018] 最长回文子串 Manacher [OTTFF]](https://www.bilibili.com/video/BV1AX4y1F79W)
+* [\[Algorithm\]\[018\] 最长回文子串 Manacher \[OTTFF\]](https://www.bilibili.com/video/BV1AX4y1F79W)
 
 ## Problems
 

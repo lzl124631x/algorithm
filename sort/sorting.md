@@ -1,12 +1,13 @@
 # Sorting
 
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
 Which algorithm works best for largely sorted array?
 
 * Insertion Sort
 * Bubble Sort
 
-
-https://stackoverflow.com/a/4276118/3127828
+[https://stackoverflow.com/a/4276118/3127828](https://stackoverflow.com/a/4276118/3127828)
 
 Only a few items => INSERTION SORT
 

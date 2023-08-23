@@ -51,3 +51,7 @@
 ## Sorting
 
 * [912. Sort an Array (Medium)](https://leetcode.com/problems/sort-an-array/)
+
+## Binary Indexed Tree
+
+* [307. Range Sum Query - Mutable (Medium)](https://leetcode.com/problems/range-sum-query-mutable)

@@ -43,5 +43,5 @@ vector<int> discretize(vector<int> &input) {
 
 ## Problem
 
+* [327. Count of Range Sum (Hard)](https://leetcode.com/problems/count-of-range-sum) **When using with BIT**
 * [699. Falling Squares (Hard)](https://leetcode.com/problems/falling-squares/)
-

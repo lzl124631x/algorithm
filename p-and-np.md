@@ -1,4 +1,4 @@
-# P and NP
+# P And Np
 
 ## P
 
@@ -28,6 +28,6 @@ We have to do searching, and think of ways to optimize the searching performance
 
 ## References
 
-* https://stackoverflow.com/questions/1857244/what-are-the-differences-between-np-np-complete-and-np-hard
-* https://en.wikipedia.org/wiki/NP_(complexity)
-* https://en.wikipedia.org/wiki/NP-completeness
+* [https://stackoverflow.com/questions/1857244/what-are-the-differences-between-np-np-complete-and-np-hard](https://stackoverflow.com/questions/1857244/what-are-the-differences-between-np-np-complete-and-np-hard)
+* [https://en.wikipedia.org/wiki/NP\_(complexity](https://en.wikipedia.org/wiki/NP\_\(complexity))
+* [https://en.wikipedia.org/wiki/NP-completeness](https://en.wikipedia.org/wiki/NP-completeness)

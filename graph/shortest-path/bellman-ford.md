@@ -21,7 +21,7 @@ Repeat `V - 1` times \(since the path in the graph is at most of length `V - 1`\
 vector<int> bellmanFord(vector<vector<int>>& edges, int V, int src) {
     vector<int> dist(N, INT_MAX);
     dist[src] = 0;
-    for (int i = 1; i < V; ++i) { // try to use all the edges to relax for V-1 times.
+    for (int i = 1; i < V; ++i) { // try to use all the edges to relax V-1 times.
         for (auto &e : edges) {
             int u = e[0], v = e[1], w = e[2];
             if (dist[u] == INT_MAX) continue;

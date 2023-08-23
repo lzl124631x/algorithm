@@ -34,7 +34,7 @@ But if there are negative edges, this `u` can be updated again later using negat
 
 ## Implementation
 
-The most basic implementation of Dijkstra algorithm has time complexity `O(V^2)`. Here I only talk about the solution using `priority_queue`.
+Here I only talk about the solution using `priority_queue`.
 
 Let `pq` be a `priority_queue` of pairs of the cost \(i.e. the length of the shortest path from `src`\) and the vertex index. The element with the smallest cost is at the top of the queue \(i.e. min-heap\). Initially `pq` only has `(0, src)` in it.
 

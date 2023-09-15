@@ -67,7 +67,7 @@ The following solution is for [1584. Min Cost to Connect All Points (Medium)](ht
 ```cpp
 // OJ: https://leetcode.com/problems/min-cost-to-connect-all-points/
 // Author: github.com/lzl124631x
-// Time: O(K * log(N^2))
+// Time: O(K * log(N^2)) where K is the number of edged we need to scan to complete the tree
 // Space: O(N^2)
 class UnionFind {
     vector<int> id;

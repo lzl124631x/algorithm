@@ -32,9 +32,9 @@ int prim(int N, int M, vector<vector<int>> &edges) { // N nodes, M edges. edges 
             if (seen[v]) continue; // skip those neighbors that are already in the MST
             dist[v] = min(dist[v], w); // Use the current node to update the distance of unvisited nodes.
         }
-        cur = min_element(begin(dist), end(dist)) - begin(dist); // The node with the minimum distance is selected.
+        cur = min_element(begin(dist), end(dist)) - begin(dist); // greedily pick an unconnected node with the minimum distance
         ans += dist[cur];
-        dist[cur] = INT_MAX;
+        dist[cur] = INT_MAX; // mark this distance as used
     }
     return ans;
 }

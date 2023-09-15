@@ -46,7 +46,7 @@ The logic is very similar to [283. Move Zeroes (Easy)](https://leetcode.com/prob
 class Solution {
     int partition(vector<int> &A, int L, int R, int pivot) {
         swap(A[pivot], A[R]);
-        for (int i = L; i < R; ++i) { // `i` is the read pointer, `L` is the write pointer
+        for (int i = L; i < R; ++i) { // `i` is the read pointer, `L` is the write pointer. The scanned range doesn't include the pivot, A[R]
             if (A[i] >= A[R]) continue; // we are looking for numbers < A[R]. So skipping those `>= A[R]`.
             swap(A[i], A[L++]); // once found, swap it to `A[L]` and move `L` forward.
         }
@@ -83,9 +83,9 @@ class Solution {
 private:
     int partition(vector<int> &A, int L, int R, int pivot) {
         swap(A[pivot], A[R]);
-        int i = L, j = R;
+        int i = L, j = R; // the initial range covers the pivot A[R]
         while (i < j) {
-            while (i < j && A[i] < A[R]) ++i;
+            while (i < j && A[i] < A[R]) ++i; // we must start from the other side of the pivot. Since we use A[R] as pivot, we need to start from the left side.
             while (i < j && A[j] >= A[R]) --j;
             swap(A[i], A[j]);
         }
@@ -106,3 +106,12 @@ public:
     }
 };
 ```
+
+## Bentley-McIlroy 3-way parititioning
+
+TODO
+
+
+## Reference
+
+* https://sedgewick.io/wp-content/themes/sedgewick/talks/2002QuicksortIsOptimal.pdf

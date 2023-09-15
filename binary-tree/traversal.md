@@ -2,7 +2,7 @@
 
 ## Preorder
 
-[145. Binary Tree Postorder Traversal (Easy)](https://leetcode.com/problems/binary-tree-postorder-traversal/))
+[144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 
 See more my solutions [here](https://github.com/lzl124631x/LeetCode/tree/master/leetcode/144.%20Binary%20Tree%20Preorder%20Traversal)
 
@@ -16,8 +16,7 @@ public:
     vector<int> preorderTraversal(TreeNode* root) {
         if (!root) return {};
         vector<int> ans;
-        stack<TreeNode*> s;
-        s.push(root);
+        stack<TreeNode*> s{{root}};
         while (s.size()) {
             root = s.top();
             s.pop();
@@ -55,6 +54,8 @@ public:
     }
 };
 ```
+
+See also [589. N-ary Tree Preorder Traversal (Easy)](https://leetcode.com/problems/n-ary-tree-preorder-traversal)
 
 ## Inorder
 
@@ -103,24 +104,26 @@ public:
     vector<int> postorderTraversal(TreeNode* root) {
         vector<int> ans;
         stack<TreeNode*> s;
-        TreeNode *prev = NULL;
+        TreeNode *prev = nullptr;
         while (root || s.size()) {
             while (root) {
                 s.push(root);
                 root = root->left;
             }
             root = s.top();
-            if (!root->right || root->right == prev) {
+            if (!root->right || root->right == prev) { // if root->right is nonexistent or visited, visit root
                 ans.push_back(root->val);
                 s.pop();
                 prev = root;
-                root = NULL;
-            } else root = root->right;
+                root = nullptr;
+            } else root = root->right; // otherwise, visit right subtree
         }
         return ans;
     }
 };
 ```
+
+See also [590. N-ary Tree Postorder Traversal (Easy)](https://leetcode.com/problems/n-ary-tree-postorder-traversal)
 
 ## Level-order
 

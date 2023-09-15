@@ -36,6 +36,10 @@ For example:
 s =   a b c
     012345678
 t = ^*a*b*c*$
+
+0 -> 2
+1 -> 4
+2 -> 6
 ```
 
 ```cpp
@@ -70,7 +74,7 @@ For center `t[6] = 'c'`, we have `r[6] = 4`:
 * For any `k < 4`, substring `t[6-k .. 6+k]` is a palindrome. E.g. for `k = 2`, `t[4 .. 8] = "b*c*b"` is a palindrome.
 * For any `k >= 4`, substring `t[6-k .. 6+k]` is not a palindrome. E.g. for `k = 4`, `t[2 .. 10] = "a*b*c*b*d"` is not a palindrome.
 
-To calculate `r[i]` efficiently, we need to \*\*leverage the computed `r[j]` (`j < i`) values.
+To calculate `r[i]` efficiently, we need to **leverage the computed `r[j]` (`j < i`) values**.
 
 Let `j < i` be the center with the furthest reach `j + r[j]`.
 

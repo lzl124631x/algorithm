@@ -66,3 +66,14 @@ $$
 $$
 
 Example question: [2280. Minimum Lines to Represent a Line Chart (Medium)](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart)
+
+## Get angle between two points
+
+Assume we have two points `(x1, y1)` and `(x2, y2)`, we want to get the angle between these two points
+
+```cpp
+if ((x1 > x2) || (x1 == x2 && y1 < y2)) swap(x1, x2), swap(y1, y2); // make sure these two points are ordered
+atan2(x2 - x1, y2 - y1)
+```
+
+Example question: [149. Max Points on a Line (Hard)](https://leetcode.com/problems/max-points-on-a-line)

@@ -44,3 +44,25 @@ $$
 where $\bm{n}$ is a unit vector perpendicular to the plane containing $\bm{a}$ and $\bm{b}$.
 
 ![Finding the direction of the cross product by the right-hand rule.](../.gitbook/assets/cross-product-right-hand-rule.png)
+
+## Check if three points are one te same line
+
+Say we have 3 points, `(x1, y1)`, `(x2, y2)` and `(x3, y3)`. Check if they are on the same line.
+
+Normally we can check if slopes are the same.
+
+$$
+\frac{y_2-y_1}{x_2-x_1} = \frac{y_3-y_2}{x_3-x_2}
+$$
+
+To avoid:
+1. The precision error we might get from the divisions
+2. Divide by zero issue
+
+We can use the following equation:
+
+$$
+(y_2-y_1)\cdot(x_3-x_2) = (y_3-y_2)\cdot(x_2-x_1)
+$$
+
+Example question: [2280. Minimum Lines to Represent a Line Chart (Medium)](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart)

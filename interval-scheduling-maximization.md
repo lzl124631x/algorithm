@@ -6,7 +6,7 @@ The interval scheduling maximization (ISM) problem is to find a largest compatib
 
 Greedily select the interval with the **earliest ending time**.
 
-1. Sort the intervals in ascending order of the end time. (We don't care the start time)
+1. Sort the intervals in ascending order of the **end time**. (We don't care the start time)
 2. Scan through the intervals and greedily collect non-overlapping intervals.
 
 Memorize point 1: For all the intervals whose start times are not overlapping with earlier intervals, picking the one ending first must be optimal.

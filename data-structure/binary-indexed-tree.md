@@ -1,6 +1,6 @@
 # Binary Indexed Tree
 
-![](<../.gitbook/assets/bit1 (1).png>)E:\Projects\algorithm.gitbook\assets\bit.pngaka Fenwick Tree.
+aka Fenwick Tree.
 
 ## Motivation
 

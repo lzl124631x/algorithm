@@ -132,6 +132,7 @@ We can use this trick in [1863. Sum of All Subset XOR Totals (Easy)](https://lee
 * [1569. Number of Ways to Reorder Array to Get Same BST (Hard)](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/)
 * [1863. Sum of All Subset XOR Totals (Easy)](https://leetcode.com/problems/sum-of-all-subset-xor-totals/)
 * [2400. Number of Ways to Reach a Position After Exactly k Steps (Medium)](https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps)
+* [2842. Count K-Subsequences of a String With Maximum Beauty (Hard)](https://leetcode.com/problems/count-k-subsequences-of-a-string-with-maximum-beauty)
 
 ## Generating Combinations
 

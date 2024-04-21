@@ -84,20 +84,19 @@ Another way to prevent visiting the same node twice is as follows:
 // Time: O(ElogE)
 // Space: O(E)
 typedef unordered_map<int, unordered_map<int, int>> Graph;
-typedef pair<int, int> iPair;
+typedef pair<int, int> PII;
 vector<int> dijkstra(Graph &graph, int N, int source) {
-    priority_queue<iPair, vector<iPair>, greater<iPair>> pq;
+    priority_queue<PII, vector<PII>, greater<PII>> pq;
     vector<int> dists(N, INT_MAX);
     dists[source] = 0;
     pq.emplace(0, source);
     while (pq.size()) {
-        int u = pq.top().second, cost = pq.top().first;
+        const [cost, u] = pq.top();
         pq.pop();
         if (cost > dists[u]) continue; // this is already not the optimal, skip
-        for (auto &neighbor : graph[u]) {
-            int v = neighbor.first, weight = neighbor.second;
-            if (dists[v] > dists[u] + weight) {
-                dists[v] = dists[u] + weight;
+        for (auto &[v, w] : graph[u]) {
+            if (dists[v] > dists[u] + w) {
+                dists[v] = dists[u] + w;
                 pq.emplace(dists[v], v);
             }
         }

@@ -15,14 +15,17 @@ Note that we should only use this algorithm on a **weighted** graph. If it's an 
 Given `V` vertices and `E` edges. The all weights of all edges are non-negative. Find the smallest distance from a source node `S` to all other nodes.
 
 We split the `V` vertices into two sets:
-* `A`, visited nodes, i.e. those whose shortest path is already determined.
-* `B`, unvisited nodes.
+
+- `A`, visited nodes, i.e. those whose shortest path is already determined.
+- `B`, unvisited nodes.
 
 Initially:
-* `A` is empty and `B` contains all the vertices
-* The distance of the source vertex is `0`, and `Infinity` for all other vertices.
+
+- `A` is empty and `B` contains all the vertices
+- The distance of the source vertex is `0`, and `Infinity` for all other vertices.
 
 Then we keep the following operations until all vertices are visited:
+
 1. Find the vertice with the smallest distance from `B`, say `u`. Move `u` from `B` to `A`.
 2. For each outbound edge from `u` `(u, v, w)` (`v` is the destination verte, `w` is the weight), try to relax `v` using `u` and `w` -- If `dist[v] > dist[u] + w`, then `dist[v] = dist[u] + w`.
 
@@ -90,7 +93,7 @@ vector<int> dijkstra(Graph &graph, int N, int source) {
     while (pq.size()) {
         int u = pq.top().second, cost = pq.top().first;
         pq.pop();
-        if (cost > dist[u]) continue; // this is already not the optimal, skip
+        if (cost > dists[u]) continue; // this is already not the optimal, skip
         for (auto &neighbor : graph[u]) {
             int v = neighbor.first, weight = neighbor.second;
             if (dists[v] > dists[u] + weight) {
@@ -105,12 +108,11 @@ vector<int> dijkstra(Graph &graph, int N, int source) {
 
 ## Problems
 
-* [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)
-* [787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
-* [1514. Path with Maximum Probability (Medium)](https://leetcode.com/problems/path-with-maximum-probability/)
-* [1368. Minimum Cost to Make at Least One Valid Path in a Grid (Hard)](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
+- [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+- [787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+- [1514. Path with Maximum Probability (Medium)](https://leetcode.com/problems/path-with-maximum-probability/)
+- [1368. Minimum Cost to Make at Least One Valid Path in a Grid (Hard)](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
 
 ## Reference
 
-* [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
-
+- [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
